@@ -153,7 +153,7 @@ yang cukup besar, namun ketika dilakukan perhitungan, waktu yang dibutuhkan cuku
 berhubungan secara independen dengan output. Setiap variabel input ini tidak memiliki keterhubungan satu sama lain. Sifat dari metode ini 
 menyebabkan model yang dihasilkan terbatasi kemampuannya. Model yang dihasilkan hanya sebatas mengikuti fungsi linear dan batas yang ada di 
 bagian input. Dimana pada dunia nyata, konsep dan input yang harus diolah lebih kompleks. Hal inilah yang membuat \emph{Deep Learning} memiliki 
-keunggulan yang signifikan. Gambar 2.3 merupakan contoh perbandingan dari jaringan komputasi yang dimiliki oleh metode \emph{linear regression}, metode 
+keunggulan yang signifikan. Gambar 2.4 merupakan contoh perbandingan dari jaringan komputasi yang dimiliki oleh metode \emph{linear regression}, metode 
 \emph{decision list network}, dan metode \emph{deep learning} \parencite{Russel2021}. 
 
 \section{\emph{Re-identifikasi}}
@@ -163,7 +163,9 @@ Re-identifikasi merupakan teknik mencocokan dua objek dengan bidang pandang berb
 ditentukan dengan tujuan untuk membuktikan bahwa kedua objek tersebut sama. Karakteristik dari re-identifikasi berupa sebuah siklus hipotesis-deduktif, 
 dimana model prediksi yang dibuat dengan mempelajari training data akan mengumpulkan data baru dari masukan, kemudian diikuti dengan revisi dan 
 pelabelan baru untuk data yang memiliki nilai kecocokan tinggi. Hal tersebut akan terus berulang mengikuti data terbaru yang dimasukan ke model 
-prediksi tersebut \parencite{Wechsler2014}.
+prediksi tersebut \parencite{Wechsler2014}. Cara kerja model re-identifikasi dapat dilihat pada gambar 2.5. Pengguna akan memasukkan sebuah gambar 
+kueri ke dalam model re-identifikasi. Model akan mencari gambar dengan objek yang memiliki kemiripan dengan gambar kueri di galeri. Gambar yang memiliki 
+kemiripan dengan kueri kemudian akan dibuat list tingkat kemiripan gambar galeri berdasarkan gambar kueri.
 
 \begin{figure}[ht]
   \centering
@@ -204,10 +206,18 @@ ketika digunakan sebagai model pada visi komputer. Hal ini dikarenakan pada tuga
 tingkat piksel. Hal ini cukup sulit untuk arsitektur Transformer ketika dihadapkan gambar beresolusi tinggi, karena mekanisme kompleksitas komputasi \emph{self-attention} 
 yang dimiliki bersifat kuadratik terhadap ukuran gambar. Sehingga untuk mengatasi masalah tersebut, diciptakanlah Swin Transformer. \parencite{Liu2021}
 
-%gambar
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.5]{gambar/Perbedaan Swin dan VIT.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Perbedaan (a)  Swin Transformer dan (b) Vision Transformer}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:perbedaanswintransformerdanvisiontransformer}
+\end{figure}
 
 Swin Transformer sebagai sebuah arsitektur baru untuk visi komputer, mampu \linebreak memetakan hirarki dan kompleksitas komputasinya mengikuti ukuran gambar. Seperti yang 
-terlihat pada gambar … , Swin Transformer membangun sebuah hirarkis dengan \emph{patch} berukuran kecil (bergaris abu-abu) pada lapisan atas, yang kemudian secara 
+terlihat pada gambar 2.6, Swin Transformer membangun sebuah hirarkis dengan \emph{patch} berukuran kecil (bergaris abu-abu) pada lapisan atas, yang kemudian secara 
 bertahap \emph{patch} tersebut akan bergabung dengan sekitarnya di lapisan yang lebih dalam. Selain itu, Swin Transformer memiliki kompleksitas komputasi yang linear 
 terhadap ukuran gambar dikarenakan komputasi \emph{self-attention} hanya berfokus pada setiap jendela (bergaris merah). Berbeda dengan Vision Transformer yang 
 memetakan dengan resolusi rendah dan memiliki kompleksitas komputasi kuadratik terhadap ukuran gambar karena komputasi \emph{self-attention} dilakukan secara 
@@ -219,18 +229,34 @@ Arsitektur standar Transformer dan adaptasinya untuk klasifikasi gambar mengguna
 satu token dengan token lainnya ketika dikomputasikan. Perhitungan global ke kompleksitas kuadrat berhubungan dengan jumlah token. Hal ini membuat Transformer tidak cocok 
 untuk menyelesaikan permasalahan visi yang membutuhkan kumpulan token yang besar untuk prediksi padat pada gambar beresolusi tinggi. \parencite{Liu2021}
 
-%gambar
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.7]{gambar/Ilustrasi Shifted Windows.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Ilustrasi Shifted-Windows}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:ilustrasishiftedwindows}
+\end{figure}
 
-Karenanya, diciptakanlah \emph{shifted windows} untuk memperbaiki kekurangan dari \linebreak transformer. Gambar … merupakan sebuah ilustrasi dari pendekatan \emph{shifted windows} 
+Karenanya, diciptakanlah \emph{shifted windows} untuk memperbaiki kekurangan dari \linebreak transformer. Gambar 2.7 merupakan sebuah ilustrasi dari pendekatan \emph{shifted windows} 
 untuk menghitung \emph{self-attention} yang dikenalkan pada arsitektur Swin Transformer. Pada layer 1 (kiri), skema partisi dari jendela biasa diadopsi, dan \emph{self-attention} 
 akan dihitung pada setiap jendelanya. Kemudian pada layer \begin{math}1+1\end{math} (kanan), jendela partisi akan bergeser (\emph{shifted}) dan menghasilkan jendela baru. Perhitungan 
 \emph{self-attention} di jendela yang baru melintasi Batasan dari jendela sebelumnya di layer 1, dimana menyediakan koneksi diantaranya. \parencite{Liu2021}
 
 \subsection{Arsitektur Swin Transformer}
 
-%gambar
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.5]{gambar/Arsitektur Swin.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Arsitektur Swin Transformer}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:arsitekturswintransformer}
+\end{figure}
 
-Gambaran dari arsitektur Swin Transformer dapat dilihat pada gambar …, yang mengilustrasikan versi kecil dari Swin Transformer (Swin-T). Pada tahap awal, gambar input akan 
+Gambaran dari arsitektur Swin Transformer dapat dilihat pada gambar 2.8, yang mengilustrasikan versi kecil dari Swin Transformer (Swin-T). Pada tahap awal, gambar input akan 
 dibagi menjadi \emph{patch} non-tumpang tindih menggunakan modul pemecah tambalan, seperti ViT. Setiap \emph{patch} yang dihasilkan diperlakukan sebagai “token” dan fiturnya ditetapkan sebagai 
 rangkaian dari nilai RGB piksel mentah. Dalam implementasinya, ukuran \emph{patch} yang digunakan adalah \begin{math}4 \times 4\end{math}, sehingga dimensi fitur dari masing-masing \emph{patch} adalah 
 \begin{math}4 \times 4 \times 3 = 48\end{math}. Lapisan linear diterapkan pada fitur bernilai mentah ini untuk memproyeksikannya ke sembarang dimensi (dilambangkan sebagai C). \parencite{Liu2021}
@@ -247,10 +273,18 @@ transformasi fitur, dengan resolusi tetap pada \begin{math}\frac{H}{8} \times \f
 
 \subsection{Blok Swin Transformer}
 
-%gambar
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Blok Swin.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Blok Swin Transformer}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:blokswintransformer}
+\end{figure}
 
-Swin Transformer dibangun dengan menggantikan standar modul \emph{multi-head self attention} (MSA) di dalam blok Transformer dengan modul \emph{shifted windows} (dijelaskan pada bagian …), dengan 
-lapisan lain tetap sama. Seperti yang diilustrasikan pada gambar …, blok Swin Transformer terdiri dari \emph{shifted windows} dengan basis modul MSA, yang kemudian diikuti 2 layer MLP dengan 
+Swin Transformer dibangun dengan menggantikan standar modul \emph{multi-head self attention} (MSA) di dalam blok Transformer dengan modul \emph{shifted windows} (dijelaskan pada bagian 2.8.1), dengan 
+lapisan lain tetap sama. Seperti yang diilustrasikan pada gambar 2.9, blok Swin Transformer terdiri dari \emph{shifted windows} dengan basis modul MSA, yang kemudian diikuti 2 layer MLP dengan 
 nonlinear GELU diantaranya. Lapisan \emph{LayerNorm} (LN) diterapkan sebelum setiap modul MSA dan MLP, dan residu koneksi diterapkan di setiap setelah modul. \parencite{Liu2021}
 
 \subsection{Variasi Model}
