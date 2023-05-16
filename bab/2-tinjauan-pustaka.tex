@@ -51,6 +51,16 @@ sebesar 0,84\parencite{Wicaksono2022}.
 \section{Mobil}
 \label{sec:mobil}
 
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.35]{gambar/Mobil2.jpg}
+  % Keterangan gambar yang diinputkan
+  \caption{Tangkapan Mobil dari Kamera Lalu Lintas}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:tangkapanmobildarikameralalulintas}
+\end{figure}
+
 Mobil (\emph{automobile}, \emph{motorcar}, atau \emph{car}) merupakan kendaraan yang umumnya beroda empat dan dirancang untuk bergerak 
 menggunakan mesin pembakaran internal menggunakan bahan bakar yang mudah menguap. Mobil memiliki sistem teknis yang 
 kompleks yang terdiri dari berbagai macam subsistem yang memiliki fungsinya masing-masing. Mobil telah menjadi sarana 
@@ -137,6 +147,15 @@ waktu untuk memproses data lebih lama karena tingkat kompleksitas yang semakin t
 \emph{visual object recognition}, \emph{machine translation}, \emph{speech recognition}, \emph{speech synthesis}, dan \emph{image synthesis} 
 \parencite{Russel2021}.
 
+\emph{Deep Learning} terbukti memiliki keunggulan yang lebih dibandingkan menggunakan \linebreak metode lainnya, khususnya data yang memiliki dimensi 
+tinggi seperti citra. Seperti misalnya pada metode linear dan metode linear regression, kedua metode tersebut dapat menangani variabel input 
+yang cukup besar, namun ketika dilakukan perhitungan, waktu yang dibutuhkan cukup singkat, karena setiap variabel input yang berbeda hanya 
+berhubungan secara independen dengan output. Setiap variabel input ini tidak memiliki keterhubungan satu sama lain. Sifat dari metode ini 
+menyebabkan model yang dihasilkan terbatasi kemampuannya. Model yang dihasilkan hanya sebatas mengikuti fungsi linear dan batas yang ada di 
+bagian input. Dimana pada dunia nyata, konsep dan input yang harus diolah lebih kompleks. Hal inilah yang membuat \emph{Deep Learning} memiliki 
+keunggulan yang signifikan. Gambar 2.4 merupakan contoh perbandingan dari jaringan komputasi yang dimiliki oleh metode \emph{linear regression}, metode 
+\emph{decision list network}, dan metode \emph{deep learning} \parencite{Russel2021}. 
+
 \begin{figure}[ht]
   \centering
   % Nama dari file gambar yang diinputkan
@@ -147,25 +166,8 @@ waktu untuk memproses data lebih lama karena tingkat kompleksitas yang semakin t
   \label{fig:perbedaanlinearregressiondecissionlistnetworkdeeplearning}
 \end{figure}
 
-\emph{Deep Learning} terbukti memiliki keunggulan yang lebih dibandingkan menggunakan \linebreak metode lainnya, khususnya data yang memiliki dimensi 
-tinggi seperti citra. Seperti misalnya pada metode linear dan metode linear regression, kedua metode tersebut dapat menangani variabel input 
-yang cukup besar, namun ketika dilakukan perhitungan, waktu yang dibutuhkan cukup singkat, karena setiap variabel input yang berbeda hanya 
-berhubungan secara independen dengan output. Setiap variabel input ini tidak memiliki keterhubungan satu sama lain. Sifat dari metode ini 
-menyebabkan model yang dihasilkan terbatasi kemampuannya. Model yang dihasilkan hanya sebatas mengikuti fungsi linear dan batas yang ada di 
-bagian input. Dimana pada dunia nyata, konsep dan input yang harus diolah lebih kompleks. Hal inilah yang membuat \emph{Deep Learning} memiliki 
-keunggulan yang signifikan. Gambar 2.4 merupakan contoh perbandingan dari jaringan komputasi yang dimiliki oleh metode \emph{linear regression}, metode 
-\emph{decision list network}, dan metode \emph{deep learning} \parencite{Russel2021}. 
-
 \section{\emph{Re-identifikasi}}
 \label{sec:re-identifikasi}
-
-Re-identifikasi merupakan teknik mencocokan dua objek dengan bidang pandang berbeda berdasarkan kemiripan pada beberapa parameter yang telah 
-ditentukan dengan tujuan untuk membuktikan bahwa kedua objek tersebut sama. Karakteristik dari re-identifikasi berupa sebuah siklus hipotesis-deduktif, 
-dimana model prediksi yang dibuat dengan mempelajari training data akan mengumpulkan data baru dari masukan, kemudian diikuti dengan revisi dan 
-pelabelan baru untuk data yang memiliki nilai kecocokan tinggi. Hal tersebut akan terus berulang mengikuti data terbaru yang dimasukan ke model 
-prediksi tersebut \parencite{Wechsler2014}. Cara kerja model re-identifikasi dapat dilihat pada gambar 2.5. Pengguna akan memasukkan sebuah gambar 
-kueri ke dalam model re-identifikasi. Model akan mencari gambar dengan objek yang memiliki kemiripan dengan gambar kueri di galeri. Gambar yang memiliki 
-kemiripan dengan kueri kemudian akan dibuat list tingkat kemiripan gambar galeri berdasarkan gambar kueri.
 
 \begin{figure}[ht]
   \centering
@@ -176,6 +178,14 @@ kemiripan dengan kueri kemudian akan dibuat list tingkat kemiripan gambar galeri
   % Label referensi dari gambar yang diinputkan
   \label{fig:contohreidentifikasi}
 \end{figure}
+
+Re-identifikasi merupakan teknik mencocokan dua objek dengan bidang pandang berbeda berdasarkan kemiripan pada beberapa parameter yang telah 
+ditentukan dengan tujuan untuk membuktikan bahwa kedua objek tersebut sama. Karakteristik dari re-identifikasi berupa sebuah siklus hipotesis-deduktif, 
+dimana model prediksi yang dibuat dengan mempelajari training data akan mengumpulkan data baru dari masukan, kemudian diikuti dengan revisi dan 
+pelabelan baru untuk data yang memiliki nilai kecocokan tinggi. Hal tersebut akan terus berulang mengikuti data terbaru yang dimasukan ke model 
+prediksi tersebut \parencite{Wechsler2014}. Cara kerja model re-identifikasi dapat dilihat pada gambar 2.5. Pengguna akan memasukkan sebuah gambar 
+kueri ke dalam model re-identifikasi. Model akan mencari gambar dengan objek yang memiliki kemiripan dengan gambar kueri di galeri. Gambar yang memiliki 
+kemiripan dengan kueri kemudian akan dibuat list tingkat kemiripan gambar galeri berdasarkan gambar kueri.
 
 Kebutuhan akan adanya sebuah sistem re-identifikasi dikaitkan dengan beberapa alasan, seperti untuk meningkatkan keamanan di lingkungan publik 
 yang menyebabkan penyebaran kamera CCTV yang meluas di area seperti taman, kampus, sekolah, jalan raya, dan lainnya. Semakin banyaknya kamera CCTV 
@@ -322,15 +332,23 @@ untuk menjadi basis di tugas visi. \parencite{Liu2021}
 \section{VRIC Dataset}
 \label{sec:vricdataset}
 
-Selama dua tahun terakhir, re-identifikasi kendaraan menjadi perhatian dikarenakan memiliki potensi untuk lebih fleksibel dalam melakukan pengenalan dan pencarian kendaraan dibandingkan 
+Selama dua tahun terakhir, re-identifikasi kendaraan menjadi perhatian dikarenakan \linebreak memiliki potensi untuk lebih fleksibel dalam melakukan pengenalan dan pencarian kendaraan dibandingkan 
 menggunakan \emph{Automatic Number Plate Recognition} (ANPR). Walaupun begitu, re-identifikasi kendaraan berdasarkan penampilan visual menjadi tantangan tersendiri dikarenakan kemungkinan 
-kendaraan memiliki penampilan yang sangat mirip dimana kendaraan yang berbeda namun jenis dan warna, model yang sama serta visual model yang bervariasi berdasarkan posisi pengambilan 
+kendaraan memiliki penampilan yang sangat mirip dimana kendaraan yang berbeda namun jenis dan warna, model yang sama serta visual model yang bervariasi \linebreak berdasarkan posisi pengambilan 
 gambar. Studi re-identifikasi kendaraan yang ada umumnya menggunakan salah satu dari dua dataset ini, yaitu VehicleID dan VeRi-776. Walaupun hasil studi menunjukkan hasil cukup memuaskan, 
 namun pengaplikasian di dunia nyata belum jelas, dikarenakan dataset yang digunakan menggunakan gambar berkualitas tinggi dengan resolusi tinggi, tidak ada \emph{motion blur}, kondisi cuaca 
 khusus, dan oklusi. Karena alasan inilah, diciptakan sebuah dataset baru yaitu \emph{Vehicle Re-Identification in Context} (VRIC). Perbedaan dataset antara VehicleID, VeRi-776, dan VRIC 
-dapat dilihat pada gambar … \parencite{Kanaci2018}
+dapat dilihat pada gambar 2.10.\parencite{Kanaci2018}
 
-%gambar
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=1]{gambar/Perbedaan VRIC dkk.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Perbedaan (a)VehicleID, (b)VeRi-776, dan (c)VRIC}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:perbedaanvehicleidveri776danvric}
+\end{figure}
 
 VRIC merupakan dataset yang lebih realistis dan menantang yang dikhususkan untuk re-identifikasi kendaraan. VRIC berisikan 60.430 gambar dengan 5.622 ID kendaraan yang diambil dari 60 
 kamera lalu lintas yang berbeda. VRIC berbeda dengan dataset dua dataset lainnya karena gambar yang diambil memiliki resolusi gambar yang bervariasi, terdapat \emph{motion blur}, kondisi 
@@ -352,11 +370,29 @@ data kendaraan diambil dari UA-DETRAC \emph{object detection and tracking benchm
 
 \end{itemize}
 
-%gambar
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=1]{gambar/Contoh lalu lintas VRIC.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Contoh tangkapan gambar lalu lintas yang digunakan VRIC}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:contohtangkapangambarlalulintasyangdigunakanvric}
+\end{figure}
 
-Contoh tangkapan gambar lalu lintas dan \emph{bounding-box} kendaraan dapat dilihat pada gambar … \parencite{Kanaci2018}
+Contoh tangkapan gambar lalu lintas dapat dilihat pada gambar 2.11.\parencite{Kanaci2018}
 
 \subsection{Filter dan Anotasi Gambar}
+
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.7]{gambar/Contoh boundingbox VRIC.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Contoh Gambar dari Dataset VRIC}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:contohgambardaridatasetvric}
+\end{figure}
 
 Dataset VRIC dibuat dengan menggunakan 60 training video dengan anotasi objek \emph{bounding-box} yang berasal dari UA-DETRAC. Anotasi identitas kendaraan (ID) dilakukan dengan menetapkan 
 label unik untuk setiap lintasan kendaraan per video UA-DETRAC, kemudian memverifikasi duplikasi ID secara manual. Dikarenakan seluruh video mentah UA-DETRAC diambil dari waktu dan adegan 
@@ -364,18 +400,34 @@ yang berbeda, ditemukan sedikit lintasan duplikat dalam hal identitas. Untuk mem
 frame, dan \emph{bounding-box} yang lebih kecil dari \begin{math}24 \times 24\end{math}. Sehingga dengan dilakukannya hal tersebut, didapatkan 5.622 ID kendaraan dari keseluruhan 60 video. 
 \parencite{Kanaci2018}
 
-%gambar
-
-Seperti yang terlihat di gambar …, rata-rata resolusi gambar dari 60.430 \emph{bounding-box} kendaraan adalah \begin{math}69,8 \times 107,5\end{math} piksel pada 
+Seperti yang terlihat di gambar 2.12, rata-rata resolusi gambar dari 60.430 \emph{bounding-box} kendaraan adalah \begin{math}69,8 \times 107,5\end{math} piksel pada 
 \begin{math}lebar \times tinggi\end{math}, dengan variasi 32 hingga 280 piksel dikarenakan jarak yang tidak dibatasi antara kendaraan dan kamera. \parencite{Kanaci2018}
 
 \subsection{Splitting Dataset}
 
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.8]{gambar/Pembagian dataset VRIC.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Pembagian Dataset VRIC}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:pembagiandatasetvric}
+\end{figure}
+
 Untuk model \emph{training} dan \emph{testing} menggunakan VRIC dataset sebagai benchmark, 5.622 ID kendaraan dari VRIC dibagi secara acak menjadi dua dan tidak tumpang tindih, dengan 
 2.811 untuk \emph{training}, dan 2.811 untuk \emph{testing}. Karena tidak ada pencocokan ID berpasangan lintas kamera, maka disimulasikan variasi tampilan silang dengan pengambilan 
-sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}. \parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar …
+sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}. \parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 2.13.
 
-%gambar
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=1]{gambar/Tampilan Dekat dan Jauh.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Tampilan Semu (a)Dekat dan (b)Jauh dari VRIC}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:tampilansemuvric}
+\end{figure}
 
 Secara khusus, VRIC memiliki dua tampilan semu, yaitu dekat atau jauh, untuk setiap video dan kemudian akan dibangun set \emph{probe/gallery} dari lintasan uji dengan mengambil sampel 
 dari dua tampilan semu tersebut secara acak. Tampilan jarak jauh dan dekat ini menghasilkan kondisi yang sangat berbeda dan memungkinkan untuk digunakan pada simulasi dari dua pandangan 
