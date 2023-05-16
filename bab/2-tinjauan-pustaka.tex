@@ -307,27 +307,107 @@ ekspansi di setiap MLP adalah \begin{math}\alpha = 4\end{math}, untuk semua para
 
 \begin{itemize}[nolistsep]
 
-  \item Swin-T: C = 96, jumlah layer = {2, 2, 6, 2}
+  \item Swin-T: C = 96, Jumlah layer = \verb|{2,2,6,2}|
 
-  \item Swin-S: C = 96, jumlah layer = {2, 2, 18, 2}
+  \item Swin-S: C = 96, Jumlah layer = \verb|{2,2,18,2}|
 
-  \item Swin-B: C = 128, jumlah layer = {2, 2, 18, 2}
+  \item Swin-B: C = 128, Jumlah layer = \verb|{2,2,18,2}|
 
-  \item Swin-L: C = 192, jumlah layer = {2, 2, 18, 2}
+  \item Swin-L: C = 192, Jumlah layer = \verb|{2,2,18,2}|
 
 \end{itemize}
 
-C merupakan nomor saluran dari lapisan tersembunyi di tahap pertama. \parencite{Liu2021}
+C merupakan nomor saluran dari lapisan tersembunyi di tahap pertama.\parencite{Liu2021}
 
 Setelah dilakukan percobaan di 3 jenis tugas, hasil percobaan menunjukan bahwa Swin Transformer memiliki performa yang bagus untuk digunakan di tugas visi. Hal ini dikarenakan pada klasifikasi gambar, Swin 
 Transformer mendapatkan akurasi 84,5 pada ImageNet-1K dan akurasi 87,3 pada ImageNet-22K pre-trained models. Kemudian pada deteksi objek, Swin Transformer mendapatkan nilai 58,7 untuk box AP dan 51,1 
 untuk mask AP pada pengembangan deteksi objek COCO. Dan pada segmentasi semantik, Swin Transformer mendapatkan nilai 53.5 untuk mIoU pada ADE20K. Hal ini menunjukan bahwa Swin Transformer memiliki potensi 
-untuk menjadi basis di tugas visi. \parencite{Liu2021}
+untuk menjadi basis di tugas visi.\parencite{Liu2021}
 
 \section{Swin Transformer V2}
 \label{sec:swintransformerv2}
 
+Swin Transformer merupakan salah satu \emph{backbone} dalam tugas umum di visi computer yang memiliki performa kuat di berbagai tugas pengenalan granular, seperti \emph{region-level object detection}, 
+\emph{pixel-level semantic segmentation}, dan klasifikasi citra. Gagasan utama dari Swin Transformer adalah untuk mengenalkan beberapa prior visual penting ke dalam encoder Transformer, termasuk hirarki, 
+lokalitas, dan invarian terjemahan. Dengan pengenalan ini membuat backbone memiliki dua kekuatan yang digabungkan, yaitu unit Transformer dasar yang memiliki kemampuan pemodelan yang kuat, dan prior 
+visual yang ramah terhadap berbagai tugas visual.\parencite{Liuv22021}
 
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.9]{gambar/Issue Swin V1.png}
+  % Keterangan gambar yang diinputkan
+  \caption{(a)Plotingan Sinyal propogasi, (b)Hasil Training Model \emph{Huge}}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:plotingansinyalpropogasidanperbedaanhasiltrainingmodelhuge}
+\end{figure}
+
+Namun ketika dilakukan peningkatan kapasitas dan resolusi jendela dari Swin \linebreak Transformer, ditemukan dua masalah. Ketika kapasitas dari model Swin Transformer ditingkatkan, terdapat masalah ketidakstabilan 
+pada plotingan sinyal propogasi seperti yang terlihat di gambar 2.10(a). Ketika model Swin Transformer diperbesar dari ukuran \emph{small} (Swin-S) ke ukuran \emph{large} (Swin-L), nilai aktivasi di lapisan 
+yang lebih dalam meningkat secara dramatis. Perbedaan antar lapisan dengan amplitudo tertinggi dan terendah mencapai nilai ekstrim sebesar 104. Ketika model Swin Transformer diperbesar hingga ukuran 
+\emph{Huge} (Swin-H), model tidak dapat menyelesaikan training seperti pada gambar 2.10(b).\parencite{Liuv22021}
+
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.75]{gambar/Penurunan kinerja Swin v1.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Perbandingan Berbagai Hasil Pendekatan Perhitungan Bias Posisi}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:perbandinganberbagaihasilpendekatanperhitunganbiasposisi}
+\end{figure}
+
+Masalah kedua yaitu adanya penurunan kinerja saat mentransfer model di seluruh resolusi jendela. Seperti yang terlihat pada gambar 2.11 pada baris pertama (\emph{Parameter position bias}), akurasi menurun secara 
+signifikan ketika dilakukan pengujian akurasi model \emph{pre-trained} Image-Net-1K (dengan gambar \begin{math}256\times256\end{math} dan ukuran jendela \begin{math}8\times8\end{math}) pada resolusi gambar dan ukuran 
+jendela yang lebih besar melalui pendekatan interpolasi bi-kubik. Sehingga perlu adanya pemeriksaan terkait pendekatan bias posisi relatif di Swin Transformer. Pemecahan kedua masalah ini adalah dengan perubahan 
+pada sisi arsitektur Swin Transformer, dan revisi dari Swin Transformer ini disebut dengan Swin Transformer V2.\parencite{Liuv22021}
+
+\subsection{Arsitektur Swin Transformer V2}
+
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.75]{gambar/Perbedaan V1 V2.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Perbedaan Arsitektur Swin Transformer V1 dan V2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:perbandinganarsitekturswintransformerv1danv2}
+\end{figure}
+
+Perubahan arsitektur Swin Transformer V1 ke V2 dapat dilihat pada gambar 2.12. Terdapat tiga bagian dari arsitektur Swin Transformer yang diadaptasi, yaitu \emph{res-post-norm} menggantikan konfigurasi 
+\emph{pre-norm} sebelumnya, penambahan kosinus berskala untuk menggantikan \emph{dot product} pada bagian \emph{attention}, dan pergantian pendekatan parameterisasi pada V1 menjadi pendekatan bias posisi 
+relatif kontinu dengan \emph{log-spaced}.\parencite{Liuv22021}
+
+Adaptasi \emph{res-post-norm} dan penambahan kosinus berskala memudahkan model untuk \linebreak meningkatkan kapasitas. Sementara pergantian pendekatan bias posisi relatif kontinu membuat model ditransfer lebih 
+efektif melewati resolusi jendela.\parencite{Liuv22021}
+
+\subsection{Variasi Model Swin Transformer V2}
+
+Swin Transformer V2 tetap mempertahankan pengaturan tahap, jumlah layer, dan saluran untuk 4 konfigurasi dari Swin Transformer V1, yaitu:
+
+\begin{itemize}[nolistsep]
+
+  \item SwinV2-T: C = \verb|96,#|. Jumlah layer = \verb|{2,2,6,2}|
+
+  \item SwinV2-S/B/L: C = \verb|96/128/192,#|. Jumlah layer = \verb|{2,2,18,2}|
+
+\end{itemize}
+
+Dengan C merupakan nomor saluran di tahap pertama.
+
+Kemudian Swin Transformer V2 juga meningkatkan skalanya ke tingkat \emph{huge} (SwinV2-H) dan tingkat \emph{giant} (SwinV2-G). SwinV2-H memiliki jumlah parameter sebanyak 658 juta, sementara SwinV2-G memiliki 
+jumlah parameter 3 miliar parameter. Nomor saluran dan jumlah layer untuk masing-masingnya yaitu:
+
+\begin{itemize}[nolistsep]
+
+  \item SwinV2-H: C = \verb|352,#|. Jumlah layer = \verb|{2,2,18,2}|
+
+  \item SwinV2-S/B/L: C = \verb|512,#|. Jumlah layer = \verb|{2,2,42,2}|
+
+\end{itemize}
+
+Terdapat penambahan lapisan normalisasi pada cabang utama di setiap 6 lapisan khusus untuk model SwinV2-H dan SwinV2-G. Karena alasan penghematan waktu eksperimen, \linebreak SwinV2-G hanya digunakan untuk eksperimen 
+berskala besar, sementara SwinV2-H untuk studi paralel lain mengenai \emph{self-supervised learning}.\parencite{Liuv22021}
 
 \section{VRIC Dataset}
 \label{sec:vricdataset}
