@@ -1,41 +1,181 @@
-\chapter{DESAIN DAN IMPLEMENTASI}
-\label{chap:desainimplementasi}
+\chapter{METODOLOGI}
+\label{chap:metodologi}
 
 % Ubah bagian-bagian berikut dengan isi dari desain dan implementasi
 
-Penelitian ini dilaksanakan sesuai \lipsum[1][1-5]
+% Penelitian ini dilaksanakan sesuai dengan batasan-batasan masalah yang telah disebutkan
+% pada bagian 1.3. Berikut ini adalah beberapa peralatan dan perangkat yang terlibat dalam
+% penelitian ini.
 
-\section{Deskripsi Sistem}
-\label{sec:deskripsisistem}
+\section{Metode yang Digunakan}
+\label{sec:metodeyangdigunakan}
 
-Sistem akan dibuat dengan \lipsum[1-2]
+Tugas akhir ini merupakan penelitian di bidang visi komputer dengan tujuan untuk melakukan 
+re-identifikasi mobil menggunakan kumpulan citra dari dataset VRIC. Alur blok diagram metodologi 
+dapat dilihat pada gambar 3.1. Perancangan model menggunakan metode Swin Transformer dari 
+\emph{Pytorch ReID layumi}.
 
-\section{Implementasi Alat
-  \label{sec:implementasi alat}}
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.65]{gambar/metodologiFix.jpg}
+  % Keterangan gambar yang diinputkan
+  \caption{Diagram Blok Metodologi}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:diagramblokmetodologi}
+\end{figure}
 
-Alat diimplementasikan dengan \lipsum[1]
+\begin{enumerate}[nolistsep]
 
-% Contoh pembuatan potongan kode
-\begin{lstlisting}[
-  language=C++,
-  caption={Program halo dunia.},
-  label={lst:halodunia}
-]
-#include <iostream>
+  \item \textbf{Pengolahan Dataset VRIC}
+  
+  Pada tahapan ini, dilakukan proses pengolahan dataset yang didapat dengan 
+  membagi dataset menjadi dua yaitu data training dan data test. Kedua data 
+  ini nantinya akan digunakan untuk tujuan yang berbeda.
 
-int main() {
-    std::cout << "Halo Dunia!";
-    return 0;
-}
-\end{lstlisting}
+  \item \textbf{Pelatihan Model Swin Transformer}
+  
+  Pada tahapan ini, dilakukan training dan tuning pada model Swin Transformer 
+  dengan mengubah parameternya. Parameter yang perlu disetel seperti 
+  \emph{Loss Function},\emph{Optimizer Function}, dan \emph{Epoch}.
 
-\lipsum[2-3]
+  \item \textbf{Pengujian Model}
+  
+  Pada tahapan ini, model Swin Transformer yang telah melalui training dan 
+  tuning akan diuji. Pengujian dilakukan menggunakan data test VRIC yang sebelumnya 
+  telah dibagi.
 
-% Contoh input potongan kode dari file
+  \item \textbf{Hasil}
+  
+  Jika hasil dari pengujian telah mencapai threshold dan model dapat melakukan \linebreak
+  re-identifikasi dengan baik, maka seluruh hasil pengujian dicatat untuk dibandingkan 
+  dengan penelitian yang sudah ada sebelumnya.
+
+\end{enumerate}
+
+\section{Bahan dan Peralatan yang Digunakan}
+\label{sec:bahandanperalatanyangdigunakan}
+
+\subsection{Dataset}
+
+Dataset yang digunakan dalam penelitian ini adalah VRIC dataset. VRIC dataset memuat 
+60 ribu citra mobil yang diambil dari kamera CCTV dari berbagai sudut pandang, sudut 
+pencahayaan, dan kondisi lingkungan yang bermacam-macam. Setiap citra mobil dari VRIC 
+dataset telah diberikan label sesuai dengan id vehicle dan id kamera yang mengambil 
+citra tersebut.
+
+%gambar 3.2 dataset
+
+Gambar 3.2 merupakan beberapa contoh citra yang ada di VRIC dataset. Di dalam VRIC 
+dataset, 60 ribu citra mobil telah dibagi ke tiga folder yang berbeda, yaitu folder 
+\emph{train}, \emph{gallery}, dan \emph{query}. Folder \emph{train} berisikan 54 
+ribu citra, sementara pada folder \emph{gallery} dan \emph{query} masing-masing 
+berisikan 2 ribu citra. Terdapat pula list anotasi dari seluruh citra yang berisikan 
+format nama file citra, label ID dari mobil, dan label kamera.
+
+\subsection{Laptop}
+
+Laptop digunakan untuk melakukan pemisahan (\emph{splitting}) dataset, training model, 
+dan melakukan testing model yang telah selesai ditraining menggunakan VRIC dataset. 
+Laptop perlu terhubung dengan internet untuk mengakses google Colaboratory, yang 
+merupakan environment yang dibutuhkan untuk membuat model Swin Transformer. Spesifikasi 
+laptop yang digunakan dapat dilihat pada tabel 3.1.
+
+\begin{table}[ht]
+  \begin{center}
+  \caption{Spesifikasi Perangkat Laptop yang Digunakan}
+  \label{tb:spesifikasilaptop}
+  \begin{tabular}{|l|l|}
+      \hline
+      \textit{\textbf{Processor}}        & \begin{tabular}[c]{@{}l@{}}Intel Core i7-8750H \\ CPU @ 2.2 GHz\end{tabular} \\ \hline
+      \textit{\textbf{Storage}}          & \begin{tabular}[c]{@{}l@{}}SSHD 1 TB Storage\\ SSD 128 GB Storage\end{tabular}         \\ \hline
+      \textit{\textbf{RAM}}              & \begin{tabular}[c]{@{}l@{}}16 GB SODIMM DDR4 \\ 2666 MHz Dual Channel\end{tabular}    \\ \hline
+      \textit{\textbf{Graphic Card}}     & \begin{tabular}[c]{@{}l@{}}NVIDIA GeForce GTX 1050 Ti \\ 4 GB GDDR5\end{tabular}      \\ \hline
+      \textit{\textbf{Operating System}} & \begin{tabular}[c]{@{}l@{}}Windows 10 Home \\ Single Language 64-bit\end{tabular}     \\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Google Colaboratory}
+
+Google Colaboratory merupakan sebuah environment komputasi cloud dengan format \linebreak notebook 
+yang disediakan oleh \emph{Google research} dengan fungsi untuk menjalankan kode python 
+yang telah dituliskan. Google Colaboratory sangat membantu dalam pengerjaan \emph{data science}, 
+\emph{deep learning}, dan \emph{machine learning} dikarenakan spesifikasi \emph{hardware} 
+yang tinggi dari Google Colaboratory. Spesifikasi Google Colaboratory yang digunakan dapat 
+dilihat pada tabel 3.2.
+
+\begin{table}[ht]
+  \begin{center}
+  \caption{Spesifikasi Google Colaboratory}
+  \label{tb:spesifikasigooglecolaboratory}
+  \begin{tabular}{|l|l|}
+      \hline
+      \textit{\textbf{Processor}}        & \begin{tabular}[c]{@{}l@{}}Intel(R) Xeon(R) \\ CPU @ 2.2 GHz\end{tabular} \\ \hline
+      \textit{\textbf{Graphic Card}}     & \begin{tabular}[c]{@{}l@{}}NVIDIA A100 SXM \\ 40 GB HBM2\end{tabular}      \\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\section{Urutan Pelaksanaan Penelitian}
+\label{sec:urutanpelaksanaanpenelitian}
+
+\subsection{Pemisahan Dataset}
+
+VRIC dataset terbagi menjadi 3 bagian, yaitu data training, data query, dan data gallery. Ketiga 
+bagian dataset tersebut telah dipisahkan dan disesuaikan secara langsung oleh developer dari VRIC 
+dataset untuk kegunaan re-identifikasi mobil. Selain file berisi dataset, di dalam VRIC dataset 
+juga terdapat file txt yang berisi list anotasi dari seluruh citra, dengan format nama file citra, 
+label ID dari mobil, dan label kamera. Dengan menggunakan list anotasi tersebut, maka setiap dataset 
+perlu dilakukan perubahan nama file sesuai dengan label ID dan label kameranya.
+
+% Potongan kode rename
 \lstinputlisting[
   language=Python,
-  caption={Program perhitungan bilangan prima.},
-  label={lst:bilanganprima}
-]{program/bilangan-prima.py}
+  caption={Program Rename Dataset.},
+  label={lst:renamedataset}
+]{program/perubahan-nama-file.py}
 
-\lipsum[4]
+Pada penelitian ini, diperlukan satu bagian lagi dalam percobaannya, yaitu data validasi. Data validasi 
+berfungsi untuk melakukan validasi dan mengecek setiap epoch yang telah dilakukan pada training. Data 
+validasi dibuat dengan mengambil sebagian data training untuk dipindahkan ke data validasi.
+
+% Potongan kode splitting
+\lstinputlisting[
+  language=Python,
+  caption={Program Pembagian Dataset.},
+  label={lst:splittingdataset}
+]{program/splitting-dataset.py}
+
+\subsection{\emph{Training} dan \emph{Validation}}
+
+\subsection{Model}
+
+\subsection{Pengujian Model}
+
+% Alat diimplementasikan dengan \lipsum[1]
+
+% % Contoh pembuatan potongan kode
+% \begin{lstlisting}[
+%   language=C++,
+%   caption={Program halo dunia.},
+%   label={lst:halodunia}
+% ]
+% #include <iostream>
+
+% int main() {
+%     std::cout << "Halo Dunia!";
+%     return 0;
+% }
+% \end{lstlisting}
+
+% \lipsum[2-3]
+
+% % Contoh input potongan kode dari file
+% \lstinputlisting[
+%   language=Python,
+%   caption={Program perhitungan bilangan prima.},
+%   label={lst:bilanganprima}
+% ]{program/bilangan-prima.py}
+
+% \lipsum[4]

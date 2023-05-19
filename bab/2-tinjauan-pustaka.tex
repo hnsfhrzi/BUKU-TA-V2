@@ -199,7 +199,7 @@ sistem re-identifikasi yang akurat dan efisien.
 Model transduksi urutan dominan (\emph{dominant sequence transduction model}) yang ada diciptakan menggunakan arsitektur \emph{convolutional neural network} 
 (CNN) atau \emph{recurrent neural network} (RNN) kompleks, yang memiliki encoder dan decoder. Namun pada 2017, diperkenalkan arsitektur jaringan yang cukup 
 simpel, yang disebut The Transformer. Arsitektur Transformer memperkenalkan sebuah sistem jaringan saraf yang berfokus pada mekanisme perhatian (\emph{attention}) 
-dengan bantuan encoder dan decoder, tanpa menggunakan \emph{reccurent network} dan konvolusi seperti yang ada pada model \emph{sequence to sequence}. 
+dengan bantuan encoder dan decoder, tanpa menggunakan \emph{reccurent network} dan konvolusi seperti yang ada pada model \emph{sequence to sequence}. \parencite{Vaswani2017}
 
 Ketika diperkenalkan,Transformer diuji cobakan untuk menjadi sebuah model penerjemah Bahasa. Ketika dibandingkan dengan model ber-asitektur CNN dan RNN 
 (seperti Extended Neural GPU, ByteNet, dan ConvS2S), terbukti bahwa Transformer, sebuah arsitektur tanpa RNN dan hanya menggunakan mekanisme perhatian, dapat 
@@ -352,7 +352,7 @@ yang lebih dalam meningkat secara dramatis. Perbedaan antar lapisan dengan ampli
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.75]{gambar/Penurunan kinerja Swin v1.png}
   % Keterangan gambar yang diinputkan
-  \caption{Perbandingan Berbagai Hasil Pendekatan Perhitungan Bias Posisi}
+  \caption{Perbandingan Hasil Berbagai Pendekatan Perhitungan Bias Posisi}
   % Label referensi dari gambar yang diinputkan
   \label{fig:perbandinganberbagaihasilpendekatanperhitunganbiasposisi}
 \end{figure}
@@ -418,7 +418,7 @@ kendaraan memiliki penampilan yang sangat mirip dimana kendaraan yang berbeda na
 gambar. Studi re-identifikasi kendaraan yang ada umumnya menggunakan salah satu dari dua dataset ini, yaitu VehicleID dan VeRi-776. Walaupun hasil studi menunjukkan hasil cukup memuaskan, 
 namun pengaplikasian di dunia nyata belum jelas, dikarenakan dataset yang digunakan menggunakan gambar berkualitas tinggi dengan resolusi tinggi, tidak ada \emph{motion blur}, kondisi cuaca 
 khusus, dan oklusi. Karena alasan inilah, diciptakan sebuah dataset baru yaitu \emph{Vehicle Re-Identification in Context} (VRIC). Perbedaan dataset antara VehicleID, VeRi-776, dan VRIC 
-dapat dilihat pada gambar 2.10.\parencite{Kanaci2018}
+dapat dilihat pada gambar 2.13.\parencite{Kanaci2018}
 
 \begin{figure}[ht]
   \centering
@@ -460,7 +460,7 @@ data kendaraan diambil dari UA-DETRAC \emph{object detection and tracking benchm
   \label{fig:contohtangkapangambarlalulintasyangdigunakanvric}
 \end{figure}
 
-Contoh tangkapan gambar lalu lintas dapat dilihat pada gambar 2.11.\parencite{Kanaci2018}
+Contoh tangkapan gambar lalu lintas dapat dilihat pada gambar 2.14.\parencite{Kanaci2018}
 
 \subsection{Filter dan Anotasi Gambar}
 
@@ -480,7 +480,7 @@ yang berbeda, ditemukan sedikit lintasan duplikat dalam hal identitas. Untuk mem
 frame, dan \emph{bounding-box} yang lebih kecil dari \begin{math}24 \times 24\end{math}. Sehingga dengan dilakukannya hal tersebut, didapatkan 5.622 ID kendaraan dari keseluruhan 60 video. 
 \parencite{Kanaci2018}
 
-Seperti yang terlihat di gambar 2.12, rata-rata resolusi gambar dari 60.430 \emph{bounding-box} kendaraan adalah \begin{math}69,8 \times 107,5\end{math} piksel pada 
+Seperti yang terlihat di gambar 2.15, rata-rata resolusi gambar dari 60.430 \emph{bounding-box} kendaraan adalah \begin{math}69,8 \times 107,5\end{math} piksel pada 
 \begin{math}lebar \times tinggi\end{math}, dengan variasi 32 hingga 280 piksel dikarenakan jarak yang tidak dibatasi antara kendaraan dan kamera. \parencite{Kanaci2018}
 
 \subsection{Splitting Dataset}
@@ -497,7 +497,7 @@ Seperti yang terlihat di gambar 2.12, rata-rata resolusi gambar dari 60.430 \emp
 
 Untuk model \emph{training} dan \emph{testing} menggunakan VRIC dataset sebagai benchmark, 5.622 ID kendaraan dari VRIC dibagi secara acak menjadi dua dan tidak tumpang tindih, dengan 
 2.811 untuk \emph{training}, dan 2.811 untuk \emph{testing}. Karena tidak ada pencocokan ID berpasangan lintas kamera, maka disimulasikan variasi tampilan silang dengan pengambilan 
-sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}. \parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 2.13.
+sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}. \parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 2.16.
 
 \begin{figure}[ht]
   \centering
