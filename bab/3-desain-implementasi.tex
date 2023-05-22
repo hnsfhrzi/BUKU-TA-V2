@@ -37,7 +37,7 @@ dapat dilihat pada gambar 3.1. Perancangan model menggunakan metode Swin Transfo
   
   Pada tahapan ini, dilakukan training dan tuning pada model Swin Transformer 
   dengan mengubah parameternya. Parameter yang perlu disetel seperti 
-  \emph{Loss Function},\emph{Optimizer Function}, dan \emph{Epoch}.
+  \emph{Loss Function}, \emph{Optimizer Function}, dan \emph{Epoch}.
 
   \item \textbf{Pengujian Model}
   
@@ -149,9 +149,76 @@ validasi dibuat dengan mengambil sebagian data training untuk dipindahkan ke dat
 
 \subsection{\emph{Training} dan \emph{Validation}}
 
+\emph{Training} dilakukan setelah proses perubahan nama dan pemisahan dataset selesai dilakukan. Di dalam 
+proses \emph{Training}, terdapat konfigurasi hyper-parameter yang harus ditentukan yaitu:
+
+\begin{enumerate}[nolistsep]
+
+  \item \textbf{Epoch}
+  
+  Epoch adalah hyper-parameter yang berfungsi untuk menentukan jumlah pengulangan proses \emph{learning} 
+  yang harus dilakukan algoritma learning ke sebuah dataset training. Semakin banyaknya pengulangan yang 
+  dilakukan maka model yang dihasilkan akan memiliki tingkat akurasi yang semakin tinggi, namun waktu 
+  yang dibutuhkan dalam melakukan training juga akan semakin banyak.
+
+  \item \textbf{\emph{Batch Size}}
+  
+  \emph{Batch size} adalah hyper-parameter yang berfungsi untuk mengontrol jumlah sampel \linebreak training 
+  untuk dikerjakan sebelum parameter internal model diperbarui. Batch dapat dibayangkan seperti \emph{for-loop} 
+  yang mengulang beberapa sampel dan kemudian membuat prediksi. Di akhir batch, prediksi dibandingkan 
+  dengan variabel keluaran yang diharapkan dan kesalahan akan dihitung. Dari kesalahan ini, maka algoritma 
+  pembaruan akan digunakan untuk memperbaiki model. 
+
+  \item \textbf{\emph{Image Size}}
+  
+  \emph{Image size} merupakan dimensi ukuran citra yang diterapkan pada dataset. Ketika ukuran citra yang 
+  diterapkan semakin kecil, maka waktu yang dibutuhkan untuk melakukan proses training akan semakin singkat. 
+
+  \item \textbf{\emph{Learning Rate}}
+  
+  \emph{Learning rate} adalah hyper-parameter yang mengontrol besarnya perubahan suatu model dalam menanggapi 
+  estimasi kesalahan setiap kali \emph{weight model} diperbarui. Dibutuhkan pemilihan nilai \emph{learning rate} 
+  yang tepat karena ketika nilai yang digunakan terlalu kecil akan berdampak pada proses training yang terlalu 
+  lama, sementara jika nilai yang digunakan terlalu besar mengakibatkan proses \emph{learning} kurang optimal.
+
+
+  \item \textbf{\emph{Random Erasing Probability}}
+  
+  \emph{Random erasing probability} adalah hyper-parameter yang akan secara acak memilih sebagian wilayah dengan 
+  bentuk persegi panjang kemudian menghapus pikselnya dengan nilai acak. \emph{Random erasing} melengkapi teknik 
+  augmentasi data yang biasa digunakan seperti pemotongan dan pembalikan acak sehingga menghasilkan peningkatan yang 
+  konsisten ketika digunakan di klasifikasi gambar, deteksi objek, dan re-identifikasi.
+
+\end{enumerate}
+
 \subsection{Model}
 
+Penelitian ini akan menggunakan 2 jenis model, yaitu Swin Transformer V1 dan Swin Transformer V2 dengan ukuran model 
+yang akan digunakan adalah model \emph{Base} (Swin-B). Kemudian akan dicoba pula menggunakan 2 format hyper-parameter yang 
+berbeda. Sehingga akan dihasilkan 4 jenis model re-identifikasi mobil dengan pengaturan yang berbeda. Rincian hyper-parameter 
+dapat dilihat pada tabel 3.3.
+
+\begin{table}[ht]
+  \begin{center}
+  \caption{Rincian Model dan Hyper-Parameter dari Penelitian}
+  \label{tb:rincianmodeldanhyperparameterdaripenelitian}
+  \begin{tabular}{|l|l|l|}
+      \hline
+      \textit{ }        & \begin{tabular}[c]{@{}l@{}}\textbf{Swin Transformer V1}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Swin Transformer V2}\end{tabular}\\ \hline
+      \textit{\textbf{Parameter 1}}  & \multicolumn{2}{|c|}{\parbox{6cm}{Batch Size=32; \\ Random Erasing Probability=0; \\ Learning Rate=0.05; \\ Warm Epoch=0}} \\ \hline
+      \textit{\textbf{Parameter 2}}  & \multicolumn{2}{|c|}{\parbox{6cm}{Batch Size=16; \\ Random Erasing Probability=0.5; \\ Learning Rate=0.01; \\ Warm Epoch=5}} \\ \hline
+      % \textit{\textbf{Parameter 1}}  & \begin{tabular}[c]{@{}l@{}}Batch Size=32 \\ Random Erasing Probability=0 \\ Learning Rate=0.05 \\ Warm Epoch=0\end{tabular} \\ \hline
+      % \textit{\textbf{Parameter 2}}  & \begin{tabular}[c]{@{}l@{}}Batch Size=16 \\ Random Erasing Probability=0.5 \\ Learning Rate=0.01 \\ Warm Epoch=5\end{tabular} \\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
 \subsection{Pengujian Model}
+
+Setiap model yang dibuat berdasarkan jenis model dan pengaturan hyper-parameternya akan diuji cobakan menggunakan data test 
+dari dataset VRIC yang telah disiapkan. Hasil dari pengujian ini akan dicatat nilai akurasi ketepatan dari re-identifikasinya 
+untuk setiap model dan akan dibandingkan hasil performanya. Dari pencatatan ini, nantinya dapat diketahui jenis model dan 
+pengaturan hyper-parameter yang tepat untuk digunakan dalam re-identifikasi mobil.
 
 % Alat diimplementasikan dengan \lipsum[1]
 
