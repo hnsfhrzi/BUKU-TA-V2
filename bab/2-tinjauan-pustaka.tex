@@ -259,7 +259,7 @@ akan dihitung pada setiap jendelanya. Kemudian pada layer \begin{math}1+1\end{ma
 \begin{figure}[ht]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.5]{gambar/Arsitektur Swin.png}
+  \includegraphics[scale=0.4]{gambar/Arsitektur Swin.png}
   % Keterangan gambar yang diinputkan
   \caption{Arsitektur Swin Transformer}
   % Label referensi dari gambar yang diinputkan
@@ -286,7 +286,7 @@ transformasi fitur, dengan resolusi tetap pada \begin{math}\frac{H}{8} \times \f
 \begin{figure}[ht]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Blok Swin.png}
+  \includegraphics[scale=0.5]{gambar/Blok Swin.png}
   % Keterangan gambar yang diinputkan
   \caption{Blok Swin Transformer}
   % Label referensi dari gambar yang diinputkan
@@ -375,8 +375,22 @@ pada sisi arsitektur Swin Transformer, dan revisi dari Swin Transformer ini dise
 \end{figure}
 
 Perubahan arsitektur Swin Transformer V1 ke V2 dapat dilihat pada gambar 2.12. Terdapat tiga bagian dari arsitektur Swin Transformer yang diadaptasi, yaitu \emph{res-post-norm} menggantikan konfigurasi 
-\emph{pre-norm} sebelumnya, penambahan kosinus berskala untuk menggantikan \emph{dot product} pada bagian \emph{attention}, dan pergantian pendekatan parameterisasi pada V1 menjadi pendekatan bias posisi 
+\emph{pre-norm} sebelumnya, penambahan kosinus berskala untuk menggantikan \emph{dot product} pada bagian \emph{attention}, dan pergantian pendekatan parameterisasi RPB pada V1 menjadi pendekatan bias posisi 
 relatif kontinu dengan \emph{log-spaced}.\parencite{Liuv22021}
+
+Pendekatan residual \emph{post normalization} merupakan salah satu adaptasi Swin Transformer V2. Dalam pendekatan ini, keluaran dari setiap blok residual dinormalisasi sebelum bergabung kembali ke 
+cabang utama, dan amplitudo pada cabang utama tidak menumpuk ketika masuk ke lapisan yang lebih dalam.
+
+Adanya penambahan kosinus berskala yang menggantikan \emph{dot product} dikarenakan ketika digunakan dalam mode visual besar, peta perhatian (\emph{attention maps}) dari beberapa blok sering didominasi 
+oleh beberapa pasang piksel. Sehingga diusulkanlah kosinus berskala dengan \begin{math}q\end{math} adalah kueri, \begin{math}k\end{math} adalah \emph{key}, dan \begin{math}v\end{math} adalah nilai matriks.
+
+% \begin{equation}
+%   \label{eq:fungsikosinusberskala}
+%   \mathrm{Sim}(\mathbf{q}_i, \mathbf{k}_j) = \cos(\mathbf{q}_i, \mathbf{k}_j) / \tau + \mathit{B}_{ij}.
+% \end{equation}
+
+% Dimana \begin{math}\mathit{B}_{ij}\end{math} merupakan posisi bias relatif dari \begin{math}i\end{math} dan \begin{math}j\end{math}. \begin{math}\tau\end{math} merupakan skalar yang dapat dipelajari dan tidak 
+% dibagi di seluruh lapisan. \begin{math}\tau\end{math} diatur lebih besar dari 0.01. 
 
 Adaptasi \emph{res-post-norm} dan penambahan kosinus berskala memudahkan model untuk \linebreak meningkatkan kapasitas. Sementara pergantian pendekatan bias posisi relatif kontinu membuat model ditransfer lebih 
 efektif melewati resolusi jendela.\parencite{Liuv22021}
@@ -423,7 +437,7 @@ dapat dilihat pada gambar 2.13.\parencite{Kanaci2018}
 \begin{figure}[ht]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=1]{gambar/Perbedaan VRIC dkk.png}
+  \includegraphics[scale=0.9]{gambar/Perbedaan VRIC dkk.png}
   % Keterangan gambar yang diinputkan
   \caption{Perbedaan (a)VehicleID, (b)VeRi-776, dan (c)VRIC}
   % Label referensi dari gambar yang diinputkan
@@ -464,17 +478,17 @@ Contoh tangkapan gambar lalu lintas dapat dilihat pada gambar 2.14.\parencite{Ka
 
 \subsection{Filter dan Anotasi Gambar}
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.7]{gambar/Contoh boundingbox VRIC.png}
+  \includegraphics[scale=0.6]{gambar/Contoh boundingbox VRIC.png}
   % Keterangan gambar yang diinputkan
   \caption{Contoh Gambar dari Dataset VRIC}
   % Label referensi dari gambar yang diinputkan
   \label{fig:contohgambardaridatasetvric}
 \end{figure}
 
-Dataset VRIC dibuat dengan menggunakan 60 training video dengan anotasi objek \emph{bounding-box} yang berasal dari UA-DETRAC. Anotasi identitas kendaraan (ID) dilakukan dengan menetapkan 
+Dataset VRIC dibuat dengan menggunakan 60 training video dengan anotasi objek \linebreak \emph{bounding-box} yang berasal dari UA-DETRAC. Anotasi identitas kendaraan (ID) dilakukan dengan menetapkan 
 label unik untuk setiap lintasan kendaraan per video UA-DETRAC, kemudian memverifikasi duplikasi ID secara manual. Dikarenakan seluruh video mentah UA-DETRAC diambil dari waktu dan adegan 
 yang berbeda, ditemukan sedikit lintasan duplikat dalam hal identitas. Untuk membuat cukup banyak variasi tampilan kendaraan, maka dibuanglah lintasan pendek yang memiliki kurang dari 20 
 frame, dan \emph{bounding-box} yang lebih kecil dari \begin{math}24 \times 24\end{math}. Sehingga dengan dilakukannya hal tersebut, didapatkan 5.622 ID kendaraan dari keseluruhan 60 video. 
@@ -485,7 +499,7 @@ Seperti yang terlihat di gambar 2.15, rata-rata resolusi gambar dari 60.430 \emp
 
 \subsection{Splitting Dataset}
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.8]{gambar/Pembagian dataset VRIC.png}
@@ -497,7 +511,7 @@ Seperti yang terlihat di gambar 2.15, rata-rata resolusi gambar dari 60.430 \emp
 
 Untuk model \emph{training} dan \emph{testing} menggunakan VRIC dataset sebagai benchmark, 5.622 ID kendaraan dari VRIC dibagi secara acak menjadi dua dan tidak tumpang tindih, dengan 
 2.811 untuk \emph{training}, dan 2.811 untuk \emph{testing}. Karena tidak ada pencocokan ID berpasangan lintas kamera, maka disimulasikan variasi tampilan silang dengan pengambilan 
-sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}. \parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 2.16.
+sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}.\parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 2.16.
 
 \begin{figure}[ht]
   \centering
@@ -511,7 +525,7 @@ sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}. \parencite{Kana
 
 Secara khusus, VRIC memiliki dua tampilan semu, yaitu dekat atau jauh, untuk setiap video dan kemudian akan dibangun set \emph{probe/gallery} dari lintasan uji dengan mengambil sampel 
 dari dua tampilan semu tersebut secara acak. Tampilan jarak jauh dan dekat ini menghasilkan kondisi yang sangat berbeda dan memungkinkan untuk digunakan pada simulasi dari dua pandangan 
-kamera yang tidak tumpang tindih. \parencite{Kanaci2018}
+kamera yang tidak tumpang tindih.\parencite{Kanaci2018}
 
 
 % % Contoh input gambar
