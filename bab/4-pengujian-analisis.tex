@@ -11,7 +11,7 @@ VRIC yang telah disiapkan.
 \label{sec:hasilpenelitian}
 
 Pada penelitian ini, telah ditentukan 4 jenis model re-identifikasi yang berbeda berdasarkan jenis model dan pengaturan 
-hyper-parameternya. Dan pada setiap jenis model, dilakukan 3 iterasi re-identifikasi untuk menentukan model re-identifikasi 
+hyper-parameternya. Dan pada setiap jenis model, dilakukan 3 kali iterasi \emph{training} untuk menentukan model re-identifikasi 
 terbaik di setiap jenisnya. Sehingga total model yang diciptakan pada penelitian ini berjumlah 12 model. 
 
 Dalam proses \emph{deep learning} khususnya pada tahap \emph{training} dan \emph{validation}, terdapat nilai yang dapat 
@@ -31,8 +31,28 @@ Pada Swin Transformer V1 parameter 1, hyper-parameter yang ditentukan yaitu seba
   \item Warm Epoch = 0
 \end{itemize}
 
-% Hasil nilai loss dan top 1 error pada Swin Transformer V1 dengan parameter 1 dapat dilihat pada gambar 
-% 4.1, gambar 4.2, dan gambar 4.3.
+Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, dilakukan tiga kali iterasi 
+\emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi dengan nilai mAP dan 
+rank@1 terbaik untuk model Swin Transformer V1 Parameter 1. Hasil Akurasi dan loss pada tahap 
+\emph{training} dan \emph{validation} dapat dilihat pada tabel 4.1.
+
+\begin{table}[h!]
+  \begin{center}
+  \caption{Nilai Akurasi dan Loss Setiap Iterasi Swin Transformer V1 Parameter 1}
+  \label{tb:NilaiakurasidanlossModelSwinTransformerV1Parameter1}
+  \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      \textit{ } & \begin{tabular}[c]{@{}l@{}}\textbf{Train Accuracy}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Train Loss}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Validation Accuracy}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Validation Loss}\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 1}} & \begin{tabular}[c]{@{}l@{}}0.9982\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.0663\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9435\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.2684\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 2}} & \begin{tabular}[c]{@{}l@{}}0.9979\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.0658\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9453\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.2725\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 3}} & \begin{tabular}[c]{@{}l@{}}0.9980\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.0659\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9453\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.2701\end{tabular}\\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+Selain nilai akurasi dan loss, diperoleh pula grafik loss, top 1 Error, nilai mAP, rank@1, 
+rank@5, rank@10 dari proses \emph{Testing} dan \emph{validation} pada masing-masing iterasi. 
+Grafik dan nilai tersebut dapat dilihat pada gambar 4.1, gambar 4.2, dan tabel 4.2.
 
 \begin{figure}[ht]
   \centering
@@ -54,20 +74,10 @@ Pada Swin Transformer V1 parameter 1, hyper-parameter yang ditentukan yaitu seba
   \label{fig:grafiklossdantop1errdariswinv1parameter1iterasi2}
 \end{figure}
 
-% \begin{figure}[ht]
-%   \centering
-%   % Nama dari file gambar yang diinputkan
-%   \includegraphics[scale=0.6]{gambar/Train SwinV1_2.png}
-%   % Keterangan gambar yang diinputkan
-%   \caption{Grafik Loss dan Top 1 Error dari Swin Transformer V1 Parameter 1 Iterasi 3}
-%   % Label referensi dari gambar yang diinputkan
-%   \label{fig:grafiklossdantop1errdariswinv1parameter1iterasi3}
-% \end{figure}
-
-Selain gambar grafik diatas, diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses 
-\emph{Testing} pada masing-masing iterasi. Dari tiga kali iterasi tersebut, maka didapatkan 
-rata-rata dari model Swin Transformer V1 Parameter 1. Seluruh nilai iterasi dan rata-ratanya 
-dapat dilihat pada tabel 4.1.
+% Selain gambar grafik diatas, diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses 
+% \emph{Testing} pada masing-masing iterasi. Dari tiga kali iterasi tersebut, maka didapatkan 
+% rata-rata dari model Swin Transformer V1 Parameter 1. Seluruh nilai iterasi dan rata-ratanya 
+% dapat dilihat pada tabel 4.1.
 % Diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses \emph{Testing} pada 
 % masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.2.
 
@@ -98,14 +108,43 @@ Pada Swin Transformer V2 parameter 1, hyper-parameter yang ditentukan yaitu seba
   \item Warm Epoch = 0
 \end{itemize}
 
-Dengan melakukan tiga kali iterasi menggunakan hyper-parameter yang disebutkan diatas, maka didapatkan hasil berupa grafik 
-nilai loss dan top 1 error dari proses \emph{training} dan \emph{validation} untuk model Swin Transformer V2 
-parameter 1 yang dapat dilihat pada gambar 4.3, dan gambar 4.4. Tiga kali iterasi dilakukan untuk mendapatkan 
-hasil terbaik dari model Swin Transformer V2 parameter 1. \\
-\\
-\\
+% Dari \emph{training} dan \emph{validation}, didapatkan nilai Akurasi, nilai dan grafik loss, 
+% serta grafik Top 1 Error yang dapat dilihat pada tabel 4.3, gambar 4.3, dan gambar 4.4.
 
-\begin{figure}[ht]
+Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, dilakukan tiga kali iterasi 
+\emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi dengan nilai mAP \linebreak dan 
+rank@1 terbaik untuk model Swin Transformer V2 Parameter 1. Hasil Akurasi, loss, dan Top 1 Error 
+pada tahap \emph{training} dan \emph{validation} dapat dilihat pada tabel 4.3, gambar 4.3, dan gambar 4.4.
+
+% Dengan menggunakan hyper-parameter yang ditentukan diatas, didapatkan nilai Akurasi, nilai 
+% dan grafik loss, serta grafik Top 1 Error pada tahap \emph{training} dan \emph{validation} 
+% yang dapat dilihat pada tabel 4.3, gambar 4.3, dan gambar 4.4.
+
+\begin{table}[h!]
+  \begin{center}
+  \caption{Nilai Akurasi dan Loss Setiap Iterasi Swin Transformer V2 Parameter 1}
+  \label{tb:NilaiakurasidanlossModelSwinTransformerV2Parameter1}
+  \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      \textit{ } & \begin{tabular}[c]{@{}l@{}}\textbf{Train Accuracy}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Train Loss}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Validation Accuracy}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Validation Loss}\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 1}} & \begin{tabular}[c]{@{}l@{}}0.9993\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.0460\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9530\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.2485\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 2}} & \begin{tabular}[c]{@{}l@{}}0.9993\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.0462\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9567\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.2361\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 3}} & \begin{tabular}[c]{@{}l@{}}0.9995\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.0458\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9563\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.2400\end{tabular}\\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+% Selain nilai akurasi dan loss, diperoleh pula grafik loss, top 1 Error, nilai mAP, rank@1, 
+% rank@5, rank@10 dari proses \emph{Testing} dan \emph{validation} pada masing-masing iterasi. 
+% Grafik dan nilai tersebut dapat dilihat pada gambar 4.3, gambar 4.4, dan tabel 4.4.
+
+% Dengan melakukan tiga kali iterasi menggunakan hyper-parameter yang disebutkan diatas, maka didapatkan hasil berupa grafik nilai loss dan top 1 error dari proses \emph{training} dan \emph{validation} untuk model Swin Transformer V2 
+% parameter 1 yang dapat dilihat pada gambar 4.3, dan gambar 4.4. Tiga kali iterasi dilakukan untuk mendapatkan 
+% hasil terbaik dari model Swin Transformer V2 parameter 1.
+% \\
+% \\
+
+\begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.55]{gambar/Train SwinV2 Loss.png}
@@ -115,7 +154,7 @@ hasil terbaik dari model Swin Transformer V2 parameter 1. \\
   \label{fig:grafiklossdantop1errdariprosestrainingdanvalidationswinv2iterasi1}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.55]{gambar/Train SwinV2 Top1Err.png}
@@ -125,18 +164,12 @@ hasil terbaik dari model Swin Transformer V2 parameter 1. \\
   \label{fig:grafiklossdantop1errdariprosestrainingdanvalidationswinv2iterasi2}
 \end{figure}
 
-% \begin{figure}[ht]
-%   \centering
-%   % Nama dari file gambar yang diinputkan
-%   \includegraphics[scale=0.6]{gambar/Train SwinV2_2.png}
-%   % Keterangan gambar yang diinputkan
-%   \caption{Grafik Loss dan Top 1 Error dari Swin Transformer V2 Parameter 1 Iterasi 3}
-%   % Label referensi dari gambar yang diinputkan
-%   \label{fig:grafiklossdantop1errdariprosestrainingdanvalidationswinv2iterasi3}
-% \end{figure}
+Selain nilai akurasi, loss, dan Top 1 Error, diperoleh pula nilai mAP, rank@1, 
+rank@5, rank@10 dari proses \emph{Testing} dan \emph{validation} pada 
+masing-masing iterasi. Grafik dan nilai tersebut dapat dilihat pada tabel 4.4.
 
-Diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses \emph{Testing} pada 
-masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.2.
+% Diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses \emph{Testing} pada 
+% masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.5.
 
 \begin{table}[h!]
   \begin{center}
@@ -153,12 +186,132 @@ masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.2.
   \end{center}
 \end{table}
 
-% \subsection{Swin Transformer V1 Parameter 2}
-% \subsection{Swin Transformer V2 Parameter 2}
+\subsection{Swin Transformer V1 Parameter 2}
 
-% Hasil nilai 
-% loss dan top 1 error dari \emph{training} dan \emph{validation} pada setiap model Swin Transformer dapat dilihat pada 
-% gambar 4.1 hingga gambar 4.12.
+Pada Swin Transformer V1 parameter 2, hyper-parameter yang ditentukan yaitu sebagai berikut:
+
+\begin{itemize}[nolistsep]
+  \item Epoch = 60
+  \item Batch Size = 16
+  \item Random Erasing Probability = 0.5
+  \item Learning Rate = 0.01
+  \item Warm Epoch = 5
+\end{itemize}
+
+Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, dilakukan tiga kali iterasi 
+\emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi dengan nilai mAP dan 
+rank@1 terbaik untuk model Swin Transformer V1 Parameter 2. Hasil Akurasi dan loss pada tahap 
+\emph{training} dan \emph{validation} dapat dilihat pada tabel 4.5.
+
+\begin{table}[h!]
+  \begin{center}
+  \caption{Nilai Akurasi dan Loss Setiap Iterasi Swin Transformer V1 Parameter 2}
+  \label{tb:NilaiakurasidanlossModelSwinTransformerV1Parameter2}
+  \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      \textit{ } & \begin{tabular}[c]{@{}l@{}}\textbf{Train Accuracy}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Train Loss}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Validation Accuracy}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Validation Loss}\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 1}} & \begin{tabular}[c]{@{}l@{}}0.9979\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.1139\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9571\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.1969\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 2}} & \begin{tabular}[c]{@{}l@{}}0.9980\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.1196\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9578\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.1897\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 3}} & \begin{tabular}[c]{@{}l@{}}0.9985\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.1180\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.9563\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.1847\end{tabular}\\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/Train SwinV1CP1 Loss.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Grafik Loss Setiap Iterasi Swin Transformer V1 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:grafiklossdariswinv1parameter2}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/Train SwinV1CP1 Top1Err.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Grafik Top 1 Error Setiap Iterasi Swin Transformer V1 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:grafiktop1errdariswinv1parameter1}
+\end{figure}
+
+% Selain gambar grafik diatas, diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses 
+% \emph{Testing} pada masing-masing iterasi. Dari tiga kali iterasi tersebut, maka didapatkan 
+% rata-rata dari model Swin Transformer V1 Parameter 1. Seluruh nilai iterasi dan rata-ratanya 
+% dapat dilihat pada tabel 4.1.
+% Diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses \emph{Testing} pada 
+% masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.2.
+
+\begin{table}[h!]
+  \begin{center}
+  \caption{Nilai mAP, Rank@1, Rank@5, dan Rank@10 Swin Transformer V1 Parameter 2}
+  \label{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV1Parameter2}
+  \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      \textit{ } & \begin{tabular}[c]{@{}l@{}}\textbf{mAP}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@1}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@5}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@10}\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 1}} & \begin{tabular}[c]{@{}l@{}}0.745984\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.704731\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.887229\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.926361\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 2}} & \begin{tabular}[c]{@{}l@{}}\textbf{0.751921}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.711135}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.892209}\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.933120\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 3}} & \begin{tabular}[c]{@{}l@{}}0.750978\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.709712\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.891498\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.934899}\end{tabular}\\ \hline
+      \textit{\textbf{Rata-Rata}} & \begin{tabular}[c]{@{}l@{}}0.749627\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.708526\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.890312\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.93146\end{tabular}\\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Swin Transformer V2 Parameter 2}
+
+Pada Swin Transformer V2 parameter 2, hyper-parameter yang ditentukan yaitu sebagai berikut:
+
+\begin{itemize}[nolistsep]
+  \item Epoch = 60
+  \item Batch Size = 16
+  \item Random Erasing Probability = 0.5
+  \item Learning Rate = 0.01
+  \item Warm Epoch = 5
+\end{itemize}
+
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/Train SwinV2CP1 Loss.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Grafik Loss Setiap Iterasi Swin Transformer V2 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:grafiklossdariswinv2parameter2}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/Train SwinV2CP1 Top1Err.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Grafik Top 1 Error Setiap Iterasi Swin Transformer V2 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:grafiktop1errdariswinv2parameter2}
+\end{figure}
+
+Selain gambar grafik diatas, diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses 
+\emph{Testing} pada masing-masing iterasi. Dari tiga kali iterasi tersebut, maka didapatkan 
+rata-rata dari model Swin Transformer V2 Parameter 2. Seluruh nilai iterasi dan rata-ratanya 
+dapat dilihat pada tabel 4.4.
+% Diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses \emph{Testing} pada 
+% masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.2.
+
+\begin{table}[h!]
+  \begin{center}
+  \caption{Nilai mAP, Rank@1, Rank@5, dan Rank@10 Swin Transformer V2 Parameter 2}
+  \label{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV2Parameter2}
+  \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      \textit{ } & \begin{tabular}[c]{@{}l@{}}\textbf{mAP}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@1}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@5}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@10}\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 1}} & \begin{tabular}[c]{@{}l@{}}0.750173\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.710423\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.890786}\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.929918\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 2}} & \begin{tabular}[c]{@{}l@{}}0.750367\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.710068\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.889363\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.925294\end{tabular}\\ \hline
+      \textit{\textbf{Iterasi 3}} & \begin{tabular}[c]{@{}l@{}}\textbf{0.751293}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.711135}\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.889719\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.930985}\end{tabular}\\ \hline
+      \textit{\textbf{Rata-Rata}} & \begin{tabular}[c]{@{}l@{}}0.750611\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.710542\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.889956\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.928732\end{tabular}\\ \hline
+  \end{tabular}
+  \end{center}
+\end{table}
 
 \section{Analisa Hasil}
 \label{sec:analisahasil}
@@ -324,7 +477,7 @@ Perbandingan nilai mAP, rank@1, rank@5, dan rank@10 dari setiap model Swin Trans
 \begin{table}[h!]
   \begin{center}
   \caption{Nilai mAP, Rank@1, Rank@5, dan Rank@10 Setiap Model Swin Transformer}
-  \label{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV1Parameter1}
+  \label{tb:NilaimAP,Rank1,Rank5,danRank10SetiapModelSwinTransformer}
   \begin{tabular}{|l|l|l|l|l|}
       \hline
       \textit{ } & \begin{tabular}[c]{@{}l@{}}\textbf{mAP}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@1}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@5}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{Rank@10}\end{tabular}\\ \hline
