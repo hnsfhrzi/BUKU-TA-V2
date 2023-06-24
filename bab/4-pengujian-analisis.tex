@@ -1000,6 +1000,213 @@ galeri hanya berada pada 10 peringkat teratas, namun tidak berada di peringkat p
 re-identifikasi dari gambar kueri. Namun gambar galeri hanya berada pada peringkat 2 teratas. Hal ini terlihat pada gambar 
 hasil pengujian dari Swin Transformer V2 parameter 2 (gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}).
 
+\subsection{Pengujian Keenam}
+
+Pengujian keenam menggunakan sebuah gambar kueri ke-29 dengan objek mobil taksi berwarna biru tua dan oranye, dengan sebagian 
+badan mobil tertutup oleh objek lain. Gambar kueri beserta hasil GradCam dapat dilihat pada gambar 
+\ref{fig:gambarkueriuntukpengujiankeenam}.
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/Que29_1060.jpg}
+    \caption{Gambar Kueri ke-29}
+    \label{gambarkuerinomorduasembilan}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/GradCamQue29_1060.jpg}
+    \caption{GradCam Gambar Kueri ke-29}
+    \label{gradcamgambarkuerinomorduasembilan}
+  \end{subfigure}
+  \caption{Gambar Kueri untuk Pengujian Keenam}
+  \label{fig:gambarkueriuntukpengujiankeenam}
+\end{figure}
+
+Gambar galeri yang dicari pada pengujian keenam merupakan gambar dengan objek mobil taksi berwarna biru tua 
+dan oranye yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankeenam} dengan sudut pengambilan yang berbeda. 
+Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeenam}.
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/Gal29_1060.jpg}
+    \caption{Gambar Galeri yang Dicari}
+    \label{gambargalerinomorduasembilan}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/GradCamGal29_1060.jpg}
+    \caption{GradCam Gambar Galeri yang Dicari}
+    \label{gradcamgambargalerinomorduasembilan}
+  \end{subfigure}
+  \caption{Gambar Galeri yang Dicari untuk Pengujian Keenam}
+  \label{fig:gambargaleriuntukpengujiankeenam}
+\end{figure}
+
+Dengan memasukkan gambar kueri ke-29 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv1param1}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que29V1P1IT3.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Keenam pada Model Swin Transformer V1 Parameter 1}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujiankeenampadamodelswintransformerv1param1}
+\end{figure}
+
+Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-29 ke dalam model Swin Transformer V2 parameter 1 dengan 
+iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv2param1}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que29V2P1IT1.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Keenam pada Model Swin Transformer V2 Parameter 1}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujiankeenampadamodelswintransformerv2param1}
+\end{figure}
+
+Dari memasukkan gambar kueri ke-29 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv1param2}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que29V1P2IT2.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Keenam pada Model Swin Transformer V1 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujiankeenampadamodelswintransformerv1param2}
+\end{figure}
+
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-29 dapat 
+dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv2param2}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que29V2P2IT1.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Keenam pada Model Swin Transformer V2 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujiankeenampadamodelswintransformerv2param2}
+\end{figure}
+
+Dari pengujian keenam, didapatkan hasil bahwa seluruh model Swin Transformer pada penelitian ini tidak mampu dalam melakukan 
+re-identifikasi ketika diberikan gambar kueri ke-29. Hal ini dapat dilihat dari hasil peringkat sepuluh teratas dari setiap 
+model tidak menunjukan adanya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujiankeenam}) pada daftar peringkat yang 
+ada. Hasil pengujian ini memperlihatkan bahwa jika gambar kueri dengan objek yang setengah utuh ingin diidentifikasi 
+ulang, model re-identifikasi kesulitan untuk mengenali objek tersebut.
+
+\subsection{Pengujian Ketujuh}
+
+Pengujian ketujuh menggunakan sebuah gambar kueri ke-70 dengan objek mobil suv \linebreak berwarna hitam. Gambar kueri 
+beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketujuh}.
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/Que70_114.jpg}
+    \caption{Gambar Kueri ke-70}
+    \label{gambarkuerinomortujuhpuluh}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/GradCamQue70_114.jpg}
+    \caption{GradCam Gambar Kueri ke-70}
+    \label{gradcamgambarkuerinomortujuhpuluh}
+  \end{subfigure}
+  \caption{Gambar Kueri untuk Pengujian Ketujuh}
+  \label{fig:gambarkueriuntukpengujianketujuh}
+\end{figure}
+
+Gambar galeri yang dicari pada pengujian ketujuh merupakan gambar dengan objek mobil suv berwarna hitam 
+yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketujuh} dengan sudut pengambilan yang berbeda. 
+Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketujuh}.
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/Gal70_114.jpg}
+    \caption{Gambar Galeri yang Dicari}
+    \label{gambargalerinomortujuhpuluh}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/GradCamGal70_114.jpg}
+    \caption{GradCam Gambar Galeri yang Dicari}
+    \label{gradcamgambargalerinomortujuhpuluh}
+  \end{subfigure}
+  \caption{Gambar Galeri yang Dicari untuk Pengujian Ketujuh}
+  \label{fig:gambargaleriuntukpengujianketujuh}
+\end{figure}
+
+Dengan memasukkan gambar kueri ke-70 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv1param1}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que70V1P1IT3.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Ketujuh pada Model Swin Transformer V1 Parameter 1}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujianketujuhpadamodelswintransformerv1param1}
+\end{figure}
+
+Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-70 ke dalam model Swin Transformer V2 parameter 1 dengan 
+iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv2param1}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que70V2P1IT1.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Ketujuh pada Model Swin Transformer V2 Parameter 1}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujianketujuhpadamodelswintransformerv2param1}
+\end{figure}
+
+Dari memasukkan gambar kueri ke-70 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv1param2}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que70V1P2IT2.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Ketujuh pada Model Swin Transformer V1 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujianketujuhpadamodelswintransformerv1param2}
+\end{figure}
+
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-70 dapat 
+dilihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv2param2}.
+
+\begin{figure}[h!]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.6]{gambar/Que70V2P2IT1.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Hasil Pengujian Ketujuh pada Model Swin Transformer V2 Parameter 2}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:hasilpengujianketujuhpadamodelswintransformerv2param2}
+\end{figure}
+
+Dari pengujian ketujuh, didapatkan hasil bahwa seluruh model Swin Transformer pada penelitian ini tidak mampu dalam melakukan 
+re-identifikasi ketika diberikan gambar kueri ke-70. Hal ini dapat dilihat dari hasil peringkat sepuluh teratas dari setiap 
+model tidak menunjukan adanya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujianketujuh}) pada daftar peringkat yang 
+ada. Hasil pengujian ini memperlihatkan bahwa jika gambar kueri dengan resolusi yang terlalu kecil hingga objek terlalu sulit 
+untuk dilakukan re-identifikasi, model re-identifikasi akan kesulitan untuk mengenali objek tersebut.
+
 % \section{Analisa Pengujian}
 % \label{sec:analisapengujian}
 
