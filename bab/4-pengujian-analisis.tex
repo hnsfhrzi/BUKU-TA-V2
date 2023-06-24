@@ -687,7 +687,7 @@ berada pada rank pertama di hasil pengujian pada setiap model re-identifikasi.
 \subsection{Pengujian Ketiga}
 
 Pengujian ketiga menggunakan sebuah gambar kueri ke-61 dengan objek mobil sedan berwarna putih. Gambar kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankedua}.
+beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketiga}.
 
 \begin{figure}[h!]
   \centering
@@ -789,209 +789,216 @@ berada pada rank pertama di hasil pengujian pada setiap model re-identifikasi.
 
 \subsection{Pengujian Keempat}
 
-Pengujian ketiga menggunakan sebuah gambar kueri ke-61 dengan objek mobil sedan berwarna putih. Gambar kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankedua}.
+Pengujian keempat menggunakan sebuah gambar kueri ke-21 dengan objek mobil sedan berwarna merah. Gambar kueri 
+beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankeempat}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/Que61_1120.jpg}
-    \caption{Gambar Kueri ke-61}
-    \label{gambarkuerinomorenamsatu}
+    \includegraphics[width=.4\linewidth]{gambar/Que21_1046.jpg}
+    \caption{Gambar Kueri ke-21}
+    \label{gambarkuerinomorduasatu}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamQue61_1120.jpg}
-    \caption{GradCam Gambar Kueri ke-61}
-    \label{gradcamgambarkuerinomorenamsatu}
+    \includegraphics[width=.4\linewidth]{gambar/GradCamQue21_1046.jpg}
+    \caption{GradCam Gambar Kueri ke-21}
+    \label{gradcamgambarkuerinomorduasatu}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Ketiga}
-  \label{fig:gambarkueriuntukpengujianketiga}
+  \caption{Gambar Kueri untuk Pengujian Keempat}
+  \label{fig:gambarkueriuntukpengujiankeempat}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian ketiga merupakan gambar dengan objek \linebreak mobil sedan berwarna putih 
-yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketiga} dengan sudut pengambilan yang berbeda. 
-Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketiga}.
+Gambar galeri yang dicari pada pengujian keempat merupakan gambar dengan objek \linebreak mobil sedan berwarna merah 
+yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankeempat} dengan sudut pengambilan yang berbeda. 
+Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeempat}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/Gal61_1120.jpg}
+    \includegraphics[width=.4\linewidth]{gambar/Gal21_1046.jpg}
     \caption{Gambar Galeri yang Dicari}
-    \label{gambargalerinomorenamsatu}
+    \label{gambargalerinomorduasatu}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamGal61_1120.jpg}
+    \includegraphics[width=.4\linewidth]{gambar/GradCamGal21_1046.jpg}
     \caption{GradCam Gambar Galeri yang Dicari}
-    \label{gradcamgambargalerinomorenamsatu}
+    \label{gradcamgambargalerinomorduasatu}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Ketiga}
-  \label{fig:gambargaleriuntukpengujianketiga}
+  \caption{Gambar Galeri yang Dicari untuk Pengujian Keempat}
+  \label{fig:gambargaleriuntukpengujiankeempat}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
-peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv1param1}.
+Dengan memasukkan gambar kueri ke-21 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V1P1IT3.png}
+  \includegraphics[scale=0.6]{gambar/Que21V1P1IT3.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V1 Parameter 1}
+  \caption{Hasil Pengujian Keempat pada Model Swin Transformer V1 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv1param1}
+  \label{fig:hasilpengujiankeempatpadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V2 parameter 1 dengan 
-iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param1}.
+Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-21 ke dalam model Swin Transformer V2 parameter 1 dengan 
+iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V2P1IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que21V2P1IT1.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V2 Parameter 1}
+  \caption{Hasil Pengujian Keempat pada Model Swin Transformer V2 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv2param1}
+  \label{fig:hasilpengujiankeempatpadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
-peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv1param2}.
+Dari memasukkan gambar kueri ke-21 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V1P2IT2.png}
+  \includegraphics[scale=0.6]{gambar/Que21V1P2IT2.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V1 Parameter 2}
+  \caption{Hasil Pengujian Keempat pada Model Swin Transformer V1 Parameter 2}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv1param2}
+  \label{fig:hasilpengujiankeempatpadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-61 dapat 
-dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param2}.
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-21 dapat 
+dilihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que21V2P2IT1.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V2 Parameter 2}
+  \caption{Hasil Pengujian Keempat pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv2param2}
+  \label{fig:hasilpengujiankeempatpadamodelswintransformerv2param2}
 \end{figure}
 
-Dari pengujian ketiga, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 gagal dalam melakukan re-identifikasi, 
-karena gambar kueri yang benar tidak berada pada rank pertama (gambar 
-\ref{fig:hasilpengujianketigapadamodelswintransformerv1param1}). Sementara ketiga model re-identifikasi lainnya berhasil 
-melakukan re-identifikasi. Hal ini dibuktikan dengan ditunjukkannya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujianketiga})
-berada pada rank pertama di hasil pengujian pada setiap model re-identifikasi.
+Dari pengujian keempat, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 gagal dalam melakukan re-identifikasi, 
+karena gambar kueri yang benar tidak berada pada sepuluh peringkat teratas (gambar 
+\ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param1}). Sementara model Swin Transformer V2 parameter 1 dan 
+Swin Transformer V1 parameter 2 masih dapat melakukan re-identifikasi sesuai gambar kueri, namun gambar galeri yang tepat 
+tidak berada pada peringkat pertama (seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param1} 
+dan gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param2}). Model Swin Transformer V2 parameter 2 berhasil 
+melakukan re-identifikasi pada pengujian keempat. Hal ini dibuktikan dengan ditunjukkannya gambar galeri 
+(gambar \ref{fig:gambargaleriuntukpengujiankeempat}) berada pada peringkat pertama di hasil pengujian model Swin Transformer 
+V2 parameter 2 (gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param2}).
 
 \subsection{Pengujian Kelima}
 
-Pengujian ketiga menggunakan sebuah gambar kueri ke-61 dengan objek mobil sedan berwarna putih. Gambar kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankedua}.
+Pengujian kelima menggunakan sebuah gambar kueri ke-9 dengan objek mobil suv berwarna hitam. Gambar kueri 
+beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankelima}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/Que61_1120.jpg}
-    \caption{Gambar Kueri ke-61}
-    \label{gambarkuerinomorenamsatu}
+    \includegraphics[width=.4\linewidth]{gambar/Que9_1019.jpg}
+    \caption{Gambar Kueri ke-9}
+    \label{gambarkuerinomorsembilan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamQue61_1120.jpg}
-    \caption{GradCam Gambar Kueri ke-61}
-    \label{gradcamgambarkuerinomorenamsatu}
+    \includegraphics[width=.4\linewidth]{gambar/GradCamQue9_1019.jpg}
+    \caption{GradCam Gambar Kueri ke-9}
+    \label{gradcamgambarkuerinomorsembilan}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Ketiga}
-  \label{fig:gambarkueriuntukpengujianketiga}
+  \caption{Gambar Kueri untuk Pengujian Kelima}
+  \label{fig:gambarkueriuntukpengujiankelima}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian ketiga merupakan gambar dengan objek \linebreak mobil sedan berwarna putih 
-yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketiga} dengan sudut pengambilan yang berbeda. 
-Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketiga}.
+Gambar galeri yang dicari pada pengujian kelima merupakan gambar dengan objek \linebreak mobil suv berwarna hitam 
+yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankelima} dengan sudut pengambilan yang berbeda. 
+Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankelima}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/Gal61_1120.jpg}
+    \includegraphics[width=.4\linewidth]{gambar/Gal9_1019.jpg}
     \caption{Gambar Galeri yang Dicari}
-    \label{gambargalerinomorenamsatu}
+    \label{gambargalerinomorsembilan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamGal61_1120.jpg}
+    \includegraphics[width=.4\linewidth]{gambar/GradCamGal9_1019.jpg}
     \caption{GradCam Gambar Galeri yang Dicari}
-    \label{gradcamgambargalerinomorenamsatu}
+    \label{gradcamgambargalerinomorsembilan}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Ketiga}
-  \label{fig:gambargaleriuntukpengujianketiga}
+  \caption{Gambar Galeri yang Dicari untuk Pengujian Kelima}
+  \label{fig:gambargaleriuntukpengujiankelima}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
-peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv1param1}.
+Dengan memasukkan gambar kueri ke-9 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V1P1IT3.png}
+  \includegraphics[scale=0.6]{gambar/Que9V1P1IT3.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V1 Parameter 1}
+  \caption{Hasil Pengujian Kelima pada Model Swin Transformer V1 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv1param1}
+  \label{fig:hasilpengujiankelimapadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V2 parameter 1 dengan 
-iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param1}.
+Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-9 ke dalam model Swin Transformer V2 parameter 1 dengan 
+iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V2P1IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que9V2P1IT1.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V2 Parameter 1}
+  \caption{Hasil Pengujian Kelima pada Model Swin Transformer V2 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv2param1}
+  \label{fig:hasilpengujiankelimapadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
-peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv1param2}.
+Dari memasukkan gambar kueri ke-9 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V1P2IT2.png}
+  \includegraphics[scale=0.6]{gambar/Que9V1P2IT2.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V1 Parameter 2}
+  \caption{Hasil Pengujian Kelima pada Model Swin Transformer V1 Parameter 2}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv1param2}
+  \label{fig:hasilpengujiankelimapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-61 dapat 
-dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param2}.
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-9 dapat 
+dilihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que9V2P2IT1.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V2 Parameter 2}
+  \caption{Hasil Pengujian Kelima pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:hasilpengujianketigapadamodelswintransformerv2param2}
+  \label{fig:hasilpengujiankelimapadamodelswintransformerv2param2}
 \end{figure}
 
-Dari pengujian ketiga, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 gagal dalam melakukan re-identifikasi, 
-karena gambar kueri yang benar tidak berada pada rank pertama (gambar 
-\ref{fig:hasilpengujianketigapadamodelswintransformerv1param1}). Sementara ketiga model re-identifikasi lainnya berhasil 
-melakukan re-identifikasi. Hal ini dibuktikan dengan ditunjukkannya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujianketiga})
-berada pada rank pertama di hasil pengujian pada setiap model re-identifikasi.
+Dari pengujian kelima, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 dan model Swin Transformer V2 parameter 1 
+gagal dalam melakukan re-identifikasi, karena gambar kueri yang benar tidak berada pada sepuluh peringkat teratas (gambar 
+\ref{fig:hasilpengujiankelimapadamodelswintransformerv1param1} dan gambar 
+\ref{fig:hasilpengujiankelimapadamodelswintransformerv2param1}). Sementara pada model Swin Transformer V1 parameter 2, gambar 
+galeri hanya berada pada 10 peringkat teratas, namun tidak berada di peringkat pertama, seperti yang terlihat pada gambar 
+\ref{fig:hasilpengujiankelimapadamodelswintransformerv1param2}. Dan untuk model Swin Transformer V2 parameter 2, dapat melakukan 
+re-identifikasi dari gambar kueri. Namun gambar galeri hanya berada pada peringkat 2 teratas. Hal ini terlihat pada gambar 
+hasil pengujian dari Swin Transformer V2 parameter 2 (gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}).
 
 % \section{Analisa Pengujian}
 % \label{sec:analisapengujian}
