@@ -12,13 +12,13 @@
 
 Tugas akhir ini merupakan penelitian di bidang visi komputer dengan tujuan untuk melakukan 
 re-identifikasi mobil menggunakan kumpulan citra dari dataset VRIC. Alur blok diagram metodologi 
-dapat dilihat pada gambar 3.1. Perancangan model menggunakan metode Swin Transformer dari 
-\emph{Pytorch ReID layumi}.
+dapat dilihat pada gambar \ref{fig:diagramblokmetodologi}. Pengembangan model menggunakan metode 
+Swin Transformer dari \emph{Pytorch ReID layumi}.
 
 \begin{figure}[ht]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.65]{gambar/metodologiFix.jpg}
+  \includegraphics[scale=0.6]{gambar/metodologiUpdate.png}
   % Keterangan gambar yang diinputkan
   \caption{Diagram Blok Metodologi}
   % Label referensi dari gambar yang diinputkan
@@ -29,27 +29,36 @@ dapat dilihat pada gambar 3.1. Perancangan model menggunakan metode Swin Transfo
 
   \item \textbf{Pengolahan Dataset VRIC}
   
-  Pada tahapan ini, dilakukan proses pengolahan dataset yang didapat dengan 
-  membagi dataset menjadi dua yaitu data training dan data test. Kedua data 
-  ini nantinya akan digunakan untuk tujuan yang berbeda.
+  Pada tahapan ini, dilakukan proses pengolahan dataset VRIC dengan 
+  membagi dataset sesuai kebutuhan dari model. Terdapat tiga tahap yang akan 
+  dilalui model, dimana setiap tahapnya membutuhkan data yang berbeda-beda. Tiga 
+  tahap tersebut yaitu  tahap \linebreak pelatihan (\emph{training}), tahap validasi 
+  (\emph{validation}), dan tahap pengujian (\emph{testing}). Sehingga perlu membaginya 
+  sesuai dengan kebutuhan di setiap tahapannya.
 
   \item \textbf{Pelatihan Model Swin Transformer}
   
-  Pada tahapan ini, dilakukan training dan tuning pada model Swin Transformer 
-  dengan mengubah parameternya. Parameter yang perlu disetel seperti 
-  \emph{Batch Size}, \emph{Learning Rate}, dan \emph{Epoch}.
+  Pada tahapan ini, dilakukan pelatihan (\emph{training}) pada model Swin Transformer 
+  menggunakan data \emph{training} VRIC yang telah dibagi dari tahapan sebelumnya. 
+  Di tahapan ini juga dilakukan pengaturan hyper-parameter agar mendapatkan nilai akurasi, 
+  mAP (\emph{Mean Average Precision}), dan rank@1 yang tinggi.
 
-  \item \textbf{Pengujian Model}
+  \item \textbf{Validasi Model Swin Transformer}
   
-  Pada tahapan ini, model Swin Transformer yang telah melalui training dan 
-  tuning akan diuji. Pengujian dilakukan menggunakan data test VRIC yang sebelumnya 
-  telah dibagi.
+  Pada tahapan ini, dilakukan validasi (\emph{validation}) pada model Swin Transformer yang 
+  telah selesai pelatihan. Validasi disini menggunakan data \emph{validation} VRIC, sehingga 
+  tidak menggunakan data yang sama dengan tahap pelatihan.
 
-  \item \textbf{Hasil}
+  \item \textbf{Pengujian Model Swin Transformer}
   
-  Jika hasil dari pengujian telah mencapai threshold dan model dapat melakukan \linebreak
-  re-identifikasi dengan baik, maka seluruh hasil pengujian dicatat untuk dibandingkan 
-  dengan penelitian yang sudah ada sebelumnya.
+  Pada tahapan ini, model Swin Transformer yang telah selesai dikembangkan bisa diujicobakan 
+  menggunakan data kueri(\emph{query}) dan data galeri (\emph{gallery}) dari VRIC.
+
+  \item \textbf{Pencatatan Hasil}
+  
+  Model yang telah melalui tahapan pelatihan, validasi, dan dapat diujicobakan, akan 
+  dicatat hasil akurasi, mAP, dan rank@1. Terdapat dua belas model yang akan dibandingkan 
+  dan nantinya akan diambil kesimpulan model terbaik dari penelitian.
 
 \end{enumerate}
 
@@ -58,28 +67,36 @@ dapat dilihat pada gambar 3.1. Perancangan model menggunakan metode Swin Transfo
 
 \subsection{Dataset}
 
-Dataset yang digunakan dalam penelitian ini adalah VRIC dataset. VRIC dataset memuat 
+Dataset yang digunakan dalam penelitian ini adalah dataset VRIC. Dataset VRIC memuat 
 60 ribu citra mobil yang diambil dari kamera CCTV dari berbagai sudut pandang, sudut 
-pencahayaan, dan kondisi lingkungan yang bermacam-macam. Setiap citra mobil dari VRIC 
-dataset telah diberikan label sesuai dengan id vehicle dan id kamera yang mengambil 
+pencahayaan, dan kondisi lingkungan yang bermacam-macam. Setiap citra mobil dari dataset 
+VRIC telah diberikan label sesuai dengan id kendaraan dan id kamera yang mengambil 
 citra tersebut.
 
-%gambar 3.2 dataset
+\begin{figure}[ht]
+  \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/VRICcontoh.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Citra pada Dataset VRIC}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:citrapadadatasetvric}
+\end{figure}
 
-Gambar 3.2 merupakan beberapa contoh citra yang ada di VRIC dataset. Di dalam VRIC 
-dataset, 60 ribu citra mobil telah dibagi ke tiga folder yang berbeda, yaitu folder 
-\emph{train}, \emph{gallery}, dan \emph{query}. Folder \emph{train} berisikan 54 
+Gambar \ref{fig:citrapadadatasetvric} merupakan beberapa contoh citra yang ada di dataset 
+VRIC. Di dalam dataset VRIC,terdapat tiga folder yang telah dibuat, yaitu folder \emph{train}, 
+\emph{gallery}, dan \emph{query}. Folder \emph{train} berisikan 54 
 ribu citra, sementara pada folder \emph{gallery} dan \emph{query} masing-masing 
 berisikan 2 ribu citra. Terdapat pula list anotasi dari seluruh citra yang berisikan 
 format nama file citra, label ID dari mobil, dan label kamera.
 
 \subsection{Laptop}
 
-Laptop digunakan untuk melakukan pemisahan (\emph{splitting}) dataset, training model, 
-dan melakukan testing model yang telah selesai ditraining menggunakan VRIC dataset. 
-Laptop perlu terhubung dengan internet untuk mengakses google Colaboratory, yang 
-merupakan environment yang dibutuhkan untuk membuat model Swin Transformer. Spesifikasi 
-laptop yang digunakan dapat dilihat pada tabel 3.1.
+Laptop digunakan untuk melakukan pengolahan dataset, pelatihan model, validasi model, 
+dan pengujian model. Laptop perlu terhubung dengan internet untuk mengakses Google \linebreak
+Colaboratory, yang merupakan \emph{environment} yang dibutuhkan untuk membuat model Swin 
+\linebreak Transformer. Spesifikasi laptop yang digunakan dapat dilihat pada tabel 
+\ref{tb:spesifikasilaptop}.
 
 \begin{table}[ht]
   \begin{center}
@@ -98,12 +115,13 @@ laptop yang digunakan dapat dilihat pada tabel 3.1.
 
 \subsection{Google Colaboratory}
 
-Google Colaboratory merupakan sebuah environment komputasi cloud dengan format \linebreak notebook 
-yang disediakan oleh \emph{Google research} dengan fungsi untuk menjalankan kode python 
-yang telah dituliskan. Google Colaboratory sangat membantu dalam pengerjaan \emph{data science}, 
-\emph{deep learning}, dan \emph{machine learning} dikarenakan spesifikasi \emph{hardware} 
-yang tinggi dari Google Colaboratory. Spesifikasi Google Colaboratory yang digunakan dapat 
-dilihat pada tabel 3.2.
+Google Colaboratory merupakan sebuah \emph{environment} komputasi cloud dengan format 
+\linebreak notebook yang disediakan oleh Google research dengan fungsi untuk 
+menjalankan kode python yang telah dituliskan. Google Colaboratory sangat membantu 
+dalam pengerjaan \emph{data science}, \emph{deep learning}, dan \emph{machine learning} 
+dikarenakan spesifikasi \emph{hardware} yang tinggi dari Google Colaboratory. Spesifikasi 
+Google Colaboratory yang digunakan dapat dilihat pada tabel 
+\ref{tb:spesifikasigooglecolaboratory}.
 
 \begin{table}[ht]
   \begin{center}
@@ -120,13 +138,14 @@ dilihat pada tabel 3.2.
 \section{Urutan Pelaksanaan Penelitian}
 \label{sec:urutanpelaksanaanpenelitian}
 
-\subsection{Pemisahan Dataset}
+\subsection{Pengolahan Dataset}
 
-VRIC dataset terbagi menjadi 3 bagian, yaitu data training, data query, dan data gallery. Ketiga 
-bagian dataset tersebut telah dipisahkan dan disesuaikan secara langsung oleh developer dari VRIC 
-dataset untuk kegunaan re-identifikasi mobil. Selain file berisi dataset, di dalam VRIC dataset 
-juga terdapat file txt yang berisi list anotasi dari seluruh citra, dengan format nama file citra, 
-label ID dari mobil, dan label kamera. Dengan menggunakan list anotasi tersebut, maka setiap dataset 
+Dataset VRIC terbagi menjadi tiga bagian, yaitu data \emph{training}, data \emph{query}, 
+dan data \emph{gallery}. Ketiga bagian dataset tersebut telah dipisahkan dan disesuaikan 
+secara langsung oleh developer dataset VRIC untuk kegunaan re-identifikasi mobil. 
+Selain file berisi citra, di dalam dataset VRIC juga terdapat file txt yang berisi list 
+anotasi dari seluruh citra, dengan format nama file citra, label ID dari mobil, dan label 
+kamera. Dengan menggunakan list anotasi tersebut, maka setiap dataset 
 perlu dilakukan perubahan nama file sesuai dengan label ID dan label kameranya.
 
 % Potongan kode rename
@@ -136,9 +155,10 @@ perlu dilakukan perubahan nama file sesuai dengan label ID dan label kameranya.
   label={lst:renamedataset}
 ]{program/perubahan-nama-file.py}
 
-Pada penelitian ini, diperlukan satu bagian lagi dalam percobaannya, yaitu data validasi. Data validasi 
-berfungsi untuk melakukan validasi dan mengecek setiap epoch yang telah dilakukan pada training. Data 
-validasi dibuat dengan mengambil sebagian data training untuk dipindahkan ke data validasi.
+Pada penelitian ini, diperlukan satu bagian lagi dalam percobaannya, yaitu data validasi. 
+Data validasi berfungsi untuk melakukan validasi dan mengecek setiap epoch yang telah 
+dilakukan pada training. Data validasi dibuat dengan mengambil sebagian data training 
+untuk dipindahkan ke data validasi.
 
 % Potongan kode splitting
 \lstinputlisting[
@@ -147,23 +167,24 @@ validasi dibuat dengan mengambil sebagian data training untuk dipindahkan ke dat
   label={lst:splittingdataset}
 ]{program/splitting-dataset.py}
 
-\subsection{\emph{Training} dan \emph{Validation}}
+\subsection{\emph{Training}}
 
-\emph{Training} dilakukan setelah proses perubahan nama dan pemisahan dataset selesai dilakukan. Di dalam 
-proses \emph{Training}, terdapat konfigurasi hyper-parameter yang harus ditentukan yaitu:
+\emph{Training} dilakukan setelah proses perubahan nama dan pemisahan dataset selesai dilakukan. 
+Di dalam proses \emph{Training}, terdapat beberapa konfigurasi hyper-parameter yang harus 
+ditentukan yaitu:
 
 \begin{enumerate}[nolistsep]
 
   \item \textbf{Epoch}
   
   Epoch adalah hyper-parameter yang berfungsi untuk menentukan jumlah pengulangan proses \emph{learning} 
-  yang harus dilakukan algoritma learning ke sebuah dataset training. Semakin banyaknya pengulangan yang 
-  dilakukan maka model yang dihasilkan akan memiliki tingkat akurasi yang semakin tinggi, namun waktu 
-  yang dibutuhkan dalam melakukan training juga akan semakin banyak.
+  yang harus dilakukan algoritma \emph{learning} ke sebuah dataset \emph{training}. Semakin banyaknya 
+  pengulangan yang dilakukan maka model yang dihasilkan akan memiliki tingkat akurasi yang semakin 
+  tinggi, namun waktu yang dibutuhkan dalam melakukan \emph{training} juga akan semakin banyak.
 
   \item \textbf{\emph{Batch Size}}
   
-  \emph{Batch size} adalah hyper-parameter yang berfungsi untuk mengontrol jumlah sampel \linebreak training 
+  \emph{Batch size} adalah hyper-parameter yang berfungsi untuk mengontrol jumlah sampel \linebreak \emph{training} 
   untuk dikerjakan sebelum parameter internal model diperbarui. Batch dapat dibayangkan seperti \emph{for-loop} 
   yang mengulang beberapa sampel dan kemudian membuat prediksi. Di akhir batch, prediksi dibandingkan 
   dengan variabel keluaran yang diharapkan dan kesalahan akan dihitung. Dari kesalahan ini, maka algoritma 
@@ -172,14 +193,15 @@ proses \emph{Training}, terdapat konfigurasi hyper-parameter yang harus ditentuk
   \item \textbf{\emph{Image Size}}
   
   \emph{Image size} merupakan dimensi ukuran citra yang diterapkan pada dataset. Ketika ukuran citra yang 
-  diterapkan semakin kecil, maka waktu yang dibutuhkan untuk melakukan proses training akan semakin singkat. 
+  diterapkan semakin kecil, maka waktu yang dibutuhkan untuk melakukan proses \emph{training} akan semakin singkat. 
 
   \item \textbf{\emph{Learning Rate}}
   
   \emph{Learning rate} adalah hyper-parameter yang mengontrol besarnya perubahan suatu model dalam menanggapi 
   estimasi kesalahan setiap kali \emph{weight model} diperbarui. Dibutuhkan pemilihan nilai \emph{learning rate} 
-  yang tepat karena ketika nilai yang digunakan terlalu kecil akan berdampak pada proses training yang terlalu 
-  lama, sementara jika nilai yang digunakan terlalu besar mengakibatkan proses \emph{learning} kurang optimal.
+  yang tepat karena ketika nilai yang digunakan terlalu kecil akan berdampak pada proses \emph{training} yang 
+  terlalu lama, sementara jika nilai yang digunakan terlalu besar mengakibatkan proses \emph{learning} kurang 
+  optimal.
 
 
   \item \textbf{\emph{Random Erasing Probability}}
@@ -190,6 +212,10 @@ proses \emph{Training}, terdapat konfigurasi hyper-parameter yang harus ditentuk
   konsisten ketika digunakan di klasifikasi gambar, deteksi objek, dan re-identifikasi.
 
 \end{enumerate}
+
+\subsection{\emph{Validation}}
+
+
 
 \subsection{Model}
 
