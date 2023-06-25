@@ -17,36 +17,36 @@ Pengujian dilakukan dengan melakukan re-identifikasi citra secara terpisah pada 
 kemudian hasil pengujian dari tiap metode digabung sehingga menghasilkan output yang merupakan hasil 
 penyatuan dari kedua metode tersebut. Pengujian menggunakan sistem yang mereka kembangkan menunjukan hasil 
 yang lebih baik jika dibandingkan dengan sistem re-identifikasi tunggal masing-masing metode. Pada sistem 
-ResNetmid, nilai mAP yang didapatkan sebesar 57,78. Sementara sistem Swin Transformer didapatkan mAP sebesar 
-56,8. Dan pada sistem yang mereka kembangkan mendapatkan mAP sebesar 61,73\parencite{Holla2022}.
+ResNetmid, nilai mAP yang didapatkan sebesar 57.78. Sementara sistem Swin Transformer didapatkan mAP sebesar 
+56.8. Dan pada sistem yang mereka kembangkan mendapatkan mAP sebesar 61.73 \parencite{Holla2022}.
 
 \subsection{A Vehicle Re-identification Framework Based on the Improved Multi-Branch Feature Fusion Network}
 
 Pada tahun 2021, terdapat penelitian yang dilakukan oleh Leilei Rong, Yan Xu, Xiaolei Zhou, Lisu Han, Linghui 
 Li, dan Xunghua Pan. Penelitian yang dilakukan merupakan pembuatan sistem re-identifikasi kendaraan menggunakan 
-Multi-branch feature fusion network yang telah ditingkatkan. Sistem yang mereka buat bertujuan untuk memecahkan 
+\emph{Multi-branch feature fusion network} yang telah ditingkatkan. Sistem yang mereka buat bertujuan untuk memecahkan 
 permasalahan dan meningkatkan akurasi dari re-identifikasi. Dengan menggunakan backbone ResNet-50 dan dataset 
 dari VehicleID, VeRi-776, dan VRIC, mereka berfokus untuk meningkatkan akurasi re-identifikasi dari citra yang 
 ditangkap dalam keadaan berbagai macam keadaan, seperti orientasi kendaraan ketika tertangkap kamera, keadaan 
 cahaya, resolusi, blur, dan keadaan lainnya.
 
 Dengan dilakukannya pengujian pada tiga dataset yang berbeda, didapatkan hasil bahwa model yang mereka kembangkan 
-mampu melakukan re-identifikasi kendaraan dengan baik. Menggunakan dataset VehicleID, didapatkan mAP sebesar 80,87. 
-Sementara  pada dataset VeRi-776, didapatkan mAP sebesar 77,12. Dan pada dataset VRIC, didapatkan mAP sebesar 
-82,75\parencite{Rong2021}.
+mampu melakukan re-identifikasi kendaraan dengan baik. Menggunakan dataset VehicleID, didapatkan mAP sebesar 80.87. 
+Sementara  pada dataset VeRi-776, didapatkan mAP sebesar 77.12. Dan pada dataset VRIC, didapatkan mAP sebesar 
+82.75 \parencite{Rong2021}.
 
 \subsection{Klasifikasi Detail Mobil Menggunakan Swin Transformer}
 
-Pada tahun 2022, Muhammad Alif W. membuat penelitian tentang klasifikasi detail mobil menggunakan Swin Transformer. 
+Pada tahun 2022, Muhammad Alif W. membuat penelitian mengenai klasifikasi detail mobil menggunakan Swin Transformer. 
 Sistem yang dibuat bertujuan untuk mengklasifikasikan merek dan tipe dari sebuah mobil. Dataset yang digunakan 
 pada penelitian ini adalah BoxCar116K yang berisi 116 ribu citra mobil.
 
 Peneliti membuat tiga sistem dimana pada setiap sistem menggunakan variasi model Swin Transformer dengan pengaturan 
-yang berbeda. Variasi tersebut yaitu Swin-B (Swin Base), Swin-S (Swin Small), dan Swin-T (Swin Tiny). Setelah 
-dilakukan pengujian, didapatkan hasil bahwa pada tiap sistem yang dibuat mampu mengklasifikasikan merek dan tipe mobil 
-dengan baik. Pada sistem dengan model Swin-B, didapatkan nilai akurasinya sebesar 0,87. Sementara pada sistem dengan 
-model Swin-S, didapatkan nilai akurasi sebesar 0,85. Dan pada sistem dengan model Swin-T, nilai akurasi yang didapat 
-sebesar 0,84\parencite{Wicaksono2022}.
+yang berbeda. Variasi tersebut yaitu Swin-B (\emph{Swin Base}), Swin-S (\emph{Swin Small}), dan Swin-T (\emph{Swin Tiny}). 
+Setelah dilakukan pengujian, didapatkan hasil bahwa pada tiap sistem yang dibuat mampu mengklasifikasikan merek 
+dan tipe mobil dengan baik. Pada sistem dengan model Swin-B, didapatkan nilai akurasinya sebesar 87\%. 
+Sementara pada sistem dengan model Swin-S, didapatkan nilai akurasi sebesar 85\%. Dan pada sistem dengan 
+model Swin-T, nilai akurasi yang didapat sebesar 84\% \parencite{Wicaksono2022}.
 
 \section{Mobil}
 \label{sec:mobil}
@@ -64,9 +64,9 @@ sebesar 0,84\parencite{Wicaksono2022}.
 Mobil (\emph{automobile}, \emph{motorcar}, atau \emph{car}) merupakan kendaraan yang umumnya beroda empat dan dirancang untuk bergerak 
 menggunakan mesin pembakaran internal menggunakan bahan bakar yang mudah menguap. Mobil memiliki sistem teknis yang 
 kompleks yang terdiri dari berbagai macam subsistem yang memiliki fungsinya masing-masing. Mobil telah menjadi sarana 
-utama transportasi keluarga selama bertahun-tahun, dengan perkiraan 1,4 miliar mobil beroperasi di seluruh dunia. Desain 
-dari mobil Sebagian besar bergantung dari tujuan penggunaannya. Seperti misalnya mobil dengan kegunaan \emph{off-road} harus tahan 
-lama terhadap kondisi medan, sistemnya sederhana namun memiliki daya tahan tinggi terhadap beban berlebih. Sementara mobil 
+utama transportasi keluarga selama bertahun-tahun, dengan perkiraan 1.4 miliar mobil beroperasi di seluruh dunia. Desain 
+dari mobil sebagian besar bergantung dari tujuan penggunaannya. Seperti misalnya mobil dengan kegunaan \emph{off-road} harus bisa menahan 
+kondisi medan, sistemnya sederhana namun memiliki daya tahan tinggi terhadap beban berlebih. Sementara mobil 
 yang digunakan di jalan raya dengan sistem kecepatan tinggi harus memiliki kondisi seperti performa mesin yang tinggi, 
 memberikan kenyamanan pada penumpang, dan mobil memiliki stabilitas yang optimal \parencite{Cromer2023}. Perbedaan 
 berdasarkan fungsi dan perusahaan manufaktur membuat mobil-mobil yang ada di dunia ini memiliki ciri khasnya masing-masing 
@@ -92,8 +92,8 @@ yang direpresentasikan dengan deretan bit tertentu.
 \end{figure}
 
 Citra dapat didefinisikan sebagai fungsi f(x,y) berukuran M baris dan N kolom. x dan y pada fungsi merupakan koordinat 
-spasial dan amplitude f di titik (x,y) adalah intensitas atau tingkat keabuan dari citra tersebut. Gambar 2.2 merupakan 
-contoh sebuah koordinat citra digital \parencite{Putra2010}.
+spasial dan amplitude f di titik (x,y) adalah intensitas atau tingkat keabuan dari citra tersebut. Gambar 
+\ref{fig:koordinatcitradigital} merupakan contoh sebuah koordinat citra digital \parencite{Putra2010}.
 
 \section{\emph{Machine Learning}}
 \label{sec:machinelearning}
@@ -114,56 +114,71 @@ pola dari data yang telah didapat, mempelajari pola tersebut secara iteratif, ke
 yang telah dipelajari, dan menggunakan model tersebut untuk membuat prediksi ketika diberikan sebuah data baru \parencite{Russel2021}.
 
 Terdapat dua alasan utama perlunya membuat sebuah mesin yang dapat belajar. Alasan pertama karena pembuat mesin 
-(machine designer) tidak dapat mengantisipasi seluruh kemungkinan yang ada di masa depan. Seperti misalnya sebuah robot 
+(\emph{machine designer}) tidak dapat mengantisipasi seluruh kemungkinan yang ada di masa depan. Seperti misalnya sebuah robot 
 yang didesain untuk menavigasikan sebuah labirin. Robot tersebut perlu mempelajari labirin tersebut sebelum dapat menavigasikannya. 
 Alasan kedua yaitu karena adakalanya pembuat mesin justru tidak tahu bagaimana membuat sebuah kode untuk memecahkan permasalahan, 
 sehingga menggunakan algoritma dari \emph{machine learning} untuk memecahkan masalah \parencite{Russel2021}.
 
 \subsection{\emph{Supervised Learning}}
 
-\emph{Supervised Learning} merupakan algoritma \emph{machine learning} yang mempelajari kumpulan input-output yang telah dipasangkan. 
-Output yang telah dipasangkan ini disebut dengan label. \emph{machine learning} akan menerima beberapa input data yang telah 
-dipasangkan dengan output, kemudian mempelajarinya dengan cara membandingkan output yang diperoleh dengan output yang benar. Seperti 
-contohnya ketika diberikan input citra bergambar bis, maka akan memberikan output bertuliskan “bis”. Dengan \emph{Supervised Learning}, 
-maka model \emph{machine learning} dapat mengklasifikasi data baru berdasarkan data training yang pernah dipelajari \parencite{Russel2021}.
+\emph{Supervised Learning} merupakan algoritma \emph{machine learning} yang mempelajari kumpulan \emph{input-output} yang telah dipasangkan. 
+\emph{Output} yang telah dipasangkan ini disebut dengan label. \emph{Machine learning} akan menerima beberapa \emph{input} data yang telah 
+dipasangkan dengan \emph{output}, kemudian mempelajarinya dengan cara membandingkan \emph{output} yang diperoleh dengan \emph{output} yang 
+benar. Seperti contohnya ketika diberikan \emph{input} citra berobjek bis, maka akan memberikan \emph{output} bertuliskan “bis”. Dengan 
+\emph{Supervised Learning}, maka model \emph{machine learning} dapat mengklasifikasi data baru berdasarkan data training yang pernah 
+dipelajari \parencite{Russel2021}.
 
 \subsection{\emph{Unsupervised Learning}}
 
 \emph{Unsupervised Learning} merupakan algoritma \emph{machine learning} yang mempelajari pola dari data yang tidak memiliki label, 
-sehingga model tidak mengetahui benar atau tidaknya output yang diberikan. Umumnya \emph{Unsupervised Learning} akan mengelompokan 
-(clustering) output berdasarkan contoh-contoh yang memiliki kemiripan. Contoh dari \emph{Unsupervised Learning} yaitu Ketika memberikan 
-input citra bergambar kucing, maka model akan memberikan output berbagai macam citra yang memiliki kemiripan atau berhubungan dengan 
+sehingga model tidak mengetahui benar atau tidaknya \emph{output} yang diberikan. Umumnya \emph{Unsupervised Learning} akan mengelompokan 
+(clustering) \emph{output} berdasarkan contoh-contoh yang memiliki kemiripan. Contoh dari \emph{Unsupervised Learning} yaitu Ketika memberikan 
+\emph{input} citra berobjek kucing, maka model akan memberikan \emph{output} berbagai macam citra yang memiliki kemiripan atau berhubungan dengan 
 kucing \parencite{Russel2021}.
 
 \section{\emph{Deep Learning}}
 \label{sec:deeplearning}
 
-\emph{Deep Learning} merupakan salah satu cabang dari \emph{machine learning} (ML) dimana model yang dibuat untuk mendapatkan output 
-mengikuti bentuk model neuron dari otak manusia, sehingga sering juga disebut dengan \emph{neural network}. Metode \emph{Deep Learning} 
+\emph{Deep learning} merupakan salah satu cabang dari \emph{machine learning} (ML) dimana model yang dibuat untuk mendapatkan \emph{output} 
+mengikuti bentuk model neuron dari otak manusia, sehingga sering juga disebut dengan \emph{neural network}. Metode \emph{Deep learning} 
 memiliki bentuk rangkaian yang memiliki banyak layer di dalamnya, sehingga data yang masuk akan melalui sejumlah layer yang telah ditetapkan 
-hingga menjadi sebuah output. Tidak seperti metode lainnya yang dapat menangani banyak data dan memiliki waktu proses yang singkat, proses 
-menggunakan metode \emph{Deep Learning} bergantung dari jumlah layer yang digunakan di dalam model. Semakin banyak layer yang digunakan mengakibatkan 
-waktu untuk memproses data lebih lama karena tingkat kompleksitas yang semakin tinggi. Metode \emph{Deep Learning} banyak diaplikasikan pada 
+hingga menjadi sebuah \emph{output}. Tidak seperti metode lainnya yang dapat menangani banyak data dan memiliki waktu proses yang singkat, proses 
+menggunakan metode \emph{Deep learning} bergantung dari jumlah layer yang digunakan di dalam model. Semakin banyak layer yang digunakan mengakibatkan 
+waktu untuk memproses data lebih lama karena tingkat kompleksitas yang semakin tinggi. Metode \emph{Deep learning} banyak diaplikasikan pada 
 \emph{visual object recognition}, \emph{machine translation}, \emph{speech recognition}, \emph{speech synthesis}, dan \emph{image synthesis} 
 \parencite{Russel2021}.
 
-\emph{Deep Learning} terbukti memiliki keunggulan yang lebih dibandingkan menggunakan \linebreak metode lainnya, khususnya data yang memiliki dimensi 
-tinggi seperti citra. Seperti misalnya pada metode linear dan metode linear regression, kedua metode tersebut dapat menangani variabel input 
-yang cukup besar, namun ketika dilakukan perhitungan, waktu yang dibutuhkan cukup singkat, karena setiap variabel input yang berbeda hanya 
-berhubungan secara independen dengan output. Setiap variabel input ini tidak memiliki keterhubungan satu sama lain. Sifat dari metode ini 
+\emph{Deep learning} terbukti memiliki keunggulan yang lebih dibandingkan menggunakan \linebreak metode lainnya, khususnya data yang memiliki dimensi 
+tinggi seperti citra. Seperti misalnya pada metode linear dan metode linear regression, kedua metode tersebut dapat menangani variabel \emph{input} 
+yang cukup besar, namun ketika dilakukan perhitungan, waktu yang dibutuhkan cukup singkat, karena setiap variabel \emph{input} yang berbeda hanya 
+berhubungan secara independen dengan \emph{output}. Setiap variabel \emph{input} ini tidak memiliki keterhubungan satu sama lain. Sifat dari metode ini 
 menyebabkan model yang dihasilkan terbatasi kemampuannya. Model yang dihasilkan hanya sebatas mengikuti fungsi linear dan batas yang ada di 
-bagian input. Dimana pada dunia nyata, konsep dan input yang harus diolah lebih kompleks. Hal inilah yang membuat \emph{Deep Learning} memiliki 
-keunggulan yang signifikan. Gambar 2.4 merupakan contoh perbandingan dari jaringan komputasi yang dimiliki oleh metode \emph{linear regression}, metode 
-\emph{decision list network}, dan metode \emph{deep learning} \parencite{Russel2021}. 
+bagian \emph{input}. Dimana pada dunia nyata, konsep dan \emph{input} yang harus diolah lebih kompleks. Hal inilah yang membuat \emph{Deep Learning} memiliki 
+keunggulan yang signifikan. Gambar \ref{fig:perbedaanketigametodemachinelearning} merupakan contoh perbandingan dari jaringan 
+komputasi yang dimiliki oleh metode \emph{linear regression}, metode \emph{decision list network}, dan metode \emph{deep learning} \parencite{Russel2021}. 
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
-  % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.7]{gambar/Jaringan Deep learning.png}
-  % Keterangan gambar yang diinputkan
-  \caption{Perbedaan (a) \emph{Linear Regression}, (b) \emph{Decision List Network}, dan (c) \emph{Deep Learning}}
-  % Label referensi dari gambar yang diinputkan
-  \label{fig:perbedaanlinearregressiondecissionlistnetworkdeeplearning}
+  \begin{subfigure}{.33\textwidth}
+    \centering
+    \includegraphics[width=.34\linewidth]{gambar/LinearRegression.png}
+    \caption{\emph{Linear Regression}}
+    \label{linearregression}
+  \end{subfigure}%
+  \begin{subfigure}{.33\textwidth}
+    \centering
+    \includegraphics[width=.45\linewidth]{gambar/DecisionListNetwork.png}
+    \caption{\emph{Decision List Network}}
+    \label{decisionlistnetwork}
+  \end{subfigure}
+  \begin{subfigure}{.33\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{gambar/DeepLearning.png}
+    \caption{\emph{Deep Learning}}
+    \label{deeplearning}
+  \end{subfigure}%
+  \caption{Perbedaan Ketiga Metode Machine Learning}
+  \label{fig:perbedaanketigametodemachinelearning}
 \end{figure}
 
 \section{\emph{Re-identifikasi}}
@@ -181,15 +196,15 @@ keunggulan yang signifikan. Gambar 2.4 merupakan contoh perbandingan dari jaring
 
 Re-identifikasi merupakan teknik mencocokan dua objek dengan bidang pandang berbeda berdasarkan kemiripan pada beberapa parameter yang telah 
 ditentukan dengan tujuan untuk membuktikan bahwa kedua objek tersebut sama. Karakteristik dari re-identifikasi berupa sebuah siklus hipotesis-deduktif, 
-dimana model prediksi yang dibuat dengan mempelajari training data akan mengumpulkan data baru dari masukan, kemudian diikuti dengan revisi dan 
-pelabelan baru untuk data yang memiliki nilai kecocokan tinggi. Hal tersebut akan terus berulang mengikuti data terbaru yang dimasukan ke model 
-prediksi tersebut \parencite{Wechsler2014}. Cara kerja model re-identifikasi dapat dilihat pada gambar 2.5. Pengguna akan memasukkan sebuah gambar 
-kueri ke dalam model re-identifikasi. Model akan mencari gambar dengan objek yang memiliki kemiripan dengan gambar kueri di galeri. Gambar yang memiliki 
-kemiripan dengan kueri kemudian akan dibuat list tingkat kemiripan gambar galeri berdasarkan gambar kueri.
+dimana model prediksi yang dibuat dengan mempelajari \emph{training} data akan mengumpulkan data baru dari masukan, kemudian diikuti dengan revisi dan 
+pelabelan baru untuk data yang memiliki nilai kecocokan tinggi. Hal tersebut akan terus berulang mengikuti data terbaru yang dimasukkan ke model 
+prediksi tersebut \parencite{Wechsler2014}. Cara kerja model re-identifikasi dapat dilihat pada gambar \ref{fig:contohreidentifikasi}. Pengguna akan 
+memasukkan sebuah citra kueri ke dalam model re-identifikasi. Model akan mencari citra dengan objek yang memiliki kemiripan dengan citra kueri di 
+galeri. Citra yang memiliki kemiripan dengan kueri kemudian akan dibuat list peringkat kemiripan citra galeri berdasarkan citra kueri.
 
 Kebutuhan akan adanya sebuah sistem re-identifikasi dikaitkan dengan beberapa alasan, seperti untuk meningkatkan keamanan di lingkungan publik 
-yang menyebabkan penyebaran kamera CCTV yang meluas di area seperti taman, kampus, sekolah, jalan raya, dan lainnya. Semakin banyaknya kamera CCTV 
-di lingkungan publik berbanding lurus dengan semakin banyaknya tenaga kerja kasar manusia yang dibutuhkan untuk melihat dan melacak orang/kendaraan 
+yang menyebabkan penyebaran kamera pengawas yang meluas di area seperti taman, kampus, sekolah, jalan raya, dan lainnya. Semakin banyaknya kamera pengawas 
+di lingkungan publik berbanding lurus dengan semakin banyaknya tenaga kerja kasar manusia yang dibutuhkan untuk melihat dan melacak \linebreak orang/kendaraan 
 secara akurat dan efisien melalui kamera \parencite{Zheng2016}. Semakin sulitnya melakukan re-identifikasi secara manual menjadi alasan kuat perlu dikembangkannya 
 sistem re-identifikasi yang akurat dan efisien.
 
@@ -204,42 +219,52 @@ dengan bantuan encoder dan decoder, tanpa menggunakan \emph{reccurent network} d
 Ketika diperkenalkan,Transformer diuji cobakan untuk menjadi sebuah model penerjemah Bahasa. Ketika dibandingkan dengan model ber-asitektur CNN dan RNN 
 (seperti Extended Neural GPU, ByteNet, dan ConvS2S), terbukti bahwa Transformer, sebuah arsitektur tanpa RNN dan hanya menggunakan mekanisme perhatian, dapat 
 melakukan training lebih cepat dengan training data yang terbatas dan ukuran yang besar, serta skor output training yang dihasilkan pun juga mengungguli model-model 
-ber-asitektur CNN dan RNN. \parencite{Vaswani2017}
+ber-asitektur CNN dan RNN. Namun ketika Transformer digunakan untuk menyelesaikan persoalan visi komputer, Transformer memiliki kekurangan dikarenakan 
+tugas visi komputer yang membutuhkan prediksi hingga tingkat piksel. Hal ini dikarenakan Transformer memiliki mekanisme \emph{self attention} yang bersifat 
+kuadratik terhadap ukuran citra. \parencite{Vaswani2017}
 
 \section{Swin Transformer}
 \label{sec:swintransformer}
 
 Pemodelan pada visi komputer telah lama didominasi oleh \emph{Convolutional Neural Network} (CNN), dimulai dengan AlexNet dan kinerja revolusinya di tantangan 
-klasifikasi gambar ImageNet. Arsitektur CNN telah berevolusi menjadi arsitektur yang hebat dengan skala yang lebih besar, koneksi yang lebih luas, dan bentuk 
+klasifikasi citra \linebreak ImageNet. Arsitektur CNN telah berevolusi menjadi arsitektur yang hebat dengan skala yang lebih besar, koneksi yang lebih luas, dan bentuk 
 konvolusinya yang lebih canggih. Sementara arsitektur Transformer yang saat ini lazim digunakan pada \emph{Natural Language Processing} (NLP), justru tidak cocok 
 ketika digunakan sebagai model pada visi komputer. Hal ini dikarenakan pada tugas visi komputer seperti segmentasi semantik, dibutuhkan fitur prediksi hingga pada 
-tingkat piksel. Hal ini cukup sulit untuk arsitektur Transformer ketika dihadapkan gambar beresolusi tinggi, karena mekanisme kompleksitas komputasi \emph{self-attention} 
-yang dimiliki bersifat kuadratik terhadap ukuran gambar. Sehingga untuk mengatasi masalah tersebut, diciptakanlah Swin Transformer. \parencite{Liu2021}
+tingkat piksel. Hal ini cukup sulit untuk arsitektur Transformer ketika dihadapkan citra beresolusi tinggi, karena mekanisme kompleksitas komputasi \emph{self-attention} 
+yang dimiliki bersifat kuadratik terhadap ukuran citra. Sehingga untuk mengatasi masalah tersebut, diciptakanlah Swin Transformer. \parencite{Liu2021}
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
-  % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.5]{gambar/Perbedaan Swin dan VIT.png}
-  % Keterangan gambar yang diinputkan
-  \caption{Perbedaan (a)  Swin Transformer dan (b) Vision Transformer}
-  % Label referensi dari gambar yang diinputkan
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gambar/SwinTransformerLayer.png}
+    \caption{Swin Transformer}
+    \label{fig:swintransformerlayer}
+  \end{subfigure}%
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.65\linewidth]{gambar/VITLayer.png}
+    \caption{Vision Transformer}
+    \label{vitlayer}
+  \end{subfigure}
+  \caption{Perbedaan Swin Transformer dan Vision Transformer}
   \label{fig:perbedaanswintransformerdanvisiontransformer}
 \end{figure}
 
-Swin Transformer sebagai sebuah arsitektur baru untuk visi komputer, mampu \linebreak memetakan hirarki dan kompleksitas komputasinya mengikuti ukuran gambar. Seperti yang 
-terlihat pada gambar 2.6, Swin Transformer membangun sebuah hirarkis dengan \emph{patch} berukuran kecil (bergaris abu-abu) pada lapisan atas, yang kemudian secara 
+Swin Transformer sebagai sebuah arsitektur baru untuk visi komputer, mampu \linebreak memetakan hirarki dan kompleksitas komputasinya mengikuti ukuran citra. Seperti yang 
+terlihat pada gambar \ref{fig:swintransformerlayer}, Swin Transformer membangun sebuah hirarkis dengan \emph{patch} berukuran kecil (bergaris abu-abu) pada lapisan atas, yang kemudian secara 
 bertahap \emph{patch} tersebut akan bergabung dengan sekitarnya di lapisan yang lebih dalam. Selain itu, Swin Transformer memiliki kompleksitas komputasi yang linear 
-terhadap ukuran gambar dikarenakan komputasi \emph{self-attention} hanya berfokus pada setiap jendela (bergaris merah). Berbeda dengan Vision Transformer yang 
-memetakan dengan resolusi rendah dan memiliki kompleksitas komputasi kuadratik terhadap ukuran gambar karena komputasi \emph{self-attention} dilakukan secara 
+terhadap ukuran citra dikarenakan komputasi \emph{self-attention} hanya berfokus pada setiap jendela (bergaris merah). Berbeda dengan Vision Transformer yang 
+memetakan dengan resolusi rendah dan memiliki kompleksitas komputasi kuadratik terhadap ukuran citra karena komputasi \emph{self-attention} dilakukan secara 
 menyeluruh. \parencite{Liu2021}
 
 \subsection{\emph{Shifted Windows}}
 
 Arsitektur standar Transformer dan adaptasinya untuk klasifikasi gambar menggunakan \emph{global self-attention}. \emph{global self-attention} merupakan hubungan antara 
 satu token dengan token lainnya ketika dikomputasikan. Perhitungan global ke kompleksitas kuadrat berhubungan dengan jumlah token. Hal ini membuat Transformer tidak cocok 
-untuk menyelesaikan permasalahan visi yang membutuhkan kumpulan token yang besar untuk prediksi padat pada gambar beresolusi tinggi. \parencite{Liu2021}
+untuk menyelesaikan \linebreak permasalahan visi yang membutuhkan kumpulan token yang besar untuk prediksi padat pada gambar beresolusi tinggi \parencite{Liu2021}.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.7]{gambar/Ilustrasi Shifted Windows.png}
@@ -249,30 +274,30 @@ untuk menyelesaikan permasalahan visi yang membutuhkan kumpulan token yang besar
   \label{fig:ilustrasishiftedwindows}
 \end{figure}
 
-Karenanya, diciptakanlah \emph{shifted windows} untuk memperbaiki kekurangan dari \linebreak transformer. Gambar 2.7 merupakan sebuah ilustrasi dari pendekatan \emph{shifted windows} 
+Karenanya, diciptakanlah \emph{shifted windows} untuk memperbaiki kekurangan dari \linebreak transformer. Gambar \ref{fig:ilustrasishiftedwindows} merupakan sebuah ilustrasi dari pendekatan \emph{shifted windows} 
 untuk menghitung \emph{self-attention} yang dikenalkan pada arsitektur Swin Transformer. Pada layer 1 (kiri), skema partisi dari jendela biasa diadopsi, dan \emph{self-attention} 
 akan dihitung pada setiap jendelanya. Kemudian pada layer \begin{math}1+1\end{math} (kanan), jendela partisi akan bergeser (\emph{shifted}) dan menghasilkan jendela baru. Perhitungan 
-\emph{self-attention} di jendela yang baru melintasi Batasan dari jendela sebelumnya di layer 1, dimana menyediakan koneksi diantaranya. \parencite{Liu2021}
+\emph{self-attention} di jendela yang baru melintasi Batasan dari jendela sebelumnya di layer 1, dimana menyediakan koneksi diantaranya \parencite{Liu2021}.
 
 \subsection{Arsitektur Swin Transformer}
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.4]{gambar/Arsitektur Swin.png}
+  \includegraphics[scale=0.5]{gambar/Arsitektur Swin.png}
   % Keterangan gambar yang diinputkan
   \caption{Arsitektur Swin Transformer}
   % Label referensi dari gambar yang diinputkan
   \label{fig:arsitekturswintransformer}
 \end{figure}
 
-Gambaran dari arsitektur Swin Transformer dapat dilihat pada gambar 2.8, yang mengilustrasikan versi kecil dari Swin Transformer (Swin-T). Pada tahap awal, gambar input akan 
+Gambaran dari arsitektur Swin Transformer dapat dilihat pada gambar \ref{fig:arsitekturswintransformer}, yang mengilustrasikan versi kecil dari Swin Transformer (Swin-T). Pada tahap awal, citra \emph{input} akan 
 dibagi menjadi \emph{patch} non-tumpang tindih menggunakan modul pemecah tambalan, seperti ViT. Setiap \emph{patch} yang dihasilkan diperlakukan sebagai “token” dan fiturnya ditetapkan sebagai 
 rangkaian dari nilai RGB piksel mentah. Dalam implementasinya, ukuran \emph{patch} yang digunakan adalah \begin{math}4 \times 4\end{math}, sehingga dimensi fitur dari masing-masing \emph{patch} adalah 
-\begin{math}4 \times 4 \times 3 = 48\end{math}. Lapisan linear diterapkan pada fitur bernilai mentah ini untuk memproyeksikannya ke sembarang dimensi (dilambangkan sebagai C). \parencite{Liu2021}
+\begin{math}4 \times 4 \times 3 = 48\end{math}. Lapisan \linebreak linear diterapkan pada fitur bernilai mentah ini untuk memproyeksikannya ke sembarang dimensi (dilambangkan sebagai C) \parencite{Liu2021}.
 
 Beberapa blok Transformer dengan perhitungan \emph{self-attention} yang dimodifikasi diterapkan pada token \emph{patch} ini. Blok Transformer mempertahankan jumlah tokennya 
-(\begin{math}\frac{H}{4} \times \frac{H}{4}\end{math}), dan bersama dengan penyematan linear disebut dengan “tahap 1”. \parencite{Liu2021}
+(\begin{math}\frac{H}{4} \times \frac{H}{4}\end{math}), dan bersama dengan penyematan linear disebut dengan “tahap 1” \parencite{Liu2021}.
 
 Untuk menghasilkan representasi hierarkis, semakin dalamnya jaringan akan membuat jumlah token dikurangi dengan lapisan yang menggabungkan \emph{patch}. Lapisan penggabungan \emph{patch} pertama menggabungkan 
 fitur dari setiap kelompok \emph{patch} sekitarnya \begin{math}2 \times 2\end{math}, yang kemudian diterapkan di lapisan linear pada rangkaian fitur dimensi 4C. Hal ini mengurangi jumlah token dengan 
@@ -283,26 +308,26 @@ transformasi fitur, dengan resolusi tetap pada \begin{math}\frac{H}{8} \times \f
 
 \subsection{Blok Swin Transformer}
 
-\begin{figure}[ht]
+Swin Transformer dibangun dengan menggantikan standar modul \emph{multi-head self attention} (MSA) di dalam blok Transformer dengan modul \emph{shifted windows} (dijelaskan pada bagian 2.8.1), dengan 
+lapisan lain tetap sama. Seperti yang diilustrasikan pada gambar \ref{fig:blokswintransformer}, blok Swin Transformer terdiri dari \emph{shifted windows} dengan basis modul MSA, yang kemudian diikuti 2 layer MLP dengan 
+nonlinear GELU diantaranya. Lapisan \emph{LayerNorm} (LN) diterapkan sebelum setiap modul MSA dan MLP, dan residu koneksi diterapkan di setiap setelah modul \parencite{Liu2021}.
+
+\begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.5]{gambar/Blok Swin.png}
+  \includegraphics[scale=0.6]{gambar/Blok Swin.png}
   % Keterangan gambar yang diinputkan
   \caption{Blok Swin Transformer}
   % Label referensi dari gambar yang diinputkan
   \label{fig:blokswintransformer}
 \end{figure}
 
-Swin Transformer dibangun dengan menggantikan standar modul \emph{multi-head self attention} (MSA) di dalam blok Transformer dengan modul \emph{shifted windows} (dijelaskan pada bagian 2.8.1), dengan 
-lapisan lain tetap sama. Seperti yang diilustrasikan pada gambar 2.9, blok Swin Transformer terdiri dari \emph{shifted windows} dengan basis modul MSA, yang kemudian diikuti 2 layer MLP dengan 
-nonlinear GELU diantaranya. Lapisan \emph{LayerNorm} (LN) diterapkan sebelum setiap modul MSA dan MLP, dan residu koneksi diterapkan di setiap setelah modul. \parencite{Liu2021}
-
 \subsection{Variasi Model}
 
 Swin Transformer memiliki beberapa variasi model yang dapat digunakan. Swin-B (\emph{Swin Base}) dibuat dengan ukuran model dan tingkat kompleksitas komputasi yang mirip dengan ViT-B 
 (\emph{Vision Transformer Base}). Selain itu, dikenalkan juga varian model Swin-T, Swin-S, dan Swin-L. Swin-T (\emph{Swin Tiny}) merupakan versi 0.25x ukuran dan tingkat kompleksitas 
 komputasi dari \emph{base}. Swin-S (\emph{Swin Small}) merupakan versi 0.5x dari \emph{base}, sementara Swin-L (\emph{Swin Large}) merupakan versi 2x dari \emph{base}. Swin-T dan Swin-S 
-memiliki kompleksitas yang mirip dengan ResNet-50 dan ResNet-101. Ukuran jendela diatur ke M = 7 secara default. Sementara dimensi kueri pada setiap kepala adalah d = 32, dan lapisan 
+memiliki kompleksitas yang mirip dengan ResNet-50 dan ResNet-101. Ukuran jendela diatur ke M = 7 secara \emph{default}. Sementara dimensi kueri pada setiap kepala adalah d = 32, dan lapisan 
 ekspansi di setiap MLP adalah \begin{math}\alpha = 4\end{math}, untuk semua parameter. Hyper-parameter dari setiap variasi modelnya adalah sebagai berikut:
 
 \begin{itemize}[nolistsep]
@@ -317,35 +342,43 @@ ekspansi di setiap MLP adalah \begin{math}\alpha = 4\end{math}, untuk semua para
 
 \end{itemize}
 
-C merupakan nomor saluran dari lapisan tersembunyi di tahap pertama.\parencite{Liu2021}
+C merupakan nomor saluran dari lapisan tersembunyi di tahap pertama \parencite{Liu2021}.
 
-Setelah dilakukan percobaan di 3 jenis tugas, hasil percobaan menunjukan bahwa Swin Transformer memiliki performa yang bagus untuk digunakan di tugas visi. Hal ini dikarenakan pada klasifikasi gambar, Swin 
-Transformer mendapatkan akurasi 84,5 pada ImageNet-1K dan akurasi 87,3 pada ImageNet-22K pre-trained models. Kemudian pada deteksi objek, Swin Transformer mendapatkan nilai 58,7 untuk box AP dan 51,1 
+Setelah dilakukan percobaan di tiga jenis tugas visi komputer, hasil percobaan menunjukan bahwa Swin Transformer memiliki performa yang bagus. Hal ini dikarenakan pada klasifikasi gambar, Swin 
+Transformer mendapatkan akurasi 84.5 pada ImageNet-1K dan akurasi 87.3 pada ImageNet-22K pre-trained models. Kemudian pada deteksi objek, Swin Transformer mendapatkan nilai 58.7 untuk box AP dan 51.1 
 untuk mask AP pada pengembangan deteksi objek COCO. Dan pada segmentasi semantik, Swin Transformer mendapatkan nilai 53.5 untuk mIoU pada ADE20K. Hal ini menunjukan bahwa Swin Transformer memiliki potensi 
-untuk menjadi basis di tugas visi.\parencite{Liu2021}
+untuk menjadi basis di tugas visi \parencite{Liu2021}.
 
 \section{Swin Transformer V2}
 \label{sec:swintransformerv2}
 
 Swin Transformer merupakan salah satu \emph{backbone} dalam tugas umum di visi computer yang memiliki performa kuat di berbagai tugas pengenalan granular, seperti \emph{region-level object detection}, 
-\emph{pixel-level semantic segmentation}, dan klasifikasi citra. Gagasan utama dari Swin Transformer adalah untuk mengenalkan beberapa prior visual penting ke dalam encoder Transformer, termasuk hirarki, 
-lokalitas, dan invarian terjemahan. Dengan pengenalan ini membuat backbone memiliki dua kekuatan yang digabungkan, yaitu unit Transformer dasar yang memiliki kemampuan pemodelan yang kuat, dan prior 
+\emph{pixel-level semantic segmentation}, dan klasifikasi gambar. Gagasan utama dari Swin Transformer adalah untuk mengenalkan beberapa prior visual penting ke dalam encoder Transformer, termasuk hirarki, 
+lokalitas, dan invarian terjemahan. Dengan pengenalan ini membuat \emph{backbone} memiliki dua kekuatan yang digabungkan, yaitu unit Transformer dasar yang memiliki kemampuan pemodelan yang kuat, dan prior 
 visual yang ramah terhadap berbagai tugas visual.\parencite{Liuv22021}
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
-  % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.9]{gambar/Issue Swin V1.png}
-  % Keterangan gambar yang diinputkan
-  \caption{(a)Plotingan Sinyal propogasi, (b)Hasil Training Model \emph{Huge}}
-  % Label referensi dari gambar yang diinputkan
-  \label{fig:plotingansinyalpropogasidanperbedaanhasiltrainingmodelhuge}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gambar/issue1SwinV1.png}
+    \caption{Plotingan Sinyal Propogasi}
+    \label{fig:plotingansinyalpropogasi}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gambar/Issue2SwinV1.png}
+    \caption{Hasil Training Swin-H}
+    \label{fig:hasiltrainingswinh}
+  \end{subfigure}
+  \caption{Permasalahan Swin Transformer V1}
+  \label{fig:permasalahanswintransformerv1}
 \end{figure}
 
-Namun ketika dilakukan peningkatan kapasitas dan resolusi jendela dari Swin \linebreak Transformer, ditemukan dua masalah. Ketika kapasitas dari model Swin Transformer ditingkatkan, terdapat masalah ketidakstabilan 
-pada plotingan sinyal propogasi seperti yang terlihat di gambar 2.10(a). Ketika model Swin Transformer diperbesar dari ukuran \emph{small} (Swin-S) ke ukuran \emph{large} (Swin-L), nilai aktivasi di lapisan 
+Namun ketika dilakukan peningkatan kapasitas dan resolusi jendela dari Swin \linebreak Transformer, ditemukan dua masalah. Ketika kapasitas dari model Swin Transformer \linebreak ditingkatkan, terdapat masalah ketidakstabilan 
+pada plotingan sinyal propogasi seperti yang terlihat di gambar \ref{fig:plotingansinyalpropogasi}. Ketika model Swin Transformer diperbesar dari ukuran \emph{small} (Swin-S) ke ukuran \emph{large} (Swin-L), nilai aktivasi di lapisan 
 yang lebih dalam meningkat secara dramatis. Perbedaan antar lapisan dengan amplitudo tertinggi dan terendah mencapai nilai ekstrim sebesar 104. Ketika model Swin Transformer diperbesar hingga ukuran 
-\emph{Huge} (Swin-H), model tidak dapat menyelesaikan training seperti pada gambar 2.10(b).\parencite{Liuv22021}
+\emph{Huge} (Swin-H), model tidak dapat menyelesaikan training seperti pada gambar \ref{fig:hasiltrainingswinh} \parencite{Liuv22021}.
 
 \begin{figure}[ht]
   \centering
@@ -357,10 +390,10 @@ yang lebih dalam meningkat secara dramatis. Perbedaan antar lapisan dengan ampli
   \label{fig:perbandinganberbagaihasilpendekatanperhitunganbiasposisi}
 \end{figure}
 
-Masalah kedua yaitu adanya penurunan kinerja saat mentransfer model di seluruh resolusi jendela. Seperti yang terlihat pada gambar 2.11 pada baris pertama (\emph{Parameter position bias}), akurasi menurun secara 
+Masalah kedua yaitu adanya penurunan kinerja saat mentransfer model di seluruh resolusi jendela. Seperti yang terlihat pada gambar \ref{fig:perbandinganberbagaihasilpendekatanperhitunganbiasposisi} pada baris pertama (\emph{Parameter position bias}), akurasi menurun secara 
 signifikan ketika dilakukan pengujian akurasi model \emph{pre-trained} Image-Net-1K (dengan gambar \begin{math}256\times256\end{math} dan ukuran jendela \begin{math}8\times8\end{math}) pada resolusi gambar dan ukuran 
 jendela yang lebih besar melalui pendekatan interpolasi bi-kubik. Sehingga perlu adanya pemeriksaan terkait pendekatan bias posisi relatif di Swin Transformer. Pemecahan kedua masalah ini adalah dengan perubahan 
-pada sisi arsitektur Swin Transformer, dan revisi dari Swin Transformer ini disebut dengan Swin Transformer V2.\parencite{Liuv22021}
+pada sisi arsitektur Swin Transformer, dan revisi dari Swin Transformer ini disebut dengan Swin Transformer V2 \parencite{Liuv22021}.
 
 \subsection{Arsitektur Swin Transformer V2}
 
@@ -374,9 +407,9 @@ pada sisi arsitektur Swin Transformer, dan revisi dari Swin Transformer ini dise
   \label{fig:perbandinganarsitekturswintransformerv1danv2}
 \end{figure}
 
-Perubahan arsitektur Swin Transformer V1 ke V2 dapat dilihat pada gambar 2.12. Terdapat tiga bagian dari arsitektur Swin Transformer yang diadaptasi, yaitu \emph{res-post-norm} menggantikan konfigurasi 
+Perubahan arsitektur Swin Transformer V1 ke V2 dapat dilihat pada gambar \ref{fig:perbandinganarsitekturswintransformerv1danv2}. Terdapat tiga bagian dari arsitektur Swin Transformer yang diadaptasi, yaitu \emph{res-post-norm} menggantikan konfigurasi 
 \emph{pre-norm} sebelumnya, penambahan kosinus berskala untuk menggantikan \emph{dot product} pada bagian \emph{attention}, dan pergantian pendekatan parameterisasi RPB pada V1 menjadi pendekatan bias posisi 
-relatif kontinu dengan \emph{log-spaced}.\parencite{Liuv22021}
+relatif kontinu dengan \emph{log-spaced} \parencite{Liuv22021}.
 
 Pendekatan residual \emph{post normalization} merupakan salah satu adaptasi Swin Transformer V2. Dalam pendekatan ini, keluaran dari setiap blok residual dinormalisasi sebelum bergabung kembali ke 
 cabang utama, dan amplitudo pada cabang utama tidak menumpuk ketika masuk ke lapisan yang lebih dalam.
@@ -393,7 +426,7 @@ oleh beberapa pasang piksel. Sehingga diusulkanlah kosinus berskala dengan \begi
 % dibagi di seluruh lapisan. \begin{math}\tau\end{math} diatur lebih besar dari 0.01. 
 
 Adaptasi \emph{res-post-norm} dan penambahan kosinus berskala memudahkan model untuk \linebreak meningkatkan kapasitas. Sementara pergantian pendekatan bias posisi relatif kontinu membuat model ditransfer lebih 
-efektif melewati resolusi jendela.\parencite{Liuv22021}
+efektif melewati resolusi jendela \parencite{Liuv22021}.
 
 \subsection{Variasi Model Swin Transformer V2}
 
@@ -416,18 +449,44 @@ jumlah parameter 3 miliar parameter. Nomor saluran dan jumlah layer untuk masing
 
   \item SwinV2-H: C = \verb|352,#|. Jumlah layer = \verb|{2,2,18,2}|
 
-  \item SwinV2-S/B/L: C = \verb|512,#|. Jumlah layer = \verb|{2,2,42,2}|
+  \item SwinV2-G: C = \verb|512,#|. Jumlah layer = \verb|{2,2,42,2}|
 
 \end{itemize}
 
 Terdapat penambahan lapisan normalisasi pada cabang utama di setiap 6 lapisan khusus untuk model SwinV2-H dan SwinV2-G. Karena alasan penghematan waktu eksperimen, \linebreak SwinV2-G hanya digunakan untuk eksperimen 
-berskala besar, sementara SwinV2-H untuk studi paralel lain mengenai \emph{self-supervised learning}.\parencite{Liuv22021}
+berskala besar, sementara SwinV2-H untuk studi paralel lain mengenai \emph{self-supervised learning} \parencite{Liuv22021}.
 
 
-\section{GradCam}
+\section{GradCAM}
 \label{sec:gradcam}
 
+Model \emph{deep learning} telah memberikan banyak terobosan yang belum pernah terjadi \linebreak sebelumnya di berbagai tugas visi komputer, seperti \emph{image classification}, \emph{object detection}, \emph{semantic segmentation}, 
+dan berbagai tugas visi komputer lainnya. Namun, dengan kinerja model \emph{deep learning} yang dapat menyelesaikan berbagai tugas visi komputer, kurangnya transparan dari komponen model membuat model \emph{deep learning} 
+sulit untuk menafsirkan. Sehingga, ketika model \emph{deep learning} gagal dalam mengerjakan tugas visi komputer tanpa peringatan ataupun penjelasan, pengembang dan pengguna 
+sulit untuk mengetahui alasan kegagalan tersebut. \linebreak Karena itulah dibutuhkan model dengan kemampuan yang dapat menjelaskan “mengapa bisa memprediksi hal tersebut”. Kemampuan 
+tersebut bernama Grad-CAM.
 
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.6\linewidth]{gambar/dog_cat.jpg}
+    \caption{Contoh Citra}
+    \label{fig:contohcitraGradCAM}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{gambar/swinT_cat_gradcam_cam.jpg}
+    \caption{Hasil Klasifikasi dengan Objek "Kucing"}
+    \label{hasilklasifikasiobjekGradCAM}
+  \end{subfigure}
+  \caption{Contoh Penggunaan GradCAM untuk Klasifikasi Citra}
+  \label{fig:contohpenggunaangradcamuntukklasifikasicitra}
+\end{figure}
+
+Grad-CAM atau \emph{Gradient-weighted Class Activation Mapping} digunakan untuk mengidentifikasi wilayah diskriminatif yang digunakan kelas terbatas dari klasifikasi gambar model 
+yang tidak berisi lapisan yang seluruhnya terhubung. Kemampuan ini dibuat untuk dapat menafsirkan tanpa mengubah bentuk arsitektur dari model ataupun melakukan training ulang. 
+Dengan adanya GradCAM, model dapat menunjukkan dan membantu mendiagnosis jika terdapat kegagalan dengan mengungkap bias dari dataset. 
 
 \section{VRIC Dataset}
 \label{sec:vricdataset}
@@ -438,21 +497,35 @@ kendaraan memiliki penampilan yang sangat mirip dimana kendaraan yang berbeda na
 gambar. Studi re-identifikasi kendaraan yang ada umumnya menggunakan salah satu dari dua dataset ini, yaitu VehicleID dan VeRi-776. Walaupun hasil studi menunjukkan hasil cukup memuaskan, 
 namun pengaplikasian di dunia nyata belum jelas, dikarenakan dataset yang digunakan menggunakan gambar berkualitas tinggi dengan resolusi tinggi, tidak ada \emph{motion blur}, kondisi cuaca 
 khusus, dan oklusi. Karena alasan inilah, diciptakan sebuah dataset baru yaitu \emph{Vehicle Re-Identification in Context} (VRIC). Perbedaan dataset antara VehicleID, VeRi-776, dan VRIC 
-dapat dilihat pada gambar 2.13.\parencite{Kanaci2018}
+dapat dilihat pada gambar \ref{fig:perbedaanketigadatasetreidentifikasikendaraan} \parencite{Kanaci2018}.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
-  % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.9]{gambar/Perbedaan VRIC dkk.png}
-  % Keterangan gambar yang diinputkan
-  \caption{Perbedaan (a)VehicleID, (b)VeRi-776, dan (c)VRIC}
-  % Label referensi dari gambar yang diinputkan
-  \label{fig:perbedaanvehicleidveri776danvric}
+  \begin{subfigure}{.33\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gambar/VehicleID.png}
+    \caption{VehicleID}
+    \label{fig:Vehicleid}
+  \end{subfigure}%
+  \begin{subfigure}{.33\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gambar/Veri-776.png}
+    \caption{VeRi-776}
+    \label{fig:veri776}
+  \end{subfigure}
+  \begin{subfigure}{.33\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{gambar/VRIC.png}
+    \caption{VRIC}
+    \label{fig:vric}
+  \end{subfigure}%
+  \caption{Perbedaan Ketiga Dataset Re-Identifikasi Kendaraan}
+  \label{fig:perbedaanketigadatasetreidentifikasikendaraan}
 \end{figure}
 
 VRIC merupakan dataset yang lebih realistis dan menantang yang dikhususkan untuk re-identifikasi kendaraan. VRIC berisikan 60.430 gambar dengan 5.622 ID kendaraan yang diambil dari 60 
-kamera lalu lintas yang berbeda. VRIC berbeda dengan dataset dua dataset lainnya karena gambar yang diambil memiliki resolusi gambar yang bervariasi, terdapat \emph{motion blur}, kondisi 
-cuaca yang bermacam-macam, dan oklusi. Hal ini membuat VRIC dapat memberikan benchmark dari re-identifikasi kendaraan yang lebih realistis. \parencite{Kanaci2018}
+kamera lalu lintas yang berbeda. VRIC berbeda dengan dua dataset lainnya karena gambar yang diambil memiliki resolusi gambar yang bervariasi, terdapat \emph{motion blur}, kondisi 
+cuaca yang bermacam-macam, dan oklusi. Hal ini membuat VRIC dapat memberikan benchmark dari re-identifikasi kendaraan yang lebih realistis \parencite{Kanaci2018}.
 
 \subsection{Sumber Gambar}
 
@@ -480,7 +553,7 @@ data kendaraan diambil dari UA-DETRAC \emph{object detection and tracking benchm
   \label{fig:contohtangkapangambarlalulintasyangdigunakanvric}
 \end{figure}
 
-Contoh tangkapan gambar lalu lintas dapat dilihat pada gambar 2.14.\parencite{Kanaci2018}
+Contoh tangkapan gambar lalu lintas dapat dilihat pada gambar \ref{fig:contohtangkapangambarlalulintasyangdigunakanvric} \parencite{Kanaci2018}.
 
 \subsection{Filter dan Anotasi Gambar}
 
@@ -494,14 +567,14 @@ Contoh tangkapan gambar lalu lintas dapat dilihat pada gambar 2.14.\parencite{Ka
   \label{fig:contohgambardaridatasetvric}
 \end{figure}
 
-Dataset VRIC dibuat dengan menggunakan 60 training video dengan anotasi objek \linebreak \emph{bounding-box} yang berasal dari UA-DETRAC. Anotasi identitas kendaraan (ID) dilakukan dengan menetapkan 
+Dataset VRIC dibuat dengan menggunakan 60 \emph{training} video dengan anotasi objek \linebreak \emph{bounding-box} yang berasal dari UA-DETRAC. Anotasi identitas kendaraan (ID) dilakukan dengan menetapkan 
 label unik untuk setiap lintasan kendaraan per video UA-DETRAC, kemudian memverifikasi duplikasi ID secara manual. Dikarenakan seluruh video mentah UA-DETRAC diambil dari waktu dan adegan 
 yang berbeda, ditemukan sedikit lintasan duplikat dalam hal identitas. Untuk membuat cukup banyak variasi tampilan kendaraan, maka dibuanglah lintasan pendek yang memiliki kurang dari 20 
 frame, dan \emph{bounding-box} yang lebih kecil dari \begin{math}24 \times 24\end{math}. Sehingga dengan dilakukannya hal tersebut, didapatkan 5.622 ID kendaraan dari keseluruhan 60 video. 
 \parencite{Kanaci2018}
 
-Seperti yang terlihat di gambar 2.15, rata-rata resolusi gambar dari 60.430 \emph{bounding-box} kendaraan adalah \begin{math}69,8 \times 107,5\end{math} piksel pada 
-\begin{math}lebar \times tinggi\end{math}, dengan variasi 32 hingga 280 piksel dikarenakan jarak yang tidak dibatasi antara kendaraan dan kamera. \parencite{Kanaci2018}
+Seperti yang terlihat di gambar \ref{fig:contohgambardaridatasetvric}, rata-rata resolusi gambar dari 60.430 \emph{bounding-box} kendaraan adalah \begin{math}69.8 \times 107.5\end{math} piksel pada 
+\begin{math}lebar \times tinggi\end{math}, dengan variasi 32 hingga 280 piksel dikarenakan jarak yang tidak dibatasi antara kendaraan dan kamera \parencite{Kanaci2018}.
 
 \subsection{Splitting Dataset}
 
@@ -517,21 +590,30 @@ Seperti yang terlihat di gambar 2.15, rata-rata resolusi gambar dari 60.430 \emp
 
 Untuk model \emph{training} dan \emph{testing} menggunakan VRIC dataset sebagai benchmark, 5.622 ID kendaraan dari VRIC dibagi secara acak menjadi dua dan tidak tumpang tindih, dengan 
 2.811 untuk \emph{training}, dan 2.811 untuk \emph{testing}. Karena tidak ada pencocokan ID berpasangan lintas kamera, maka disimulasikan variasi tampilan silang dengan pengambilan 
-sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}.\parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 2.16.
+sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}.\parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 
+\ref{fig:tampilansemudaridatasetvric}.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
   \centering
-  % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=1]{gambar/Tampilan Dekat dan Jauh.png}
-  % Keterangan gambar yang diinputkan
-  \caption{Tampilan Semu (a)Dekat dan (b)Jauh dari VRIC}
-  % Label referensi dari gambar yang diinputkan
-  \label{fig:tampilansemuvric}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{gambar/tampilansemudekat.png}
+    \caption{Tampilan Semu Dekat}
+    \label{fig:tampilansemudekat}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.8\linewidth]{gambar/tampilansemujauh.png}
+    \caption{Tampilan Semu Jauh}
+    \label{tampilansemujauh}
+  \end{subfigure}
+  \caption{Tampilan Semu dari dataset VRIC}
+  \label{fig:tampilansemudaridatasetvric}
 \end{figure}
 
 Secara khusus, VRIC memiliki dua tampilan semu, yaitu dekat atau jauh, untuk setiap video dan kemudian akan dibangun set \emph{probe/gallery} dari lintasan uji dengan mengambil sampel 
 dari dua tampilan semu tersebut secara acak. Tampilan jarak jauh dan dekat ini menghasilkan kondisi yang sangat berbeda dan memungkinkan untuk digunakan pada simulasi dari dua pandangan 
-kamera yang tidak tumpang tindih.\parencite{Kanaci2018}
+kamera yang tidak tumpang tindih \parencite{Kanaci2018}.
 
 
 % % Contoh input gambar
