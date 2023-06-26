@@ -6,21 +6,28 @@
 \section{Kesimpulan}
 \label{sec:kesimpulan}
 
-Berdasarkan hasil pengujian sementara yang telah dijelaskan pada Bab 4, dapat 
+Berdasarkan hasil pengujian yang telah dijelaskan pada Bab 4, dapat 
 ditarik beberapa kesimpulan sebagai berikut:
 
 \begin{enumerate}[nolistsep]
 
   \item Pembuatan Model Re-Identifikasi dengan metode Swin Transformer untuk 
-  mengidentifikasi ulang mobil berhasil dibuat dengan nilai mAP paling optimal sampai 
-  saat ini yang didapat sebesar 72,5\%.
+  mengidentifikasi ulang mobil berhasil dibuat dengan nilai mAP tertinggi yang didapat 
+  di penelitian ini sebesar 75.21\% dan rank@1 tertinggi sebesar 71.2\%.
 
-  \item Dari keseluruhan varian model yang telah dibuat pada penelitian sampai saat ini, 
+  \item Dari keseluruhan model yang telah dibuat pada penelitian ini, 
   model terbaik yang dapat digunakan untuk model re-identifikasi mobil adalah 
-  Swin Transformer V2 dengan pengaturan parameter 1. Hal ini dibuktikan dengan nilai 
-  mAP yang didapat sebesar 72,5\% dan nilai rank@1 sebesar 68,6\%.
+  Swin Transformer V2 dengan pengaturan parameter 2. Hal ini dibuktikan dengan nilai 
+  mAP rata-rata yang didapat sebesar 75.1\% dan rank@1 rata-rata sebesar 71.2\%
 
-  % \item \lipsum[2][7-10]
+  \item Arsitektur Swin Transformer cocok digunakan untuk menyelesaikan permasalahan 
+  re-identifikasi kendaraan karena dapat mengidentifikasi citra dengan resolusi yang cukup 
+  kecil, sehingga melakukan re-identifikasi dengan sebuah citra dengan objek yang 
+  tidak terlalu jelas dapat dilakukan.
+
+  \item Model re-identifikasi mobil yang dibuat di penelitian ini masih belum mengungguli 
+  model re-identifikasi dari penelitian terdahulu yang menggunakan VRIC sebagai dataset 
+  dan CNN sebagai arsitektur.
 
 \end{enumerate}
 
@@ -30,13 +37,11 @@ ditarik beberapa kesimpulan sebagai berikut:
 Untuk pengembangan lebih lanjut pada penelitian berikutnya atau yang akan datang, \linebreak
 penulis memiliki beberapa saran antara lain:
 
-% \begin{enumerate}[nolistsep]
+\begin{enumerate}[nolistsep]
 
-%   % \item Menggunakan Dataset citra yang berasal dari daerah lokal atau seminimalnya berasal 
-%   % dari Indonesia.
+  \item Menggunakan Dataset citra yang berasal dari daerah lokal atau berasal dari Indonesia.
 
-%   % % \item \lipsum[2][4-6]
+  \item Perlunya pembenahan dan pengaturan pada hyper-parameter agar model dapat melakukan 
+  re-identifikasi dengan lebih baik.
 
-%   % % \item \lipsum[2][7-10]
-
-% \end{enumerate}
+\end{enumerate}

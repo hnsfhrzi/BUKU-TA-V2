@@ -4,20 +4,20 @@
 % Ubah bagian-bagian berikut dengan isi dari pengujian dan analisis
 
 Pada penelitian ini dipaparkan hasil penelitian beserta analisis dari model re-identifikasi yang telah dibuat sesuai dengan 
-yang telah dijelaskan di Bab 3. Model re-identifikasi yang telah dibuat akan diuji cobakan menggunakan data test dari dataset 
-VRIC yang telah disiapkan. 
+yang telah dijelaskan pada Bab 3. Model re-identifikasi yang telah dibuat akan diujicobakan menggunakan data 
+kueri dan data galeri dari dataset VRIC yang telah disiapkan. 
 
 \section{Hasil Penelitian}
 \label{sec:hasilpenelitian}
 
-Pada penelitian ini, telah ditentukan 4 jenis model re-identifikasi yang berbeda berdasarkan jenis model dan pengaturan 
-hyper-parameternya. Dan pada setiap jenis model, dilakukan 3 kali iterasi \emph{training} untuk menentukan model re-identifikasi 
+Pada penelitian ini, telah ditentukan empat jenis model re-identifikasi yang berbeda \linebreak berdasarkan jenis model dan pengaturan 
+hyper-parameternya. Dan pada setiap jenis model, dilakukan tiga kali iterasi \emph{training} untuk menentukan model re-identifikasi 
 terbaik di setiap jenisnya. Sehingga total model yang diciptakan pada penelitian ini berjumlah 12 model. 
 
-Dalam proses \emph{deep learning} khususnya pada tahap \emph{training} dan \emph{validation}, terdapat nilai yang dapat 
-menunjukan bagus atau tidaknya model yang telah diciptakan. Nilai tersebut adalah nilai loss dan nilai top 1 error, yang 
-dapat menunjukan performa dari sebuah model saat tahapan \emph{training} dan \emph{validation} berlangsung. Dengan total 
-epoch sebesar 60 untuk setiap model, akan didapatkan model dengan nilai loss dan nilai top 1 error terendah. 
+Dalam proses \emph{deep learning} khususnya pada tahap \emph{training} dan \emph{validation}, terdapat nilai  akurasi, loss, dan 
+nilai top 1 error, yang dapat menunjukan performa dari sebuah model saat tahapan \emph{training} dan \emph{validation} berlangsung. 
+Dengan total epoch sebesar 60 untuk setiap model, akan didapatkan model dengan nilai akurasi tertinggi, dan nilai loss serta nilai 
+top 1 error terendah. 
 
 \subsection{Swin Transformer V1 Parameter 1}
 
@@ -32,9 +32,10 @@ Pada Swin Transformer V1 parameter 1, hyper-parameter yang ditentukan yaitu seba
 \end{itemize}
 
 Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, dilakukan tiga kali iterasi 
-\emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi dengan nilai mAP dan 
-rank@1 terbaik untuk model Swin Transformer V1 Parameter 1. Hasil Akurasi dan loss pada tahap 
-\emph{training} dan \emph{validation} dapat dilihat pada tabel 4.1.
+\emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi yang bisa memberikan 
+nilai mAP dan rank@1 terbaik untuk model Swin Transformer V1 Parameter 1. Hasil Akurasi dan loss pada 
+tahap \emph{training} dan \emph{validation} dapat dilihat pada tabel 
+\ref{tb:NilaiakurasidanlossModelSwinTransformerV1Parameter1}.
 
 \begin{table}[h!]
   \begin{center}
@@ -51,8 +52,11 @@ rank@1 terbaik untuk model Swin Transformer V1 Parameter 1. Hasil Akurasi dan lo
 \end{table}
 
 Selain nilai akurasi dan loss, diperoleh pula grafik loss, top 1 Error, nilai mAP, rank@1, 
-rank@5, rank@10 dari proses \emph{Testing} dan \emph{validation} pada masing-masing iterasi. 
-Grafik dan nilai tersebut dapat dilihat pada gambar 4.1, gambar 4.2, dan tabel 4.2.
+rank@5, rank@10 dari proses \emph{validation} dan \emph{Testing} pada masing-masing iterasi. 
+Grafik dan nilai tersebut dapat dilihat pada gambar 
+\ref{fig:grafiklossdariswinv1parameter1}, gambar 
+\ref{fig:grafiktop1errdariswinv1parameter1}, 
+dan tabel \ref{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV1Parameter1}.
 
 \begin{figure}[ht]
   \centering
@@ -61,7 +65,7 @@ Grafik dan nilai tersebut dapat dilihat pada gambar 4.1, gambar 4.2, dan tabel 4
   % Keterangan gambar yang diinputkan
   \caption{Grafik Loss Setiap Iterasi Swin Transformer V1 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:grafiklossdantop1errdariswinv1parameter1iterasi1}
+  \label{fig:grafiklossdariswinv1parameter1}
 \end{figure}
 
 \begin{figure}[ht]
@@ -71,7 +75,7 @@ Grafik dan nilai tersebut dapat dilihat pada gambar 4.1, gambar 4.2, dan tabel 4
   % Keterangan gambar yang diinputkan
   \caption{Grafik Top 1 Error Setiap Iterasi Swin Transformer V1 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:grafiklossdantop1errdariswinv1parameter1iterasi2}
+  \label{fig:grafiktop1errdariswinv1parameter1}
 \end{figure}
 
 % Selain gambar grafik diatas, diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses 
@@ -111,10 +115,19 @@ Pada Swin Transformer V2 parameter 1, hyper-parameter yang ditentukan yaitu seba
 % Dari \emph{training} dan \emph{validation}, didapatkan nilai Akurasi, nilai dan grafik loss, 
 % serta grafik Top 1 Error yang dapat dilihat pada tabel 4.3, gambar 4.3, dan gambar 4.4.
 
-Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, dilakukan tiga kali iterasi 
-\emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi dengan nilai mAP \linebreak dan 
-rank@1 terbaik untuk model Swin Transformer V2 Parameter 1. Hasil Akurasi, loss, dan Top 1 Error 
-pada tahap \emph{training} dan \emph{validation} dapat dilihat pada tabel 4.3, gambar 4.3, dan gambar 4.4.
+% Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, dilakukan tiga kali iterasi 
+% \emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi dengan nilai mAP \linebreak dan 
+% rank@1 terbaik untuk model Swin Transformer V2 Parameter 1. Hasil Akurasi, loss, dan Top 1 Error 
+% yang didapat dapat dilihat pada tabel 
+% \ref{tb:NilaiakurasidanlossModelSwinTransformerV2Parameter1}, 
+% gambar \ref{fig:grafiklossdantop1errdariprosestrainingdanvalidationswinv2iterasi1}, 
+% dan gambar \ref{fig:grafiklossdantop1errdariprosestrainingdanvalidationswinv2iterasi2}.
+
+Dengan menggunakan hyper-parameter yang telah ditentukan, didapatkan Hasil Akurasi, loss, dan Top 1 
+Error pada tahap \emph{training} dan \emph{validation} yang dapat dilihat pada tabel 
+\ref{tb:NilaiakurasidanlossModelSwinTransformerV2Parameter1}, gambar 
+\ref{fig:grafiklossdariswinv2parameter1}, dan gambar 
+\ref{fig:grafiktop1errdariswinv2parameter1}.
 
 % Dengan menggunakan hyper-parameter yang ditentukan diatas, didapatkan nilai Akurasi, nilai 
 % dan grafik loss, serta grafik Top 1 Error pada tahap \emph{training} dan \emph{validation} 
@@ -151,7 +164,7 @@ pada tahap \emph{training} dan \emph{validation} dapat dilihat pada tabel 4.3, g
   % Keterangan gambar yang diinputkan
   \caption{Grafik Loss Setiap Iterasi Swin Transformer V2 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:grafiklossdantop1errdariprosestrainingdanvalidationswinv2iterasi1}
+  \label{fig:grafiklossdariswinv2parameter1}
 \end{figure}
 
 \begin{figure}[h!]
@@ -161,12 +174,13 @@ pada tahap \emph{training} dan \emph{validation} dapat dilihat pada tabel 4.3, g
   % Keterangan gambar yang diinputkan
   \caption{Grafik Top 1 Error Setiap Iterasi Swin Transformer V2 Parameter 1}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:grafiklossdantop1errdariprosestrainingdanvalidationswinv2iterasi2}
+  \label{fig:grafiktop1errdariswinv2parameter1}
 \end{figure}
 
 Selain nilai akurasi, loss, dan Top 1 Error, diperoleh pula nilai mAP, rank@1, 
-rank@5, rank@10 dari proses \emph{Testing} dan \emph{validation} pada 
-masing-masing iterasi. Grafik dan nilai tersebut dapat dilihat pada tabel 4.4.
+rank@5, rank@10 dari proses \emph{validation} dan \emph{Testing} pada 
+masing-masing iterasi. Grafik dan nilai tersebut dapat dilihat pada tabel 
+\ref{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV2Parameter1}.
 
 % Diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses \emph{Testing} pada 
 % masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.5.
@@ -199,7 +213,9 @@ Pada Swin Transformer V1 parameter 2, hyper-parameter yang ditentukan yaitu:
 \end{itemize}
 
 Dengan menggunakan hyper-parameter yang telah ditentukan, didapatkan Hasil Akurasi, loss, dan Top 1 
-Error pada tahap \emph{training} dan \emph{validation} yang dapat dilihat pada tabel 4.5.
+Error yang dapat dilihat pada tabel 
+\ref{tb:NilaiakurasidanlossModelSwinTransformerV1Parameter2}, gambar 
+\ref{fig:grafiklossdariswinv1parameter2}, dan gambar \ref{fig:grafiktop1errdariswinv1parameter2}.
 
 % Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, dilakukan tiga kali iterasi 
 % \emph{training} dan \emph{validation} dengan tujuan untuk mendapatkan iterasi dengan nilai mAP dan 
@@ -241,7 +257,7 @@ Error pada tahap \emph{training} dan \emph{validation} yang dapat dilihat pada t
   % Keterangan gambar yang diinputkan
   \caption{Grafik Top 1 Error Setiap Iterasi Swin Transformer V1 Parameter 2}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:grafiktop1errdariswinv1parameter1}
+  \label{fig:grafiktop1errdariswinv1parameter2}
 \end{figure}
 
 % Selain gambar grafik diatas, diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses 
@@ -252,7 +268,8 @@ Error pada tahap \emph{training} dan \emph{validation} yang dapat dilihat pada t
 % masing-masing iterasi. Seluruh nilai tersebut dapat dilihat di tabel 4.2.
 
 Kemudian diperoleh pula nilai mAP, rank@1, rank@5, dan rank@10 dari proses \emph{Testing} 
-dan \emph{validation} pada masing-masing iterasi yang dapat dilihat pada tabel 4.6.
+dan \emph{validation} pada masing-masing iterasi yang dapat dilihat pada 
+tabel \ref{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV1Parameter2}.
 
 \begin{table}[h!]
   \begin{center}
@@ -282,7 +299,9 @@ Pada Swin Transformer V2 parameter 2, hyper-parameter yang ditentukan yaitu:
 \end{itemize}
 
 Dengan menggunakan hyper-parameter yang ditentukan seperti diatas, didapatkan hasil akurasi, loss, 
-dan Top 1 Error pada tahap \emph{training} dan \emph{validation} yang dapat dilihat pada tabel 4.7.
+dan Top 1 Error pada tahap \emph{training} dan \emph{validation} yang dapat dilihat pada 
+tabel \ref{tb:NilaiakurasidanlossModelSwinTransformerV2Parameter2}, gambar 
+\ref{fig:grafiklossdariswinv2parameter2} dan gambar \ref{fig:grafiktop1errdariswinv2parameter2}.
 
 \begin{table}[h!]
   \begin{center}
@@ -301,7 +320,7 @@ dan Top 1 Error pada tahap \emph{training} dan \emph{validation} yang dapat dili
 \begin{figure}[ht]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.55]{gambar/Train SwinV2CP1 Loss.png}
+  \includegraphics[scale=0.575]{gambar/Train SwinV2CP1 Loss.png}
   % Keterangan gambar yang diinputkan
   \caption{Grafik Loss Setiap Iterasi Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
@@ -311,7 +330,7 @@ dan Top 1 Error pada tahap \emph{training} dan \emph{validation} yang dapat dili
 \begin{figure}[ht]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.55]{gambar/Train SwinV2CP1 Top1Err.png}
+  \includegraphics[scale=0.575]{gambar/Train SwinV2CP1 Top1Err.png}
   % Keterangan gambar yang diinputkan
   \caption{Grafik Top 1 Error Setiap Iterasi Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
@@ -320,7 +339,8 @@ dan Top 1 Error pada tahap \emph{training} dan \emph{validation} yang dapat dili
 
 Selain nilai akurasi, loss, dan Top 1 Error, diperoleh pula nilai mAP, rank@1, 
 rank@5, rank@10 dari proses \emph{Testing} dan \emph{validation} pada 
-masing-masing iterasi. Nilai tersebut dapat dilihat pada tabel 4.8.\\
+masing-masing iterasi. Nilai tersebut dapat dilihat pada tabel 
+\ref{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV2Parameter2}.\\
 
 % Selain gambar grafik diatas, diperoleh pula nilai mAP, rank@1, rank@5, rank@10 dari proses 
 % \emph{Testing} pada masing-masing iterasi. Dari tiga kali iterasi tersebut, maka didapatkan 
@@ -361,7 +381,7 @@ Dari seluruh data yang ditampilkan pada bagian 4.1, dapat diteliti hasil model t
 
 Pada model Swin Transformer V1 parameter 1, model yang digunakan yaitu Swin-B (\emph{Base}), yang merupakan bentuk 
 dasar dari arsitektur Swin Transformer. Dari tiga kali iterasi yang dilakukan, didapatkan data bahwa rata-rata nilai 
-mAP (\emph{Mean Average Precision}) untuk model Swin Transformer V1 parameter 1 sebesar 0,668 atau 66,8\%. Dan untuk 
+mAP (\emph{Mean Average Precision}) untuk model Swin Transformer V1 parameter 1 sebesar 0.668 atau 66.8\%. Dan untuk 
 rank@1, rank@5, dan rank@10 berturut-turut sebesar 62.2\%, 82.6\%, dan 87\%. 
 
 Berdasarkan Tabel \ref{tb:NilaimAP,Rank1,Rank5,danRank10ModelSwinTransformerV1Parameter1}, iterasi ketiga menjadi 
@@ -413,7 +433,8 @@ mAP rata-rata. Selain itu rank@1 yang didapat sebesar 71,2\% atau sama besar den
 nilai sebesar 89.2\% atau sama besar dengan rank@5 rata-rata. Dan rank@10 sebesar 93.2\% atau 0.2\% 
 lebih besar dari rank@10 rata-rata.
 
-\subsection{Perbandingan Model Swin Transformer}
+\section{Perbandingan Model Swin Transformer}
+\label{sec:perbandinganmodelswintransformer}
 
 Terdapat dua belas model yang telah dibuat pada penelitian ini, dengan setiap jenis modelnya dilakukan tiga kali iterasi. 
 Perbandingan setiap jenis model beserta iterasinya dapat dilihat pada tabel 
@@ -444,7 +465,7 @@ Perbandingan setiap jenis model beserta iterasinya dapat dilihat pada tabel
 
 Dari perbandingan tersebut dapat terlihat bahwa model Swin Transformer V2 parameter 2 pada iterasi pertama menjadi model 
 dengan nilai rank@1, dan rank@5 tertinggi dari seluruh model yang telah dibuat serta memiliki selisih 
-0.000046 dengan model Swin Transformer V2 parameter 2 iterasi kedua.
+0.000046 dengan model yang memiliki mAP tertinggi yaitu Swin Transformer V2 parameter 2 iterasi kedua.
 
 \section{Skenario Pengujian}
 \label{sec:skenariopengujian}
@@ -452,10 +473,9 @@ dengan nilai rank@1, dan rank@5 tertinggi dari seluruh model yang telah dibuat s
 Pengujian dilakukan menggunakan setiap jenis model re-identifikasi mobil yang telah dibuat pada penelitian ini. Setiap jenis model 
 re-identifikasi mobil untuk pengujian hanya akan menggunakan salah satu dari tiga iterasi yang telah dibuat. Iterasi yang 
 akan mewakili model re-identifikasi mobil ditentukan dari iterasi dengan nilai mAP dan rank@1 tertinggi yang didapat pada jenis 
-model tersebut. Setiap model re-identifikasi mobil yang telah ditentukan akan melakukan pengujian menggunakan data \emph{query} dan \emph{gallery} 
+model tersebut. Setiap model re-identifikasi mobil yang telah ditentukan akan melakukan pengujian menggunakan data kueri dan galeri 
 yang telah tersedia dari dataset VRIC. Model re-identifikasi mobil yang digunakan untuk pengujian dapat dilihat pada 
-tabel \ref{tb:modelreidentifikasiyangdigunakanpengujian}.\\
-\\
+tabel \ref{tb:modelreidentifikasiyangdigunakanpengujian}.
 
 \begin{table}[h!]
   \begin{center}
@@ -472,37 +492,37 @@ tabel \ref{tb:modelreidentifikasiyangdigunakanpengujian}.\\
   \end{center}
 \end{table}
 
-Pengujian dilakukan dengan cara memasukkan sebuah gambar kueri ke dalam model re-identifikasi mobil. Model yang sudah memiliki 
-galeri berisi kumpulan gambar mobil kemudian akan mencari gambar dengan objek (mobil) yang memiliki kemiripan dengan gambar 
-kueri di galeri. Beberapa gambar yang memiliki tingkat kemiripan tertinggi dengan kueri kemudian akan dibuat list peringkat 
-kemiripan gambar galeri berdasarkan gambar kueri. Gambar galeri yang memiliki objek yang sesuai dengan yang dicari dari gambar 
+Pengujian dilakukan dengan cara memasukkan sebuah citra kueri ke dalam model re-identifikasi. Model yang sudah memiliki 
+galeri berisi kumpulan citra kemudian akan mencari citra dengan objek (mobil) di galeri yang memiliki kemiripan dengan citra 
+kueri. Beberapa citra yang memiliki tingkat kemiripan tertinggi dengan kueri kemudian akan dibuat list peringkat 
+kemiripan citra galeri berdasarkan citra kueri. Citra galeri yang memiliki objek yang sesuai dengan yang dicari dari citra 
 kueri akan ditandai dengan warna hijau pada peringkatnya. Berikut merupakan beberapa hasil pengujian model re-identifikasi mobil.
 
 \subsection{Pengujian Pertama}
 
-Pengujian pertama menggunakan sebuah gambar kueri ke-8 dengan objek minibus \linebreak berwarna krem dan putih. Gambar kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianpertama}.
+Pengujian pertama menggunakan sebuah citra kueri ke-8 dengan objek minibus \linebreak berwarna krem dan putih. Citra kueri 
+beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianpertama}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Que8_1018.jpg}
-    \caption{Gambar Kueri ke-8}
+    \caption{Citra Kueri ke-8}
     \label{gambarkuerinomordelapan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamQue8_1018.jpg}
-    \caption{GradCam Gambar Kueri ke-8}
+    \includegraphics[width=.3\linewidth]{gambar/GradCamQue8_1018.jpg}
+    \caption{GradCam Citra Kueri ke-8}
     \label{gradcamgambarkuerinomordelapan}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Pertama}
+  \caption{Citra Kueri untuk Pengujian Pertama}
   \label{fig:gambarkueriuntukpengujianpertama}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian pertama merupakan gambar dengan objek \linebreak minibus yang sesuai dengan gambar 
-\ref{fig:gambarkueriuntukpengujianpertama} dengan sudut pengambilan yang berbeda. Gambar galeri beserta hasil GradCam dapat 
+Citra galeri yang dicari pada pengujian pertama merupakan citra dengan objek \linebreak minibus yang sesuai dengan gambar 
+\ref{fig:gambarkueriuntukpengujianpertama} dengan sudut pengambilan yang berbeda. Citra galeri beserta hasil GradCam dapat 
 dilihat pada gambar \ref{fig:gambargaleriuntukpengujianpertama}.
 
 \begin{figure}[h!]
@@ -510,20 +530,20 @@ dilihat pada gambar \ref{fig:gambargaleriuntukpengujianpertama}.
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Gal8_1018.jpg}
-    \caption{Gambar Galeri yang Dicari}
+    \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomordelapan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamGal8_1018.jpg}
-    \caption{GradCam Gambar Galeri yang Dicari}
+    \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomordelapan}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Pertama}
+  \caption{Citra Galeri yang Dicari untuk Pengujian Pertama}
   \label{fig:gambargaleriuntukpengujianpertama}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-8 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+Dengan memasukkan citra kueri ke-8 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianpertamapadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
@@ -536,7 +556,7 @@ peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianpertamapadamo
   \label{fig:hasilpengujianpertamapadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-8 ke dalam model Swin Transformer V2 parameter 1 dengan 
+Hasil pengujian yang didapat ketika memasukkan citra kueri ke-8 ke dalam model Swin Transformer V2 parameter 1 dengan 
 iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianpertamapadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
@@ -549,7 +569,7 @@ iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianpertamapadamodelswint
   \label{fig:hasilpengujianpertamapadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-8 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+Dari memasukkan citra kueri ke-8 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
 peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianpertamapadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
@@ -562,7 +582,7 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianpertamapadamode
   \label{fig:hasilpengujianpertamapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-8 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-8 dapat 
 dilihat pada gambar \ref{fig:hasilpengujianpertamapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
@@ -576,35 +596,34 @@ dilihat pada gambar \ref{fig:hasilpengujianpertamapadamodelswintransformerv2para
 \end{figure}
 
 Dari pengujian pertama, didapatkan hasil bahwa keempat model Swin Transformer yang berbeda dapat melakukan re-identifikasi 
-dengan benar. Hal ini dibuktikan dengan ditunjukkannya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujianpertama})
-berada pada rank pertama di hasil pengujian dari setiap model re-identifikasi.
+dengan benar. Hal ini dibuktikan dengan ditunjukkannya citra galeri (gambar \ref{fig:gambargaleriuntukpengujianpertama})
+berada pada peringkat pertama di hasil pengujian dari setiap model re-identifikasi.
 
 \subsection{Pengujian Kedua}
 
-Pengujian kedua menggunakan sebuah gambar kueri ke-57 dengan objek mobil sedan berwarna biru tua. Gambar kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankedua}.\\
-\\
+Pengujian kedua menggunakan sebuah citra kueri ke-57 dengan objek mobil sedan berwarna biru tua yang terlihat dari samping 
+dengan adanya blur. Citra kueri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankedua}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Que57_1112.jpg}
-    \caption{Gambar Kueri ke-57}
+    \caption{Citra Kueri ke-57}
     \label{gambarkuerinomorlimatujuh}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamQue57_1112.jpg}
-    \caption{GradCam Gambar Kueri ke-57}
+    \caption{GradCam Citra Kueri ke-57}
     \label{gradcamgambarkuerinomorlimatujuh}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Kedua}
+  \caption{Citra Kueri untuk Pengujian Kedua}
   \label{fig:gambarkueriuntukpengujiankedua}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian kedua merupakan gambar dengan objek \linebreak mobil sedan berwarna biru tua 
-yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankedua} dengan sudut pengambilan yang berbeda. Gambar galeri 
+Citra galeri yang dicari pada pengujian kedua merupakan citra dengan objek \linebreak mobil sedan berwarna biru tua 
+yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankedua} dengan sudut pengambilan yang berbeda. Citra galeri 
 beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankedua}.
 
 \begin{figure}[h!]
@@ -612,21 +631,21 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpenguj
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Gal57_1112.jpg}
-    \caption{Gambar Galeri yang Dicari}
+    \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomorlimatujuh}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamGal57_1112.jpg}
-    \caption{GradCam Gambar Galeri yang Dicari}
+    \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomorlimatujuh}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Kedua}
+  \caption{Citra Galeri yang Dicari untuk Pengujian Kedua}
   \label{fig:gambargaleriuntukpengujiankedua}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-57 ke dalam model Swin Transformer V1 parameter 1 dengan 
-iterasi 3 dapat dilihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv1param1}.\\
+Hasil pengujian yang didapat ketika memasukkan citra kueri ke-57 ke dalam model Swin Transformer V1 parameter 1 dengan 
+iterasi 3 dapat dilihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
   \centering
@@ -638,8 +657,8 @@ iterasi 3 dapat dilihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintra
   \label{fig:hasilpengujiankeduapadamodelswintransformerv1param1}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-57 ke dalam model Swin Transformer V2 parameter 1 dengan iterasi 1, didapatkan hasil 
-peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv2param1}.\\
+Dengan memasukkan citra kueri ke-57 ke dalam model Swin Transformer V2 parameter 1 dengan iterasi 1, didapatkan hasil 
+peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
   \centering
@@ -651,9 +670,8 @@ peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeduapadamode
   \label{fig:hasilpengujiankeduapadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-57 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
-peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv1param2}.\\
-\\
+Dari memasukkan citra kueri ke-57 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
   \centering
@@ -665,7 +683,7 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeduapadamodels
   \label{fig:hasilpengujiankeduapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-57 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar citra ke-57 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
@@ -679,14 +697,14 @@ dilihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv2param2
 \end{figure}
 
 Dari pengujian kedua, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 gagal dalam melakukan re-identifikasi, 
-karena gambar kueri yang benar tidak berada pada rank pertama (gambar 
+karena citra kueri yang benar tidak berada pada peringkat pertama (gambar 
 \ref{fig:hasilpengujiankeduapadamodelswintransformerv1param1}). Sementara ketiga model re-identifikasi lainnya berhasil 
-melakukan re-identifikasi. Hal ini dibuktikan dengan ditunjukkannya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujianpertama})
-berada pada rank pertama di hasil pengujian pada setiap model re-identifikasi.
+melakukan re-identifikasi yang dibuktikan dengan ditunjukkannya citra galeri (gambar \ref{fig:gambargaleriuntukpengujianpertama})
+berada pada peringkat pertama di hasil pengujian pada setiap model re-identifikasi.
 
 \subsection{Pengujian Ketiga}
 
-Pengujian ketiga menggunakan sebuah gambar kueri ke-61 dengan objek mobil sedan berwarna putih. Gambar kueri 
+Pengujian ketiga menggunakan sebuah citra kueri ke-61 dengan objek mobil sedan berwarna putih. Citra kueri 
 beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketiga}.
 
 \begin{figure}[h!]
@@ -694,42 +712,42 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Que61_1120.jpg}
-    \caption{Gambar Kueri ke-61}
+    \caption{Citra Kueri ke-61}
     \label{gambarkuerinomorenamsatu}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamQue61_1120.jpg}
-    \caption{GradCam Gambar Kueri ke-61}
+    \includegraphics[width=.35\linewidth]{gambar/GradCamQue61_1120.jpg}
+    \caption{GradCam Citra Kueri ke-61}
     \label{gradcamgambarkuerinomorenamsatu}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Ketiga}
+  \caption{Citra Kueri untuk Pengujian Ketiga}
   \label{fig:gambarkueriuntukpengujianketiga}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian ketiga merupakan gambar dengan objek \linebreak mobil sedan berwarna putih 
+Citra galeri yang dicari pada pengujian ketiga merupakan citra dengan objek mobil sedan berwarna putih 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketiga} dengan sudut pengambilan yang berbeda. 
-Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketiga}.
+Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketiga}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Gal61_1120.jpg}
-    \caption{Gambar Galeri yang Dicari}
+    \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomorenamsatu}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamGal61_1120.jpg}
-    \caption{GradCam Gambar Galeri yang Dicari}
+    \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomorenamsatu}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Ketiga}
+  \caption{Citra Galeri yang Dicari untuk Pengujian Ketiga}
   \label{fig:gambargaleriuntukpengujianketiga}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+Dengan memasukkan citra kueri ke-61 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
@@ -742,7 +760,7 @@ peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketigapadamod
   \label{fig:hasilpengujianketigapadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V2 parameter 1 dengan 
+Hasil pengujian yang didapat ketika memasukkan citra kueri ke-61 ke dalam model Swin Transformer V2 parameter 1 dengan 
 iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
@@ -755,7 +773,7 @@ iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintr
   \label{fig:hasilpengujianketigapadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-61 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+Dari memasukkan citra kueri ke-61 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
 peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
@@ -768,7 +786,7 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketigapadamodel
   \label{fig:hasilpengujianketigapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-61 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-61 dapat 
 dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
@@ -782,14 +800,14 @@ dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param
 \end{figure}
 
 Dari pengujian ketiga, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 gagal dalam melakukan re-identifikasi, 
-karena gambar kueri yang benar tidak berada pada rank pertama (gambar 
+karena citra kueri yang benar tidak berada pada peringkat pertama (gambar 
 \ref{fig:hasilpengujianketigapadamodelswintransformerv1param1}). Sementara ketiga model re-identifikasi lainnya berhasil 
-melakukan re-identifikasi. Hal ini dibuktikan dengan ditunjukkannya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujianketiga})
-berada pada rank pertama di hasil pengujian pada setiap model re-identifikasi.
+melakukan re-identifikasi. Hal ini dibuktikan dengan ditunjukkannya citra galeri (gambar \ref{fig:gambargaleriuntukpengujianketiga})
+berada pada peringkat pertama di hasil pengujian pada setiap model re-identifikasi.
 
 \subsection{Pengujian Keempat}
 
-Pengujian keempat menggunakan sebuah gambar kueri ke-21 dengan objek mobil sedan berwarna merah. Gambar kueri 
+Pengujian keempat menggunakan sebuah citra kueri ke-21 dengan objek mobil sedan berwarna merah. Citra kueri 
 beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankeempat}.
 
 \begin{figure}[h!]
@@ -797,42 +815,42 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Que21_1046.jpg}
-    \caption{Gambar Kueri ke-21}
+    \caption{Citra Kueri ke-21}
     \label{gambarkuerinomorduasatu}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamQue21_1046.jpg}
-    \caption{GradCam Gambar Kueri ke-21}
+    \caption{GradCam Citra Kueri ke-21}
     \label{gradcamgambarkuerinomorduasatu}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Keempat}
+  \caption{Citra Kueri untuk Pengujian Keempat}
   \label{fig:gambarkueriuntukpengujiankeempat}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian keempat merupakan gambar dengan objek \linebreak mobil sedan berwarna merah 
+Citra galeri yang dicari pada pengujian keempat merupakan citra dengan objek \linebreak mobil sedan berwarna merah 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankeempat} dengan sudut pengambilan yang berbeda. 
-Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeempat}.
+Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeempat}.\\
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Gal21_1046.jpg}
-    \caption{Gambar Galeri yang Dicari}
+    \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomorduasatu}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamGal21_1046.jpg}
-    \caption{GradCam Gambar Galeri yang Dicari}
+    \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomorduasatu}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Keempat}
+  \caption{Citra Galeri yang Dicari untuk Pengujian Keempat}
   \label{fig:gambargaleriuntukpengujiankeempat}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-21 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+Dengan memasukkan citra kueri ke-21 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
@@ -845,7 +863,7 @@ peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamo
   \label{fig:hasilpengujiankeempatpadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-21 ke dalam model Swin Transformer V2 parameter 1 dengan 
+Hasil pengujian yang didapat ketika memasukkan citra kueri ke-21 ke dalam model Swin Transformer V2 parameter 1 dengan 
 iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
@@ -858,7 +876,7 @@ iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswint
   \label{fig:hasilpengujiankeempatpadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-21 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+Dari memasukkan citra kueri ke-21 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
 peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
@@ -871,7 +889,7 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamode
   \label{fig:hasilpengujiankeempatpadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-21 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-21 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
@@ -885,18 +903,18 @@ dilihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2para
 \end{figure}
 
 Dari pengujian keempat, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 gagal dalam melakukan re-identifikasi, 
-karena gambar kueri yang benar tidak berada pada sepuluh peringkat teratas (gambar 
+karena citra kueri yang benar tidak berada pada sepuluh peringkat teratas (gambar 
 \ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param1}). Sementara model Swin Transformer V2 parameter 1 dan 
-Swin Transformer V1 parameter 2 masih dapat melakukan re-identifikasi sesuai gambar kueri, namun gambar galeri yang tepat 
+Swin Transformer V1 parameter 2 masih dapat melakukan re-identifikasi sesuai citra kueri, namun citra galeri yang tepat 
 tidak berada pada peringkat pertama (seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param1} 
 dan gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv1param2}). Model Swin Transformer V2 parameter 2 berhasil 
-melakukan re-identifikasi pada pengujian keempat. Hal ini dibuktikan dengan ditunjukkannya gambar galeri 
+melakukan re-identifikasi pada pengujian keempat. Hal ini dibuktikan dengan ditunjukkannya citra galeri 
 (gambar \ref{fig:gambargaleriuntukpengujiankeempat}) berada pada peringkat pertama di hasil pengujian model Swin Transformer 
 V2 parameter 2 (gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param2}).
 
 \subsection{Pengujian Kelima}
 
-Pengujian kelima menggunakan sebuah gambar kueri ke-9 dengan objek mobil suv berwarna hitam. Gambar kueri 
+Pengujian kelima menggunakan sebuah citra kueri ke-9 dengan objek mobil suv berwarna hitam. Citra kueri 
 beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankelima}.
 
 \begin{figure}[h!]
@@ -904,42 +922,42 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Que9_1019.jpg}
-    \caption{Gambar Kueri ke-9}
+    \caption{Citra Kueri ke-9}
     \label{gambarkuerinomorsembilan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamQue9_1019.jpg}
-    \caption{GradCam Gambar Kueri ke-9}
+    \caption{GradCam Citra Kueri ke-9}
     \label{gradcamgambarkuerinomorsembilan}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Kelima}
+  \caption{Citra Kueri untuk Pengujian Kelima}
   \label{fig:gambarkueriuntukpengujiankelima}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian kelima merupakan gambar dengan objek \linebreak mobil suv berwarna hitam 
+Citra galeri yang dicari pada pengujian kelima merupakan citra dengan objek \linebreak mobil suv berwarna hitam 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankelima} dengan sudut pengambilan yang berbeda. 
-Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankelima}.
+Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankelima}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Gal9_1019.jpg}
-    \caption{Gambar Galeri yang Dicari}
+    \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomorsembilan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamGal9_1019.jpg}
-    \caption{GradCam Gambar Galeri yang Dicari}
+    \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomorsembilan}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Kelima}
+  \caption{Citra Galeri yang Dicari untuk Pengujian Kelima}
   \label{fig:gambargaleriuntukpengujiankelima}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-9 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+Dengan memasukkan citra kueri ke-9 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
@@ -952,7 +970,7 @@ peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankelimapadamod
   \label{fig:hasilpengujiankelimapadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-9 ke dalam model Swin Transformer V2 parameter 1 dengan 
+Hasil pengujian yang didapat ketika memasukkan citra kueri ke-9 ke dalam model Swin Transformer V2 parameter 1 dengan 
 iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
@@ -965,7 +983,7 @@ iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintr
   \label{fig:hasilpengujiankelimapadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-9 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+Dari memasukkan citra kueri ke-9 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
 peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
@@ -978,7 +996,7 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankelimapadamodel
   \label{fig:hasilpengujiankelimapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-9 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-9 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
@@ -991,19 +1009,19 @@ dilihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param
   \label{fig:hasilpengujiankelimapadamodelswintransformerv2param2}
 \end{figure}
 
-Dari pengujian kelima, didapatkan hasil bahwa model Swin Transformer V1 parameter 1 dan model Swin Transformer V2 parameter 1 
-gagal dalam melakukan re-identifikasi, karena gambar kueri yang benar tidak berada pada sepuluh peringkat teratas (gambar 
+Dari pengujian kelima, didapatkan hasil bahwa Swin Transformer V1 parameter 1 dan Swin Transformer V2 parameter 1 
+gagal dalam melakukan re-identifikasi, karena citra kueri yang benar tidak berada di sepuluh peringkat teratas (gambar 
 \ref{fig:hasilpengujiankelimapadamodelswintransformerv1param1} dan gambar 
-\ref{fig:hasilpengujiankelimapadamodelswintransformerv2param1}). Sementara pada model Swin Transformer V1 parameter 2, gambar 
-galeri hanya berada pada 10 peringkat teratas, namun tidak berada di peringkat pertama, seperti yang terlihat pada gambar 
-\ref{fig:hasilpengujiankelimapadamodelswintransformerv1param2}. Dan untuk model Swin Transformer V2 parameter 2, dapat melakukan 
-re-identifikasi dari gambar kueri. Namun gambar galeri hanya berada pada peringkat 2 teratas. Hal ini terlihat pada gambar 
-hasil pengujian dari Swin Transformer V2 parameter 2 (gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}).
+\ref{fig:hasilpengujiankelimapadamodelswintransformerv2param1}). Sementara pada Swin Transformer V1 parameter 2, citra 
+galeri hanya berada pada peringkat ke-7 (gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv1param2}). 
+Dan untuk Swin Transformer V2 parameter 2, dapat melakukan 
+re-identifikasi namun citra galeri hanya berada pada peringkat ke-2 seperti yang terlihat pada gambar 
+\ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}.
 
 \subsection{Pengujian Keenam}
 
-Pengujian keenam menggunakan sebuah gambar kueri ke-29 dengan objek mobil taksi berwarna biru tua dan oranye, dengan sebagian 
-badan mobil tertutup oleh objek lain. Gambar kueri beserta hasil GradCam dapat dilihat pada gambar 
+Pengujian keenam menggunakan sebuah citra kueri ke-29 dengan objek mobil taksi \linebreak berwarna biru tua dan oranye, dengan sebagian 
+badan mobil tertutup oleh objek lain. Citra kueri beserta hasil GradCam dapat dilihat pada gambar 
 \ref{fig:gambarkueriuntukpengujiankeenam}.
 
 \begin{figure}[h!]
@@ -1011,42 +1029,42 @@ badan mobil tertutup oleh objek lain. Gambar kueri beserta hasil GradCam dapat d
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Que29_1060.jpg}
-    \caption{Gambar Kueri ke-29}
+    \caption{Citra Kueri ke-29}
     \label{gambarkuerinomorduasembilan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamQue29_1060.jpg}
-    \caption{GradCam Gambar Kueri ke-29}
+    \caption{GradCam Citra Kueri ke-29}
     \label{gradcamgambarkuerinomorduasembilan}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Keenam}
+  \caption{Citra Kueri untuk Pengujian Keenam}
   \label{fig:gambarkueriuntukpengujiankeenam}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian keenam merupakan gambar dengan objek mobil taksi berwarna biru tua 
+Citra galeri yang dicari pada pengujian keenam merupakan citra dengan objek mobil taksi berwarna biru tua 
 dan oranye yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankeenam} dengan sudut pengambilan yang berbeda. 
-Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeenam}.
+Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeenam}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Gal29_1060.jpg}
-    \caption{Gambar Galeri yang Dicari}
+    \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomorduasembilan}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamGal29_1060.jpg}
-    \caption{GradCam Gambar Galeri yang Dicari}
+    \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomorduasembilan}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Keenam}
+  \caption{Citra Galeri yang Dicari untuk Pengujian Keenam}
   \label{fig:gambargaleriuntukpengujiankeenam}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-29 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+Dengan memasukkan citra kueri ke-29 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
@@ -1059,7 +1077,7 @@ peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeenampadamod
   \label{fig:hasilpengujiankeenampadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-29 ke dalam model Swin Transformer V2 parameter 1 dengan 
+Hasil pengujian yang didapat ketika memasukkan citra kueri ke-29 ke dalam model Swin Transformer V2 parameter 1 dengan 
 iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
@@ -1072,7 +1090,7 @@ iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintr
   \label{fig:hasilpengujiankeenampadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-29 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+Dari memasukkan citra kueri ke-29 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
 peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
@@ -1085,7 +1103,7 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeenampadamodel
   \label{fig:hasilpengujiankeenampadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-29 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-29 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
@@ -1099,14 +1117,14 @@ dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv2param
 \end{figure}
 
 Dari pengujian keenam, didapatkan hasil bahwa seluruh model Swin Transformer pada penelitian ini tidak mampu dalam melakukan 
-re-identifikasi ketika diberikan gambar kueri ke-29. Hal ini dapat dilihat dari hasil peringkat sepuluh teratas dari setiap 
-model tidak menunjukan adanya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujiankeenam}) pada daftar peringkat yang 
-ada. Hasil pengujian ini memperlihatkan bahwa jika gambar kueri dengan objek yang setengah utuh ingin diidentifikasi 
-ulang, model re-identifikasi kesulitan untuk mengenali objek tersebut.
+re-identifikasi ketika diberikan citra yang objeknya tertimpa oleh objek lain. Hal ini dapat dilihat dari hasil peringkat 
+sepuluh teratas dari setiap model tidak menunjukan adanya citra galeri (gambar \ref{fig:gambargaleriuntukpengujiankeenam}) 
+pada daftar peringkat yang ada. Hasil pengujian ini memperlihatkan bahwa jika citra kueri dengan objek yang setengah utuh 
+ingin diidentifikasi ulang, model re-identifikasi kesulitan untuk mengenali objek tersebut.
 
 \subsection{Pengujian Ketujuh}
 
-Pengujian ketujuh menggunakan sebuah gambar kueri ke-70 dengan objek mobil suv \linebreak berwarna hitam. Gambar kueri 
+Pengujian ketujuh menggunakan sebuah citra kueri ke-70 dengan objek mobil suv \linebreak berwarna hitam. Citra kueri 
 beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketujuh}.
 
 \begin{figure}[h!]
@@ -1114,42 +1132,42 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Que70_114.jpg}
-    \caption{Gambar Kueri ke-70}
+    \caption{Citra Kueri ke-70}
     \label{gambarkuerinomortujuhpuluh}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamQue70_114.jpg}
-    \caption{GradCam Gambar Kueri ke-70}
+    \caption{GradCam Citra Kueri ke-70}
     \label{gradcamgambarkuerinomortujuhpuluh}
   \end{subfigure}
-  \caption{Gambar Kueri untuk Pengujian Ketujuh}
+  \caption{Citra Kueri untuk Pengujian Ketujuh}
   \label{fig:gambarkueriuntukpengujianketujuh}
 \end{figure}
 
-Gambar galeri yang dicari pada pengujian ketujuh merupakan gambar dengan objek mobil suv berwarna hitam 
+Citra galeri yang dicari pada pengujian ketujuh merupakan citra dengan objek mobil suv berwarna hitam 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketujuh} dengan sudut pengambilan yang berbeda. 
-Gambar galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketujuh}.
+Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketujuh}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/Gal70_114.jpg}
-    \caption{Gambar Galeri yang Dicari}
+    \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomortujuhpuluh}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.4\linewidth]{gambar/GradCamGal70_114.jpg}
-    \caption{GradCam Gambar Galeri yang Dicari}
+    \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomortujuhpuluh}
   \end{subfigure}
-  \caption{Gambar Galeri yang Dicari untuk Pengujian Ketujuh}
+  \caption{Citra Galeri yang Dicari untuk Pengujian Ketujuh}
   \label{fig:gambargaleriuntukpengujianketujuh}
 \end{figure}
 
-Dengan memasukkan gambar kueri ke-70 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
+Dengan memasukkan citra kueri ke-70 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv1param1}.
 
 \begin{figure}[h!]
@@ -1162,7 +1180,7 @@ peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamo
   \label{fig:hasilpengujianketujuhpadamodelswintransformerv1param1}
 \end{figure}
 
-Hasil pengujian yang didapat ketika memasukkan gambar kueri ke-70 ke dalam model Swin Transformer V2 parameter 1 dengan 
+Hasil pengujian yang didapat ketika memasukkan citra kueri ke-70 ke dalam model Swin Transformer V2 parameter 1 dengan 
 iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv2param1}.
 
 \begin{figure}[h!]
@@ -1175,7 +1193,7 @@ iterasi 1 dapat dilihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswint
   \label{fig:hasilpengujianketujuhpadamodelswintransformerv2param1}
 \end{figure}
 
-Dari memasukkan gambar kueri ke-70 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
+Dari memasukkan citra kueri ke-70 ke dalam model Swin Transformer V1 parameter 2 dengan iterasi 2, didapatkan hasil 
 peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv1param2}.
 
 \begin{figure}[h!]
@@ -1188,7 +1206,7 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamode
   \label{fig:hasilpengujianketujuhpadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar kueri ke-70 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-70 dapat 
 dilihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
@@ -1202,9 +1220,9 @@ dilihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv2para
 \end{figure}
 
 Dari pengujian ketujuh, didapatkan hasil bahwa seluruh model Swin Transformer pada penelitian ini tidak mampu dalam melakukan 
-re-identifikasi ketika diberikan gambar kueri ke-70. Hal ini dapat dilihat dari hasil peringkat sepuluh teratas dari setiap 
-model tidak menunjukan adanya gambar galeri (gambar \ref{fig:gambargaleriuntukpengujianketujuh}) pada daftar peringkat yang 
-ada. Hasil pengujian ini memperlihatkan bahwa jika gambar kueri dengan resolusi yang terlalu kecil hingga objek terlalu sulit 
+re-identifikasi ketika diberikan citra kueri ke-70. Hal ini dapat dilihat dari hasil peringkat sepuluh teratas dari setiap 
+model tidak menunjukan adanya citra galeri (gambar \ref{fig:gambargaleriuntukpengujianketujuh}) pada daftar peringkat yang 
+ada. Hasil pengujian ini memperlihatkan bahwa jika citra kueri dengan resolusi yang terlalu kecil hingga objek terlalu sulit 
 untuk dilakukan re-identifikasi, model re-identifikasi akan kesulitan untuk mengenali objek tersebut.
 
 % \section{Analisa Pengujian}
