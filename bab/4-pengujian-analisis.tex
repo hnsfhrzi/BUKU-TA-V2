@@ -456,16 +456,17 @@ Perbandingan setiap jenis model beserta iterasinya dapat dilihat pada tabel
       \multirow{3}{*}{\textbf{Swin T. V1 Parameter 2}} & \begin{tabular}[c]{@{}l@{}}Iterasi 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.743027\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.701530\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.885094\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.925294\end{tabular}\\
       & \begin{tabular}[c]{@{}l@{}}Iterasi 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.748120\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.706866\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.890786\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.932053\end{tabular}\\
       & \begin{tabular}[c]{@{}l@{}}Iterasi 3\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.748066\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.706510\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.890430\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.934543\end{tabular}\\ \hline
-      \multirow{3}{*}{\textbf{Swin T. V2 Parameter 2}} & \begin{tabular}[c]{@{}l@{}}\textbf{Iterasi 1}\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.752135\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.712202}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.893988}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.930985}\end{tabular}\\
-      & \begin{tabular}[c]{@{}l@{}}Iterasi 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.752181}\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.711846\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.891853\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.927072\end{tabular}\\
-      & \begin{tabular}[c]{@{}l@{}}Iterasi 3\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.751642\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.712083\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.892802\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.930273\end{tabular}\\ \hline
+      \multirow{3}{*}{\textbf{Swin T. V2 Parameter 2}} & \begin{tabular}[c]{@{}l@{}}Iterasi 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.752135\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.712202\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.893988}\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.930985\end{tabular}\\
+      & \begin{tabular}[c]{@{}l@{}}Iterasi 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.752181\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.711846\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.891853\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.927072\end{tabular}\\
+      & \begin{tabular}[c]{@{}l@{}}\textbf{Iterasi 3}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.752636}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.712202}\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.892565\end{tabular} & \begin{tabular}[c]{@{}l@{}}\textbf{0.932764}\end{tabular}\\ \hline
     \end{tabular}
   \end{center}
 \end{table}
 
-Dari perbandingan tersebut dapat terlihat bahwa model Swin Transformer V2 parameter 2 pada iterasi pertama menjadi model 
-dengan nilai rank@1, dan rank@5 tertinggi dari seluruh model yang telah dibuat serta memiliki selisih 
-0.000046 dengan model yang memiliki mAP tertinggi yaitu Swin Transformer V2 parameter 2 iterasi kedua.
+Dari perbandingan tersebut dapat terlihat bahwa model Swin Transformer V2 parameter 2 pada iterasi ketiga 
+menjadi model dengan nilai mAP, rank@1, dan rank@10 tertinggi dari seluruh model yang telah dibuat serta 
+memiliki selisih 0.001423 dengan model yang memiliki rank@5 tertinggi yaitu Swin Transformer V2 parameter 
+2 iterasi pertama.
 
 \section{Skenario Pengujian}
 \label{sec:skenariopengujian}
@@ -487,7 +488,7 @@ tabel \ref{tb:modelreidentifikasiyangdigunakanpengujian}.
       \begin{tabular}[c]{@{}l@{}}Swin T. V1 Parameter 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}Iterasi 3\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.670210\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.623621\end{tabular}\\ \hline
       \begin{tabular}[c]{@{}l@{}}Swin T. V2 Parameter 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}Iterasi 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.725377\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.686233\end{tabular}\\ \hline
       \begin{tabular}[c]{@{}l@{}}Swin T. V1 Parameter 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}Iterasi 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.748120\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.706866\end{tabular}\\ \hline
-      \begin{tabular}[c]{@{}l@{}}Swin T. V2 Parameter 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}Iterasi 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.752135\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.712202\end{tabular}\\ \hline
+      \begin{tabular}[c]{@{}l@{}}Swin T. V2 Parameter 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}Iterasi 3\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.752636\end{tabular} & \begin{tabular}[c]{@{}l@{}}0.712202\end{tabular}\\ \hline
   \end{tabular}
   \end{center}
 \end{table}
@@ -522,7 +523,7 @@ beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
 \end{figure}
 
 Citra galeri yang dicari pada pengujian pertama merupakan citra dengan objek \linebreak minibus yang sesuai dengan gambar 
-\ref{fig:gambarkueriuntukpengujianpertama} dengan sudut pengambilan yang berbeda. Citra galeri beserta hasil GradCam dapat 
+\ref{fig:gambarkueriuntukpengujianpertama} dengan sudut pengambilan yang berbeda. Citra galeri beserta hasil GradCAM dapat 
 dilihat pada gambar \ref{fig:gambargaleriuntukpengujianpertama}.
 
 \begin{figure}[h!]
@@ -582,13 +583,13 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianpertamapadamode
   \label{fig:hasilpengujianpertamapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-8 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 3 menggunakan citra kueri ke-8 dapat 
 dilihat pada gambar \ref{fig:hasilpengujianpertamapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que8V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que8V2P2IT3.png}
   % Keterangan gambar yang diinputkan
   \caption{Hasil Pengujian Pertama pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
@@ -601,8 +602,8 @@ berada pada peringkat pertama di hasil pengujian dari setiap model re-identifika
 
 \subsection{Pengujian Kedua}
 
-Pengujian kedua menggunakan sebuah citra kueri ke-57 dengan objek mobil sedan berwarna biru tua yang terlihat dari samping 
-dengan adanya blur. Citra kueri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankedua}.
+Pengujian kedua menggunakan sebuah citra kueri ke-57 dengan objek mobil sedan \linebreak berwarna biru tua yang terlihat dari samping 
+dengan adanya blur. Citra kueri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankedua}.
 
 \begin{figure}[h!]
   \centering
@@ -624,7 +625,7 @@ dengan adanya blur. Citra kueri beserta hasil GradCam dapat dilihat pada gambar 
 
 Citra galeri yang dicari pada pengujian kedua merupakan citra dengan objek \linebreak mobil sedan berwarna biru tua 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankedua} dengan sudut pengambilan yang berbeda. Citra galeri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankedua}.
+beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankedua}.
 
 \begin{figure}[h!]
   \centering
@@ -683,15 +684,15 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeduapadamodels
   \label{fig:hasilpengujiankeduapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan gambar citra ke-57 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 3 menggunakan gambar citra ke-57 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankeduapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que57V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que57V2P2IT3.png}
   % Keterangan gambar yang diinputkan
-  \caption{Hasil Pengujian Pertama pada Model Swin Transformer V2 Parameter 2}
+  \caption{Hasil Pengujian Kedua pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
   \label{fig:hasilpengujiankeduapadamodelswintransformerv2param2}
 \end{figure}
@@ -704,8 +705,8 @@ berada pada peringkat pertama di hasil pengujian pada setiap model re-identifika
 
 \subsection{Pengujian Ketiga}
 
-Pengujian ketiga menggunakan sebuah citra kueri ke-61 dengan objek mobil sedan berwarna putih. Citra kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketiga}.
+Pengujian ketiga menggunakan sebuah citra kueri ke-61 dengan objek mobil sedan \linebreak berwarna putih. Citra kueri 
+beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketiga}.
 
 \begin{figure}[h!]
   \centering
@@ -727,7 +728,7 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
 
 Citra galeri yang dicari pada pengujian ketiga merupakan citra dengan objek mobil sedan berwarna putih 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketiga} dengan sudut pengambilan yang berbeda. 
-Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketiga}.
+Citra galeri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketiga}.
 
 \begin{figure}[h!]
   \centering
@@ -786,13 +787,13 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketigapadamodel
   \label{fig:hasilpengujianketigapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-61 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 3 menggunakan citra kueri ke-61 dapat 
 dilihat pada gambar \ref{fig:hasilpengujianketigapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que61V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que61V2P2IT3.png}
   % Keterangan gambar yang diinputkan
   \caption{Hasil Pengujian Ketiga pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
@@ -808,7 +809,7 @@ berada pada peringkat pertama di hasil pengujian pada setiap model re-identifika
 \subsection{Pengujian Keempat}
 
 Pengujian keempat menggunakan sebuah citra kueri ke-21 dengan objek mobil sedan berwarna merah. Citra kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankeempat}.
+beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankeempat}.
 
 \begin{figure}[h!]
   \centering
@@ -830,7 +831,7 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
 
 Citra galeri yang dicari pada pengujian keempat merupakan citra dengan objek \linebreak mobil sedan berwarna merah 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankeempat} dengan sudut pengambilan yang berbeda. 
-Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeempat}.\\
+Citra galeri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeempat}.\\
 
 \begin{figure}[h!]
   \centering
@@ -889,13 +890,13 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeempatpadamode
   \label{fig:hasilpengujiankeempatpadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-21 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 3 menggunakan citra kueri ke-21 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que21V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que21V2P2IT3.png}
   % Keterangan gambar yang diinputkan
   \caption{Hasil Pengujian Keempat pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
@@ -915,7 +916,7 @@ V2 parameter 2 (gambar \ref{fig:hasilpengujiankeempatpadamodelswintransformerv2p
 \subsection{Pengujian Kelima}
 
 Pengujian kelima menggunakan sebuah citra kueri ke-9 dengan objek mobil suv berwarna hitam. Citra kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankelima}.
+beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujiankelima}.
 
 \begin{figure}[h!]
   \centering
@@ -937,7 +938,7 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
 
 Citra galeri yang dicari pada pengujian kelima merupakan citra dengan objek \linebreak mobil suv berwarna hitam 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankelima} dengan sudut pengambilan yang berbeda. 
-Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankelima}.
+Citra galeri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankelima}.
 
 \begin{figure}[h!]
   \centering
@@ -996,13 +997,13 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankelimapadamodel
   \label{fig:hasilpengujiankelimapadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-9 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 3 menggunakan citra kueri ke-9 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que9V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que9V2P2IT3.png}
   % Keterangan gambar yang diinputkan
   \caption{Hasil Pengujian Kelima pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
@@ -1015,13 +1016,13 @@ gagal dalam melakukan re-identifikasi, karena citra kueri yang benar tidak berad
 \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param1}). Sementara pada Swin Transformer V1 parameter 2, citra 
 galeri hanya berada pada peringkat ke-7 (gambar \ref{fig:hasilpengujiankelimapadamodelswintransformerv1param2}). 
 Dan untuk Swin Transformer V2 parameter 2, dapat melakukan 
-re-identifikasi namun citra galeri hanya berada pada peringkat ke-2 seperti yang terlihat pada gambar 
+re-identifikasi dengan citra galeri berada pada peringkat pertama seperti yang terlihat pada gambar 
 \ref{fig:hasilpengujiankelimapadamodelswintransformerv2param2}.
 
 \subsection{Pengujian Keenam}
 
 Pengujian keenam menggunakan sebuah citra kueri ke-29 dengan objek mobil taksi \linebreak berwarna biru tua dan oranye, dengan sebagian 
-badan mobil tertutup oleh objek lain. Citra kueri beserta hasil GradCam dapat dilihat pada gambar 
+badan mobil tertutup oleh objek lain. Citra kueri beserta hasil GradCAM dapat dilihat pada gambar 
 \ref{fig:gambarkueriuntukpengujiankeenam}.
 
 \begin{figure}[h!]
@@ -1044,7 +1045,7 @@ badan mobil tertutup oleh objek lain. Citra kueri beserta hasil GradCam dapat di
 
 Citra galeri yang dicari pada pengujian keenam merupakan citra dengan objek mobil taksi berwarna biru tua 
 dan oranye yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankeenam} dengan sudut pengambilan yang berbeda. 
-Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeenam}.
+Citra galeri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeenam}.
 
 \begin{figure}[h!]
   \centering
@@ -1103,13 +1104,13 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujiankeenampadamodel
   \label{fig:hasilpengujiankeenampadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-29 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 3 menggunakan citra kueri ke-29 dapat 
 dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que29V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que29V2P2IT3.png}
   % Keterangan gambar yang diinputkan
   \caption{Hasil Pengujian Keenam pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
@@ -1118,26 +1119,26 @@ dilihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv2param
 
 Dari pengujian keenam, didapatkan hasil bahwa seluruh model Swin Transformer pada penelitian ini tidak mampu dalam melakukan 
 re-identifikasi ketika diberikan citra yang objeknya tertimpa oleh objek lain. Hal ini dapat dilihat dari hasil peringkat 
-sepuluh teratas dari setiap model tidak menunjukan adanya citra galeri (gambar \ref{fig:gambargaleriuntukpengujiankeenam}) 
-pada daftar peringkat yang ada. Hasil pengujian ini memperlihatkan bahwa jika citra kueri dengan objek yang setengah utuh 
+sepuluh teratas dari setiap model tidak menunjukan adanya citra galeri (gambar \ref{fig:gambargaleriuntukpengujiankeenam}). 
+Hasil pengujian ini memperlihatkan bahwa jika citra kueri dengan objek yang setengah utuh 
 ingin diidentifikasi ulang, model re-identifikasi kesulitan untuk mengenali objek tersebut.
 
 \subsection{Pengujian Ketujuh}
 
 Pengujian ketujuh menggunakan sebuah citra kueri ke-70 dengan objek mobil suv \linebreak berwarna hitam. Citra kueri 
-beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketujuh}.
+beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketujuh}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/Que70_114.jpg}
+    \includegraphics[width=.5\linewidth]{gambar/Que70_114.jpg}
     \caption{Citra Kueri ke-70}
     \label{gambarkuerinomortujuhpuluh}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamQue70_114.jpg}
+    \includegraphics[width=.5\linewidth]{gambar/GradCamQue70_114.jpg}
     \caption{GradCam Citra Kueri ke-70}
     \label{gradcamgambarkuerinomortujuhpuluh}
   \end{subfigure}
@@ -1147,19 +1148,19 @@ beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
 
 Citra galeri yang dicari pada pengujian ketujuh merupakan citra dengan objek mobil suv berwarna hitam 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketujuh} dengan sudut pengambilan yang berbeda. 
-Citra galeri beserta hasil GradCam dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketujuh}.
+Citra galeri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketujuh}.
 
 \begin{figure}[h!]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/Gal70_114.jpg}
+    \includegraphics[width=.5\linewidth]{gambar/Gal70_114.jpg}
     \caption{Citra Galeri yang Dicari}
     \label{gambargalerinomortujuhpuluh}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamGal70_114.jpg}
+    \includegraphics[width=.5\linewidth]{gambar/GradCamGal70_114.jpg}
     \caption{GradCam Citra Galeri yang Dicari}
     \label{gradcamgambargalerinomortujuhpuluh}
   \end{subfigure}
@@ -1206,13 +1207,13 @@ peringkat yang dapat terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamode
   \label{fig:hasilpengujianketujuhpadamodelswintransformerv1param2}
 \end{figure}
 
-Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 1 menggunakan citra kueri ke-70 dapat 
+Hasil pengujian dari model Swin Transformer V2 parameter 2 dengan iterasi 3 menggunakan citra kueri ke-70 dapat 
 dilihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv2param2}.
 
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Que70V2P2IT1.png}
+  \includegraphics[scale=0.6]{gambar/Que70V2P2IT3.png}
   % Keterangan gambar yang diinputkan
   \caption{Hasil Pengujian Ketujuh pada Model Swin Transformer V2 Parameter 2}
   % Label referensi dari gambar yang diinputkan
