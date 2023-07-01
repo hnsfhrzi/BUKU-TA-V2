@@ -1027,7 +1027,7 @@ beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=1]{gambar/Que21_1046.jpg}
+  \includegraphics[scale=2]{gambar/Que21_1046.jpg}
   % Keterangan gambar yang diinputkan
   \caption{Citra Kueri ke-21}
   % Label referensi dari gambar yang diinputkan
@@ -1089,7 +1089,7 @@ Citra galeri dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeempa
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Gal21_1046.jpg}
+  \includegraphics[scale=0.4]{gambar/Gal21_1046.jpg}
   % Keterangan gambar yang diinputkan
   \caption{Citra Galeri yang Dicari untuk Pengujian Keempat}
   % Label referensi dari gambar yang diinputkan
@@ -1167,7 +1167,7 @@ beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=1]{gambar/Que9_1019.jpg}
+  \includegraphics[scale=2]{gambar/Que9_1019.jpg}
   % Keterangan gambar yang diinputkan
   \caption{Citra Kueri ke-9}
   % Label referensi dari gambar yang diinputkan
@@ -1200,7 +1200,7 @@ beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpenguji
     \caption{GradCAM dari Swin T. V2 P.2}
     \label{gradcamkuerinomorsembilanV2P2}
   \end{subfigure}
-  \caption{GradCAM Citra Kueri ke-9 dari setiap Jenis Model}
+  \caption{GradCAM Citra Kueri ke-9 dari Setiap Jenis Model}
   \label{fig:gradcamdarisetiapjenismodelpengujiankelima}
 \end{figure}
 
@@ -1211,7 +1211,7 @@ Citra galeri dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankelima
 \begin{figure}[h!]
   \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.6]{gambar/Gal9_1019.jpg}
+  \includegraphics[scale=0.4]{gambar/Gal9_1019.jpg}
   % Keterangan gambar yang diinputkan
   \caption{Citra Galeri yang Dicari}
   % Label referensi dari gambar yang diinputkan
@@ -1301,47 +1301,79 @@ re-identifikasi dengan citra galeri berada pada peringkat pertama seperti yang t
 
 Pengujian keenam menggunakan sebuah citra kueri ke-29 dengan objek mobil taksi \linebreak berwarna biru tua dan oranye, dengan sebagian 
 badan mobil tertutup oleh objek lain. Citra kueri beserta hasil GradCAM dapat dilihat pada gambar 
-\ref{fig:gambarkueriuntukpengujiankeenam}.
+\ref{fig:gambarkueriuntukpengujiankeenam} dan gambar \ref{fig:gradcamdarisetiapjenismodelpengujiankeenam}.\\
 
 \begin{figure}[h!]
   \centering
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.4\linewidth]{gambar/Que29_1060.jpg}
-    \caption{Citra Kueri ke-29}
-    \label{gambarkuerinomorduasembilan}
-  \end{subfigure}%
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamQue29_1060.jpg}
-    \caption{GradCam Citra Kueri ke-29}
-    \label{gradcamgambarkuerinomorduasembilan}
-  \end{subfigure}
-  \caption{Citra Kueri untuk Pengujian Keenam}
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=3]{gambar/Que29_1060.jpg}
+  % Keterangan gambar yang diinputkan
+  \caption{Citra Kueri ke-29}
+  % Label referensi dari gambar yang diinputkan
   \label{fig:gambarkueriuntukpengujiankeenam}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que29_gradCAMV1P1IT3.jpg}
+    \caption{GradCAM dari Swin T. V1 P.1}
+    \label{gradcamkuerinomorduasembilanV1P1}
+  \end{subfigure}%
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que29_gradCAMV1P2IT2.jpg}
+    \caption{GradCAM dari Swin T. V1 P.2}
+    \label{gradcamkuerinomorduasembilanV1P2}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que29_V2P1IT1.png}
+    \caption{GradCAM dari Swin T. V2 P.1}
+    \label{gradcamkuerinomorduasembilanV2P1}
+  \end{subfigure}%
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que29_V2P2IT3.png}
+    \caption{GradCAM dari Swin T. V2 P.2}
+    \label{gradcamkuerinomorduasembilanV2P2}
+  \end{subfigure}%
+  \caption{GradCAM Citra Kueri ke-29 dari Setiap Jenis Model}
+  \label{fig:gradcamdarisetiapjenismodelpengujiankeenam}
 \end{figure}
 
 Citra galeri yang dicari pada pengujian keenam merupakan citra dengan objek mobil taksi berwarna biru tua 
 dan oranye yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujiankeenam} dengan sudut pengambilan yang berbeda. 
-Citra galeri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeenam}.
+Citra galeri dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujiankeenam}.
 
 \begin{figure}[h!]
   \centering
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.4\linewidth]{gambar/Gal29_1060.jpg}
-    \caption{Citra Galeri yang Dicari}
-    \label{gambargalerinomorduasembilan}
-  \end{subfigure}%
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.4\linewidth]{gambar/GradCamGal29_1060.jpg}
-    \caption{GradCam Citra Galeri yang Dicari}
-    \label{gradcamgambargalerinomorduasembilan}
-  \end{subfigure}
-  \caption{Citra Galeri yang Dicari untuk Pengujian Keenam}
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.3]{gambar/Gal29_1060.jpg}
+  % Keterangan gambar yang diinputkan
+  \caption{Citra Galeri yang Dicari}
+  % Label referensi dari gambar yang diinputkan
   \label{fig:gambargaleriuntukpengujiankeenam}
 \end{figure}
+% \begin{figure}[h!]
+%   \centering
+%   \begin{subfigure}{.5\textwidth}
+%     \centering
+%     \includegraphics[width=.4\linewidth]{gambar/Gal29_1060.jpg}
+%     \caption{Citra Galeri yang Dicari}
+%     \label{gambargalerinomorduasembilan}
+%   \end{subfigure}%
+%   \begin{subfigure}{.5\textwidth}
+%     \centering
+%     \includegraphics[width=.4\linewidth]{gambar/GradCamGal29_1060.jpg}
+%     \caption{GradCam Citra Galeri yang Dicari}
+%     \label{gradcamgambargalerinomorduasembilan}
+%   \end{subfigure}
+%   \caption{Citra Galeri yang Dicari untuk Pengujian Keenam}
+%   \label{fig:gambargaleriuntukpengujiankeenam}
+% \end{figure}
 
 Dengan memasukkan citra kueri ke-29 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujiankeenampadamodelswintransformerv1param1}.
@@ -1404,47 +1436,80 @@ ingin diidentifikasi ulang, model re-identifikasi kesulitan untuk mengenali obje
 \subsection{Pengujian Ketujuh}
 
 Pengujian ketujuh menggunakan sebuah citra kueri ke-70 dengan objek mobil suv \linebreak berwarna hitam. Citra kueri 
-beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketujuh}.
+beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambarkueriuntukpengujianketujuh} dan gambar 
+\ref{fig:gradcamdarisetiapjenismodelpengujianketujuh}.
 
 \begin{figure}[h!]
   \centering
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.5\linewidth]{gambar/Que70_114.jpg}
-    \caption{Citra Kueri ke-70}
-    \label{gambarkuerinomortujuhpuluh}
-  \end{subfigure}%
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.5\linewidth]{gambar/GradCamQue70_114.jpg}
-    \caption{GradCam Citra Kueri ke-70}
-    \label{gradcamgambarkuerinomortujuhpuluh}
-  \end{subfigure}
-  \caption{Citra Kueri untuk Pengujian Ketujuh}
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=4]{gambar/Que70_114.jpg}
+  % Keterangan gambar yang diinputkan
+  \caption{Citra Kueri ke-70}
+  % Label referensi dari gambar yang diinputkan
   \label{fig:gambarkueriuntukpengujianketujuh}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que70_gradCAMV1P1IT3.jpg}
+    \caption{GradCAM dari Swin T. V1 P.1}
+    \label{gradcamkuerinomortujuhpuluhV1P1}
+  \end{subfigure}%
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que70_gradCAMV1P2IT2.jpg}
+    \caption{GradCAM dari Swin T. V1 P.2}
+    \label{gradcamkuerinomortujuhpuluhV1P2}
+  \end{subfigure}%
+  \\
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que70_V2P1IT1.png}
+    \caption{GradCAM dari Swin T. V2 P.1}
+    \label{gradcamkuerinomortujuhpuluhV2P1}
+  \end{subfigure}%
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=.3\linewidth]{gambar/Que70_V2P2IT3.png}
+    \caption{GradCAM dari Swin T. V2 P.2}
+    \label{gradcamkuerinomortujuhpuluhV2P2}
+  \end{subfigure}
+  \caption{GradCAM Citra Kueri-70 dari Setiap Jenis Model}
+  \label{fig:gradcamdarisetiapjenismodelpengujianketujuh}
 \end{figure}
 
 Citra galeri yang dicari pada pengujian ketujuh merupakan citra dengan objek mobil suv berwarna hitam 
 yang sesuai dengan gambar \ref{fig:gambarkueriuntukpengujianketujuh} dengan sudut pengambilan yang berbeda. 
-Citra galeri beserta hasil GradCAM dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketujuh}.
+Citra galeri dapat dilihat pada gambar \ref{fig:gambargaleriuntukpengujianketujuh}.
 
 \begin{figure}[h!]
   \centering
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.5\linewidth]{gambar/Gal70_114.jpg}
-    \caption{Citra Galeri yang Dicari}
-    \label{gambargalerinomortujuhpuluh}
-  \end{subfigure}%
-  \begin{subfigure}{.5\textwidth}
-    \centering
-    \includegraphics[width=.5\linewidth]{gambar/GradCamGal70_114.jpg}
-    \caption{GradCam Citra Galeri yang Dicari}
-    \label{gradcamgambargalerinomortujuhpuluh}
-  \end{subfigure}
-  \caption{Citra Galeri yang Dicari untuk Pengujian Ketujuh}
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.4]{gambar/Gal70_114.jpg}
+  % Keterangan gambar yang diinputkan
+  \caption{Citra Galeri yang Dicari}
+  % Label referensi dari gambar yang diinputkan
   \label{fig:gambargaleriuntukpengujianketujuh}
 \end{figure}
+% \begin{figure}[h!]
+%   \centering
+%   \begin{subfigure}{.5\textwidth}
+%     \centering
+%     \includegraphics[width=.5\linewidth]{gambar/Gal70_114.jpg}
+%     \caption{Citra Galeri yang Dicari}
+%     \label{gambargalerinomortujuhpuluh}
+%   \end{subfigure}%
+%   \begin{subfigure}{.5\textwidth}
+%     \centering
+%     \includegraphics[width=.5\linewidth]{gambar/GradCamGal70_114.jpg}
+%     \caption{GradCam Citra Galeri yang Dicari}
+%     \label{gradcamgambargalerinomortujuhpuluh}
+%   \end{subfigure}
+%   \caption{Citra Galeri yang Dicari untuk Pengujian Ketujuh}
+%   \label{fig:gambargaleriuntukpengujianketujuh}
+% \end{figure}
 
 Dengan memasukkan citra kueri ke-70 ke dalam model Swin Transformer V1 parameter 1 dengan iterasi 3, didapatkan hasil 
 peringkat seperti yang terlihat pada gambar \ref{fig:hasilpengujianketujuhpadamodelswintransformerv1param1}.
