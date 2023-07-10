@@ -146,7 +146,8 @@ secara langsung oleh developer dataset VRIC untuk kegunaan re-identifikasi mobil
 Selain file berisi citra, di dalam dataset VRIC juga terdapat file txt yang berisi list 
 anotasi dari seluruh citra, dengan format nama file citra, label ID dari mobil, dan label 
 kamera. Dengan menggunakan list anotasi tersebut, maka setiap dataset 
-perlu dilakukan perubahan nama file sesuai dengan label ID dan label kameranya.\\
+perlu dilakukan perubahan nama file sesuai dengan label ID dan label kameranya. program yang 
+dibuat untuk merubah nama data dalam dataset dapat dilihat pada program \ref{lst:renamedataset}.\\
 
 % Potongan kode rename
 \lstinputlisting[
@@ -158,7 +159,8 @@ perlu dilakukan perubahan nama file sesuai dengan label ID dan label kameranya.\
 Pada penelitian ini, diperlukan satu bagian lagi dalam percobaannya, yaitu data validasi. 
 Data validasi berfungsi untuk melakukan validasi dan mengetes re-identifikasi setiap epoch yang telah 
 melalui tahapan \emph{training}. Data validasi dibuat dengan mengambil sebagian data \emph{training} 
-untuk dipindahkan ke data validasi. \\
+untuk dipindahkan ke data validasi. program yang dibuat untuk mengambil sebagian data training untuk 
+data validasi dapat dilihat pada program \ref{lst:splittingdataset}.\\
 
 % Potongan kode splitting
 \lstinputlisting[
@@ -255,7 +257,7 @@ jenis model dan pengaturan hyper-parameter yang tepat untuk digunakan dalam re-i
 Penelitian ini akan menggunakan Swin Transformer V1 dan Swin Transformer V2 sebagai model dengan varian
 yang akan digunakan adalah varian \emph{Base} (Swin-B). Kemudian akan dicoba pula menggunakan 2 format hyper-parameter yang 
 berbeda. Sehingga akan dihasilkan 4 jenis model re-identifikasi mobil dengan pengaturan yang berbeda. Rincian hyper-parameter 
-dapat dilihat pada \ref{tb:rincianmodeldanhyperparameterdaripenelitian}.
+dapat dilihat pada tabel \ref{tb:rincianmodeldanhyperparameterdaripenelitian}.
 
 \begin{table}[ht]
   \begin{center}

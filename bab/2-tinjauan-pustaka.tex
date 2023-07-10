@@ -56,21 +56,33 @@ model Swin-T, nilai akurasi yang didapat sebesar 84\% \parencite{Wicaksono2022}.
   % Nama dari file gambar yang diinputkan
   \includegraphics[scale=0.35]{gambar/Mobil2.jpg}
   % Keterangan gambar yang diinputkan
-  \caption{Tangkapan Mobil dari Kamera Lalu Lintas}
+  \caption{Kumpulan Mobil di Jalan Raya}
   % Label referensi dari gambar yang diinputkan
-  \label{fig:tangkapanmobildarikameralalulintas}
+  \label{fig:kumpulanmobildijalanraya}
 \end{figure}
 
 Mobil (\emph{automobile}, \emph{motorcar}, atau \emph{car}) merupakan kendaraan yang umumnya beroda empat dan dirancang untuk bergerak 
 menggunakan mesin pembakaran internal menggunakan bahan bakar yang mudah menguap. Mobil memiliki sistem teknis yang 
 kompleks yang terdiri dari berbagai macam subsistem yang memiliki fungsinya masing-masing. Mobil telah menjadi sarana 
-utama transportasi keluarga selama bertahun-tahun, dengan perkiraan 1,4 miliar mobil beroperasi di seluruh dunia. Desain 
-dari mobil sebagian besar bergantung dari tujuan penggunaannya. Seperti misalnya mobil dengan kegunaan \emph{off-road} harus bisa menahan 
-kondisi medan, sistemnya sederhana namun memiliki daya tahan tinggi terhadap beban berlebih. Sementara mobil 
+utama transportasi keluarga selama bertahun-tahun, dengan perkiraan 1,4 miliar mobil beroperasi di seluruh dunia. Hal ini 
+dapat terlihat pada gambar \ref{fig:kumpulanmobildijalanraya}, dimana masyarakat menggunakan mobil untuk beraktivitas sehari-hari. 
+Desain dari mobil sebagian besar bergantung dari tujuan penggunaannya. Seperti misalnya mobil dengan kegunaan \emph{off-road} 
+harus bisa menahan kondisi medan, sistemnya sederhana namun memiliki daya tahan tinggi terhadap beban berlebih. Sementara mobil 
 yang digunakan di jalan raya dengan sistem kecepatan tinggi harus memiliki kondisi seperti performa mesin yang tinggi, 
 memberikan kenyamanan pada penumpang, dan mobil memiliki stabilitas yang optimal \parencite{Cromer2023}. Perbedaan 
 berdasarkan fungsi dan perusahaan manufaktur membuat mobil-mobil yang ada di dunia ini memiliki ciri khasnya masing-masing 
 dan dapat dibedakan satu sama lain.
+
+% Mobil (\emph{automobile}, \emph{motorcar}, atau \emph{car}) merupakan kendaraan yang umumnya beroda empat dan dirancang untuk bergerak 
+% menggunakan mesin pembakaran internal menggunakan bahan bakar yang mudah menguap. Mobil memiliki sistem teknis yang 
+% kompleks yang terdiri dari berbagai macam subsistem yang memiliki fungsinya masing-masing. Mobil telah menjadi sarana 
+% utama transportasi keluarga selama bertahun-tahun, dengan perkiraan 1,4 miliar mobil beroperasi di seluruh dunia. Desain 
+% dari mobil sebagian besar bergantung dari tujuan penggunaannya. Seperti misalnya mobil dengan kegunaan \emph{off-road} harus bisa menahan 
+% kondisi medan, sistemnya sederhana namun memiliki daya tahan tinggi terhadap beban berlebih. Sementara mobil 
+% yang digunakan di jalan raya dengan sistem kecepatan tinggi harus memiliki kondisi seperti performa mesin yang tinggi, 
+% memberikan kenyamanan pada penumpang, dan mobil memiliki stabilitas yang optimal \parencite{Cromer2023}. Perbedaan 
+% berdasarkan fungsi dan perusahaan manufaktur membuat mobil-mobil yang ada di dunia ini memiliki ciri khasnya masing-masing 
+% dan dapat dibedakan satu sama lain.
 
 \section{Citra}
 \label{sec:citra}
@@ -111,7 +123,13 @@ spasial dan amplitude f di titik (x,y) adalah intensitas atau tingkat keabuan da
 \emph{Machine learning} (ML) merupakan salah satu disiplin dari \emph{Artificial Intelligence} (AI) dimana sebuah sistem akan 
 mempelajari dan menganalisa data-data terdahulu secara otomatis. Sistem tersebut nantinya akan berfokus mengindetifikasi 
 pola dari data yang telah didapat, mempelajari pola tersebut secara iteratif, kemudian membangun model berdasarkan data 
-yang telah dipelajari, dan menggunakan model tersebut untuk membuat prediksi ketika diberikan sebuah data baru \parencite{Russel2021}.
+yang telah dipelajari, dan menggunakan model tersebut untuk membuat prediksi ketika diberikan sebuah data baru \parencite{Russel2021}. 
+Contoh cara kerja dari \emph{machine learning} dapat dilihat pada gambar \ref{fig:carakerjamachinelearning}.
+
+% \emph{Machine learning} (ML) merupakan salah satu disiplin dari \emph{Artificial Intelligence} (AI) dimana sebuah sistem akan 
+% mempelajari dan menganalisa data-data terdahulu secara otomatis. Sistem tersebut nantinya akan berfokus mengindetifikasi 
+% pola dari data yang telah didapat, mempelajari pola tersebut secara iteratif, kemudian membangun model berdasarkan data 
+% yang telah dipelajari, dan menggunakan model tersebut untuk membuat prediksi ketika diberikan sebuah data baru \parencite{Russel2021}. 
 
 Terdapat dua alasan utama perlunya membuat sebuah mesin yang dapat belajar. Alasan pertama karena pembuat mesin 
 (\emph{machine designer}) tidak dapat mengantisipasi seluruh kemungkinan yang ada di masa depan. Seperti misalnya sebuah robot 
@@ -480,10 +498,15 @@ berskala besar, sementara SwinV2-H untuk studi paralel lain mengenai \emph{self-
 \label{sec:gradcam}
 
 Model \emph{deep learning} telah memberikan banyak terobosan yang belum pernah terjadi \linebreak sebelumnya di berbagai tugas visi komputer, seperti \emph{image classification}, \emph{object detection}, \emph{semantic segmentation}, 
-dan berbagai tugas visi komputer lainnya. Namun, dengan kinerja model \emph{deep learning} yang dapat menyelesaikan berbagai tugas visi komputer, kurangnya transparan dari komponen model membuat model \emph{deep learning} 
+dan berbagai tugas visi komputer lainnya. Namun, kurangnya transparan kinerja model \emph{deep learning} membuat model \emph{deep learning} 
 sulit untuk menafsirkan. Sehingga, ketika model \emph{deep learning} gagal dalam mengerjakan tugas visi komputer tanpa peringatan ataupun penjelasan, pengembang dan pengguna 
-sulit untuk mengetahui alasan kegagalan tersebut. \linebreak Karena itulah dibutuhkan model dengan kemampuan yang dapat menjelaskan “mengapa bisa memprediksi hal tersebut”. Kemampuan 
+sulit untuk mengetahui alasan kegagalan tersebut. Karena itulah dibutuhkan model dengan kemampuan yang dapat menjelaskan “mengapa bisa memprediksi hal tersebut”. Kemampuan 
 tersebut bernama Grad-CAM \parencite{Selvaraju2019}.
+% Model \emph{deep learning} telah memberikan banyak terobosan yang belum pernah terjadi \linebreak sebelumnya di berbagai tugas visi komputer, seperti \emph{image classification}, \emph{object detection}, \emph{semantic segmentation}, 
+% dan berbagai tugas visi komputer lainnya. Namun, dengan kinerja model \emph{deep learning} yang dapat menyelesaikan berbagai tugas visi komputer, kurangnya transparan dari komponen model membuat model \emph{deep learning} 
+% sulit untuk menafsirkan. Sehingga, ketika model \emph{deep learning} gagal dalam mengerjakan tugas visi komputer tanpa peringatan ataupun penjelasan, pengembang dan pengguna 
+% sulit untuk mengetahui alasan kegagalan tersebut. \linebreak Karena itulah dibutuhkan model dengan kemampuan yang dapat menjelaskan “mengapa bisa memprediksi hal tersebut”. Kemampuan 
+% tersebut bernama Grad-CAM \parencite{Selvaraju2019}.
 
 \begin{figure}[h!]
   \centering
@@ -505,7 +528,8 @@ tersebut bernama Grad-CAM \parencite{Selvaraju2019}.
 
 Grad-CAM atau \emph{Gradient-weighted Class Activation Mapping} digunakan untuk mengidentifikasi wilayah diskriminatif yang digunakan kelas terbatas dari klasifikasi gambar model 
 yang tidak berisi lapisan yang seluruhnya terhubung. Kemampuan ini dibuat untuk dapat menafsirkan tanpa mengubah bentuk arsitektur dari model ataupun melakukan training ulang. 
-Dengan adanya GradCAM, model dapat menunjukkan dan membantu mendiagnosis jika terdapat kegagalan dengan mengungkap bias dari dataset \parencite{Selvaraju2019}.
+Dengan adanya GradCAM, model dapat menunjukkan dan membantu mendiagnosis jika terdapat kegagalan dengan mengungkap bias dari dataset seperti yang terlihat pada gambar 
+\ref{fig:contohpenggunaangradcamuntukklasifikasicitra} \parencite{Selvaraju2019}.
 
 \section{VRIC Dataset}
 \label{sec:vricdataset}
@@ -610,7 +634,7 @@ Seperti yang terlihat di gambar \ref{fig:contohgambardaridatasetvric}, rata-rata
 Untuk model \emph{training} dan \emph{testing} menggunakan VRIC dataset sebagai benchmark, 5.622 ID kendaraan dari VRIC dibagi secara acak menjadi dua dan tidak tumpang tindih, dengan 
 2.811 untuk \emph{training}, dan 2.811 untuk \emph{testing}. Karena tidak ada pencocokan ID berpasangan lintas kamera, maka disimulasikan variasi tampilan silang dengan pengambilan 
 sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}.\parencite{Kanaci2018} Pembagian data untuk kebutuhan \emph{training} dan \emph{testing} dapat dilihat pada gambar 
-\ref{fig:tampilansemudaridatasetvric}.
+\ref{fig:pembagiandatasetvric}.
 
 \begin{figure}[h!]
   \centering
@@ -630,7 +654,7 @@ sampel jarak jauh antara gambar \emph{probe} dan \emph{gallery}.\parencite{Kanac
   \label{fig:tampilansemudaridatasetvric}
 \end{figure}
 
-Secara khusus, VRIC memiliki dua tampilan semu, yaitu dekat atau jauh, untuk setiap video dan kemudian akan dibangun set \emph{probe/gallery} dari lintasan uji dengan mengambil sampel 
+Secara khusus, VRIC memiliki dua tampilan semu, yaitu dekat atau jauh(seperti gambar \ref{fig:tampilansemudaridatasetvric}), untuk setiap video dan kemudian akan dibangun set \emph{probe/gallery} dari lintasan uji dengan mengambil sampel 
 dari dua tampilan semu tersebut secara acak. Tampilan jarak jauh dan dekat ini menghasilkan kondisi yang sangat berbeda dan memungkinkan untuk digunakan pada simulasi dari dua pandangan 
 kamera yang tidak tumpang tindih \parencite{Kanaci2018}.
 
